@@ -162,7 +162,7 @@ button {
 }
 .content.sub {
 	position: relative;
-/*	height: 100vh;*/
+	height: 100vh;
 	min-height: 1000px;
 	background: url(../images/sub_bottom_line.png), url(../images/main_bg.png);
 	background-position: 50% 100%, 50%;
@@ -261,24 +261,18 @@ button {
 	margin-top: 19px;
 }
 .content.sub > .wrapper {
-/*
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 	height: 100%;
-*/
-/*	overflow: hidden;*/
-	overflow: auto;
+	overflow: hidden;
 }
 .content.sub > .wrapper .visual-wrap {
 	width: 100%;
-/*
 	display: table-cell;
 	vertical-align: middle;
-*/
-	padding: 181px 0 45px;
 }
-.content.game > .wrapper .visual-wrap .title-group {
+.content.sub > .wrapper .visual-wrap .title-group {
 	margin-bottom: 45px;
 }
 .content.game > .wrapper .visual-wrap .title-group .object {
@@ -286,12 +280,12 @@ button {
 	height: 56px;
 	margin: 0 auto 15px;
 }
-.content.game > .wrapper .visual-wrap .title-group .text {
+.content.sub > .wrapper .visual-wrap .title-group .text {
 	font-size: 32px;
 	font-weight: 500;
 	color: #333333;
 }
-.content.game > .wrapper .visual-wrap .title-group .text b {
+.content.sub > .wrapper .visual-wrap .title-group .text b {
 	font-weight: 800;
 	color: #4374a6;
 }
@@ -401,24 +395,61 @@ button {
 	font-size: 30px;
 	color: #4374a6;
 }
-.content.game {
+.content.sub {
 	overflow: hidden;
 }
-.content.game .svg-wrapper {
+.content.sub .svg-wrapper {
 	position: absolute;
 	width: 100%;
 	height: auto;
 }
-.content.game .svg-wrapper.pink { left: -150px; left: -7.8%; bottom: -200px; bottom: -5.5%; }
-.content.game .svg-wrapper.blue { left: -100px; left: -5.2%; bottom: -180px; bottom: -2.8%; }
+.content.sub .svg-wrapper.pink { left: -150px; left: -7.8%; bottom: -200px; bottom: -5.5%; }
+.content.sub .svg-wrapper.blue { left: -100px; left: -5.2%; bottom: -180px; bottom: -2.8%; }
 
-.content.game #footer {
-	position: static;
+.content.gate > .wrapper .visual-wrap .title-group {
+	margin-bottom: 64px;
 }
-
-@media all and (max-height: 1000px) {
-	.content.main #footer {
+.content.gate > .wrapper .visual-wrap .title-group .object {
+	width: 52px;
+	height: 40px;
+	margin: 0 auto 17px;
+}
+.content.gate > .wrapper .visual-wrap .title-group span {
+	display: block;
+	font-size: 20px;
+	color: #333333;
+	margin-top: 5px;
+}
+.content.gate > .wrapper .visual-wrap .btn-group {
+	text-align: center;
+	font-size: 0;
+	padding-bottom: 50px;
+}
+.content.gate > .wrapper .visual-wrap .btn-group .btn {
+	display: block;
+	margin-right: 29px;
+}
+.content.gate > .wrapper .visual-wrap .btn-group .btn:last-child {
+	margin-right: 0;
+}
+@media all and (max-height: 1050px) {
+	#footer {
 		position: absolute;
-		
+	}
+	.content.game .visual-wrap .game-container .frame {
+		width: 600px;
+		height: 569px;
+	}
+	.content.gate > .wrapper .visual-wrap .title-group {
+		margin-bottom: 40px;
+	}
+	.content.sub > .wrapper .visual-wrap .title-group .text {
+		font-size: 26px;
+	}
+	.content.sub > .wrapper .visual-wrap .title-group .text span {
+		font-size: 16px;
+	}
+	.content.game .visual-wrap .game-container .gage-wrap {
+		height: 525px;
 	}
 }
