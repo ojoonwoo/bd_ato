@@ -7,6 +7,19 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="./js/snap.svg-min.js"></script>
 	<script src="./js/jquery-3.3.1.min.js"></script>
+	<style>
+		#Layer_1 {
+			width: 300px;
+			height: 300px;
+		}
+		#Layer_1 .cls-1 {
+/*
+			paint-order: stroke;
+			stroke-dasharray: 0;
+			stroke-dashoffset: 0;
+*/
+		}
+	</style>
 </head>
 <body>
 	<div id="container">
@@ -24,7 +37,14 @@
 				</div>
 			</div>
 			<div class="wrapper">
-				<div class="balls"></div>
+<!--
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+					 y="0px" viewBox="0 0 149 174">
+					<path class="st0" fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" stroke-linecap="butt" stroke-linejoin="round" d="M139.5,117.4c-6.6,26.2-26.1,45.6-61.2,45.6c-45.8,0-68.6-34.3-68.6-77.1c0-41.2,23-78.3,69.5-78.3
+										 c36.6,0,55.9,21,60.3,46.3H117C112,38.3,101.6,26,78.4,26c-32.2,0-45.2,29.2-45.2,59.2c0,28.9,12.2,59.4,46.1,59.4
+										 c23,0,32.5-13.5,37.7-27.1H139.5z"/>
+				</svg>
+-->
 				<div class="visual-wrap">
 					<svg 
 						 xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +117,8 @@
 		var svg1Points = svgPath1.node.getAttribute('d');
 		var svg2Points = svgPath2.node.getAttribute('d');
 		
-		svgPath1.animate({ d: svg2Points }, 1800, mina.easeinout, svgChange(svgPath1, svg2Points));  
-		svgPath2.animate({ d: svg1Points }, 1800, mina.easeinout, svgChange(svgPath2, svg1Points));  
+		svgPath1.animate({ d: svg2Points }, 1600, mina.easeinout, svgChange(svgPath1, svg2Points));  
+		svgPath2.animate({ d: svg1Points }, 1600, mina.easeinout, svgChange(svgPath2, svg1Points));  
 
 
 		function svgChange(el, currentPoints) {
@@ -109,8 +129,8 @@
 				targetPoints = svg1Points;
 			}
 			setTimeout(function() {
-				el.animate({ d: targetPoints }, 1800, mina.easeinout, svgChange(el, targetPoints));
-			}, 1800);
+				el.animate({ d: targetPoints }, 1600, mina.easeinout, svgChange(el, targetPoints));
+			}, 1600);
 		}
 		
 		(function($){

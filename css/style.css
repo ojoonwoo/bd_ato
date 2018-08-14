@@ -162,7 +162,7 @@ button {
 }
 .content.sub {
 	position: relative;
-	height: 100vh;
+/*	height: 100vh;*/
 	min-height: 1000px;
 	background: url(../images/sub_bottom_line.png), url(../images/main_bg.png);
 	background-position: 50% 100%, 50%;
@@ -261,16 +261,22 @@ button {
 	margin-top: 19px;
 }
 .content.sub > .wrapper {
+/*
 	display: table;
 	table-layout: fixed;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+*/
+/*	overflow: hidden;*/
+	overflow: auto;
 }
 .content.sub > .wrapper .visual-wrap {
 	width: 100%;
+/*
 	display: table-cell;
 	vertical-align: middle;
+*/
+	padding: 181px 0 45px;
 }
 .content.game > .wrapper .visual-wrap .title-group {
 	margin-bottom: 45px;
@@ -406,8 +412,12 @@ button {
 .content.game .svg-wrapper.pink { left: -150px; left: -7.8%; bottom: -200px; bottom: -5.5%; }
 .content.game .svg-wrapper.blue { left: -100px; left: -5.2%; bottom: -180px; bottom: -2.8%; }
 
+.content.game #footer {
+	position: static;
+}
+
 @media all and (max-height: 1000px) {
-	#footer {
+	.content.main #footer {
 		position: absolute;
 		
 	}
