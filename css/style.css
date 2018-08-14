@@ -65,6 +65,7 @@ button {
 	top: 0;
 	left: 0;
 	right: 0;
+	z-index: 100;
 }
 #header .inner {
 	position: relative;
@@ -159,12 +160,21 @@ button {
 	background-repeat: no-repeat;
 /*	background: url(../images/main_bg.png) 50% / cover no-repeat;*/
 }
-.content.main .wrapper {
+.content.sub {
+	position: relative;
+	height: 100vh;
+	min-height: 1000px;
+	background: url(../images/sub_bottom_line.png), url(../images/main_bg.png);
+	background-position: 50% 100%, 50%;
+	background-size: 100% 798px, cover;
+	background-repeat: no-repeat;
+}
+.content > .wrapper {
 	text-align: center;
 	font-size: 0;
 	height: 100%;
 }
-.content.main .wrapper .balls {
+.content .wrapper .balls {
 	position: absolute;
 	top: 11.4%;
 	left: 6.7%;
@@ -173,9 +183,11 @@ button {
 	background: url(../images/main_balls.png) 0 0 / cover no-repeat;
 	z-index: 4;
 }
-.content.main .visual-wrap {
+.content > .wrapper .visual-wrap {
 	position: relative;
 	display: inline-block;
+}
+.content.main > .wrapper .visual-wrap {
 	width: 800px;
 	height: 800px;
 	top: 50%;
@@ -248,6 +260,152 @@ button {
 	background-color: #84bce9;
 	margin-top: 19px;
 }
+.content.sub > .wrapper {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.content.sub > .wrapper .visual-wrap {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.content.game > .wrapper .visual-wrap .title-group {
+	margin-bottom: 45px;
+}
+.content.game > .wrapper .visual-wrap .title-group .object {
+	width: 48px;
+	height: 56px;
+	margin: 0 auto 15px;
+}
+.content.game > .wrapper .visual-wrap .title-group .text {
+	font-size: 32px;
+	font-weight: 500;
+	color: #333333;
+}
+.content.game > .wrapper .visual-wrap .title-group .text b {
+	font-weight: 800;
+	color: #4374a6;
+}
+.content.game .visual-wrap .game-container {
+	font-size: 0;
+	position: relative;
+	z-index: 4;
+}
+.content.game .visual-wrap .game-container .frame {
+	display: inline-block;
+	position: relative;
+	width: 656px;
+	height: 622px;
+	margin-left: 75px;
+	margin-right: 39px;
+	background: #ffffff;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.content.game .visual-wrap .game-container .frame .timer {
+	position: absolute;
+	left: 30px;
+	top: 30px;
+}
+.content.game .visual-wrap .game-container .frame .timer #count {
+	font-size: 30px;
+	color: #333333;
+}
+.content.game .visual-wrap .game-container .frame > .bg img {
+	width: 100%;
+}
+.content.game .visual-wrap .game-container .frame .hand {
+	position: absolute;
+	bottom: 0;
+	left: 300px;
+}
+.content.game .visual-wrap .game-container .frame .hand img {
+	width: 257px;
+}
+.content.game .visual-wrap .game-container .gage-wrap {
+	display: inline-block;
+	position: relative;
+	width: 50px;
+	height: 563px;
+	vertical-align: bottom;
+}
+.content.game .visual-wrap .game-container .gage-wrap .msg-box {
+	position: absolute;
+	top: -77px;
+	left: -21px;
+	width: 91px;
+	height: 68px;
+	padding-top: 10px;
+	background: url(../images/game_gage_msg_bg.png) 0 0 / 91px 68px no-repeat;
+}
+.content.game .visual-wrap .game-container .gage-wrap .msg-box span {
+	display: block;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1;
+	color: #ffffff;
+}
+.content.game .visual-wrap .game-container .gage-wrap .msg-box span:first-child {
+	margin-bottom: 3px;
+}
+.content.game .visual-wrap .game-container .gage-wrap .inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding: 65px 12px 15px 12px;
+	background: rgba(255, 255, 255, 0.68);
+	border-radius: 10px;
+}
+.content.game .visual-wrap .game-container .gage-wrap .inner .gage-bg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #f8f8f8;
+	box-shadow: inset 0px 3px 4px 0px rgba(0, 0, 0, 0.09);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.content.game .visual-wrap .game-container .gage-wrap .inner .gage {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 0%;
+	width: 100%;
+	background: #84bce9;
+	border-radius: 10px;
+	transition: height 0.07s ease-in-out;
+}
+.content.game .visual-wrap .game-container .gage-wrap .inner .percent {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.content.game .visual-wrap .game-container .gage-wrap .inner .percent span {
+	display: block;
+	font-size: 15px;
+	font-weight: 800;
+	color: #797979;
+	line-height: 1;
+}
+.content.game .visual-wrap .game-container .gage-wrap .inner .percent .num {
+	font-size: 30px;
+	color: #4374a6;
+}
+.content.game {
+	overflow: hidden;
+}
+.content.game .svg-wrapper {
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+.content.game .svg-wrapper.pink { left: -150px; left: -7.8%; bottom: -200px; bottom: -5.5%; }
+.content.game .svg-wrapper.blue { left: -100px; left: -5.2%; bottom: -180px; bottom: -2.8%; }
+
 @media all and (max-height: 1000px) {
 	#footer {
 		position: absolute;
