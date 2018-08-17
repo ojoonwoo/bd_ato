@@ -11,12 +11,8 @@ $(function(){
 	var locationArray = location.href.split('/');
 	var currentLocation = locationArray[locationArray.length-1].split('.')[0];
 	
-	
-	
-	var agree1 	= "N";
-	var agree2 	= "N";
+	var pt_type		= "light";
 
-   
 	bato.popup = {
 		bind : function(){
 			$doc
@@ -208,7 +204,7 @@ $(function(){
 //	share.bind();
 	
 
-	$(".input-submit-btn").on("click", function(){
+	$(".btn-result").on("click", function(){
 		var mb_name 	= $("#mb_name").val();
 		var mb_phone1 	= $("#mb_phone1").val();
 		var mb_phone2 	= $("#mb_phone2").val();
@@ -217,6 +213,7 @@ $(function(){
 		var mb_addr2 	= $("#mb_addr2").val();
 		var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
 
+		// console.log($('.mb_type').val());
 		if (mb_name == "") {
 			alert("이름을 입력해 주세요.");
 			$("#mb_name").focus();
@@ -249,14 +246,15 @@ $(function(){
 			return false;
 		}
 
-
-		if (agree1 == "N") {
-			alert("개인정보 수집 약관에 동의해 주셔야만 이벤트에 참여하실 수 있습니다.");
+		if ($("#agree1").is(":checked") === false)
+		{
+			alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
 			return false;
 		}
 
-		if (agree2 == "N") {
-			alert("개인정보 취급 약관에 동의해 주셔야만 이벤트에 참여하실 수 있습니다.");
+		if ($("#agree2").is(":checked") === false)
+		{
+			alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
 			return false;
 		}
 
@@ -267,18 +265,24 @@ $(function(){
 				"mb_name"			: mb_name,
 				"mb_phone"			: mb_phone,
 				"mb_addr1"			: mb_addr1,
-				"mb_addr2"			: mb_addr2
+				"mb_addr2"			: mb_addr2,
+				"mb_type"			: pt_type
 			},
 			url: "./main_exec.php",
 			success: function(response){
-				alert("이벤트에 참여해 주셔서 감사합니다!");
-				location.href = "index.php";
+				if (response == "Y")
+				{
+					bato.popup.close($("#pt-pass"));
+					bato.popup.show($("#pt-result"));
+				}else{
+					alert("참여자가 많습니다. 다시시도해 주세요!");
+				}
 			}
 		});
 	
 	});
 
-	$(".find-addr").on("click", function(){
+	$(".search").on("click", function(){
 		new daum.Postcode({
 			oncomplete: function(data) {
 				// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.

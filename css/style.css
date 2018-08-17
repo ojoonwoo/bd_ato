@@ -88,7 +88,8 @@ input[type="checkbox"]:focus {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
+	/* z-index: 100; */
+	z-index: 99;
 }
 #header .inner {
 	position: relative;
@@ -209,6 +210,7 @@ input[type="checkbox"]:focus {
 .content > .wrapper .visual-wrap {
 	position: relative;
 	display: inline-block;
+	z-index: 9;
 }
 .content.main > .wrapper .visual-wrap {
 	width: 800px;
