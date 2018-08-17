@@ -88,7 +88,7 @@ input[type="checkbox"]:focus {
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
+	z-index: 98;
 }
 #header .inner {
 	position: relative;
@@ -139,6 +139,7 @@ input[type="checkbox"]:focus {
 	padding: 25px 0;
 	background: rgba(255, 255 ,255 ,0.3);
 	text-align: center;
+	z-index: 98;
 }
 #footer ul {
 	display: block;
@@ -448,9 +449,11 @@ input[type="checkbox"]:focus {
 	margin-top: 5px;
 }
 .content.gate > .wrapper .visual-wrap .btn-group {
+	position: relative;
 	text-align: center;
 	font-size: 0;
 	padding-bottom: 50px;
+	z-index: 5;
 }
 .content.gate > .wrapper .visual-wrap .btn-group .btn {
 	display: block;
@@ -870,6 +873,20 @@ html.popup-opened {
 	font-size: 12px;
 	font-weight: 400;
 	color: #717171;
+}
+.popup.pt-pass .terms-block .terms-group .check input[type="checkbox"] {
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+.popup.pt-pass .terms-block .terms-group .check label.check-target {
+	position: absolute;
+	right: 5px;
+	top: 2px;
+	width: 13px;
+	height: 13px;
+	z-index: 3;
+	cursor: pointer;
 }
 .popup.pt-pass .terms-block .terms-group .check .checkbox {
 	display: inline-block;
