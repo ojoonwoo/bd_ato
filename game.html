@@ -8,6 +8,7 @@
 		<script src="./js/snap.svg-min.js"></script>
 		<script src="./js/jquery-3.3.1.min.js"></script>
 		<script src="./js/jquery-ui.min.js"></script>
+		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 		<script src="./js/main.js"></script>
 	</head>
 	<body>
@@ -20,8 +21,8 @@
 						</div>
 						<ul class="menu">
 							<li><a href="javascript:void(0)">HOME</a></li>
-							<li class="is-active"><a href="javascript:void(0)">PT GAME</a></li>
-							<li><a href="javascript:void(0)">PT CREAM</a></li>
+							<li class="is-active"><a href="javascript:void(0)">PT 시작</a></li>
+							<li><a href="javascript:void(0)">PT 찾기</a></li>
 						</ul>
 					</div>
 				</div>
@@ -245,8 +246,8 @@
 							<span>주소</span>
 						</div>
 						<div class="input">
-							<input type="text">
-							<button type="button" class="search"></button>
+							<input type="text" id="mb_addr1" readonly style="padding-right: 20px;text-overflow: ellipsis;">
+							<button type="button" class="search find-addr"></button>
 						</div>
 					</div>
 					<div class="input-group">

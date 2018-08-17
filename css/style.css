@@ -460,7 +460,62 @@ input[type="checkbox"]:focus {
 	margin-right: 0;
 }
 
+.content.find {
+/*	background: url(../images/find_texture_bg.png) center / cover no-repeat !important;*/
+	background: url(../images/find_ball_bg.png), url(../images/find_colorline_bg.png), url(../images/find_texture_bg.png);
+	background-size: 88.4% auto, cover, cover;
+	background-position: 43% 128px, 50% 128px, 50% 0;
+	background-repeat: no-repeat;
+	overflow: auto !important;
+	height: auto;
+}
+.content.find .scroll-content {
+	padding: 189px 0 45px;
+}
+.content.find .scroll-content .title-group {
+	margin: 0 0 39px;
+	text-align: center;
+}
+.content.find .scroll-content .title-group .object {
+	margin-bottom: 18px;
+}
+.content.find .scroll-content .title-group .text h3 {
+	font-size: 32px;
+	font-weight: 500;
+	margin-bottom: 24px;
+}
+.content.find .scroll-content .title-group .text h3 b {
+	color: #4374a6;
+	font-weight: 800;
+}
+.content.find .scroll-content .title-group .text p {
+	font-size: 22px;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+.content.find .scroll-content .title-group .text span {
+	font-size: 18px;
+	font-weight: 500;
+}
+.content.find .scroll-content .checklist {
+	position: relative;
+	width: 909px;
+	height: 1713px;
+	margin: 0 auto;
+	background: url(../images/find_checklist_bg.png) 0 0 / 909px 1713px no-repeat;
+}
+.content.find .scroll-content .checklist button {
+	position: absolute;
+	left: 508px;
+	cursor: pointer;
+}
+.content.find .scroll-content .checklist button.season {top:518px;}
+.content.find .scroll-content .checklist button.chronic {top:996px;}
+.content.find .scroll-content .checklist button.problem {top:1477px;}
 
+.content.find #footer {
+	position: static;
+}
 
 
 
