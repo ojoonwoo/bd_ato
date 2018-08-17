@@ -58,6 +58,11 @@ html, body {
 	line-height: 1.2;
 	color: #333333;
 }
+input[type="text"],
+input[type="tel"],
+button {
+	font-family: "Noto Sans Korean", sans-serif;
+}
 button {
 	cursor: pointer;
 }
@@ -724,7 +729,7 @@ html.popup-opened {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	width: 390px;
+	width: 391px;
 	height: 185px;
 }
 .popup.pt-pass .tab-block .content {
@@ -878,6 +883,7 @@ html.popup-opened {
 	width: 1px;
 	height: 1px;
 	margin: -1px;
+	visibility: hidden;
 }
 .popup.pt-pass .terms-block .terms-group .check label.check-target {
 	position: absolute;
