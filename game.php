@@ -223,63 +223,6 @@
 					gameController.dragging = false;
 				}
 			}
-//			var svg1 = document.getElementById("svg-shape1");
-//			var svg2 = document.getElementById("svg-shape2");
-//			var s1 = Snap(svg1);
-//			var s2 = Snap(svg2);
-//
-//			var svgPath1 = Snap.select('#svg-path1');
-//			var svgPath2 = Snap.select('#svg-path2');
-//
-//			var svg1Points = svgPath1.node.getAttribute('d');
-//			var svg2Points = svgPath2.node.getAttribute('d');
-//
-//			svgPath1.animate({ d: svg2Points }, 1800, mina.easeinout, svgChange(svgPath1, svg2Points));  
-//			svgPath2.animate({ d: svg1Points }, 1800, mina.easeinout, svgChange(svgPath2, svg1Points));  
-//
-//
-//			function svgChange(el, currentPoints) {
-//				var targetPoints = '';
-//				if(currentPoints == svg1Points) {
-//					targetPoints = svg2Points;
-//				} else {
-//					targetPoints = svg1Points;
-//				}
-//				setTimeout(function() {
-//					el.animate({ d: targetPoints }, 1800, mina.easeinout, svgChange(el, targetPoints));
-//				}, 1800);
-//			}
-//
-//			(function($){
-//				var x;
-//				var y;
-//				var waves = $('.wave').each(function(){
-//					this.np = 0;
-//					this.ep = 0;
-//					this.yp = 0;
-//					this.lv = this.getAttribute('data-wave')*1;
-//				});
-//				function move(){
-//					this.ep = this.lv*x;
-//					this.yp = this.lv*y;
-//				}
-//				function loop() {
-//					this.np = this.np + (this.ep - this.np)*0.1;
-//					this.yp = this.yp + (this.yp - this.yp)*0.1;
-//					this.style.transform = "translate("+this.np+'px'+", "+this.yp+'px'+")";
-//					//			this.style.transform = "translate("+this.np+'px'+")";
-//				}
-//				$(window).on('mousemove', function(e){
-//					x = (e.clientX - $(window).width()/2) / 50;
-//					y = (e.clientY - $(window).height()/2) / 50;
-//					waves.each(move);
-//				});
-//
-//				setInterval(function(){
-//					waves.each(loop);
-//				},33);
-//			})(jQuery);
-
 		</script>
 	</body>
 </html>
