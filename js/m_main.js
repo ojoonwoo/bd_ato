@@ -16,6 +16,7 @@ $(function(){
 	var agree1 	= "N";
 	var agree2 	= "N";
 
+	var pt_type		= "light";
 
 	bato.popup = {
 		bind : function(){

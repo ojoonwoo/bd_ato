@@ -122,9 +122,9 @@
 ?>		
 		<input type="button" id="sample-btn" data-popup="#pt-pass">
 		<script type="text/javascript">
-			$(window).on('load', function() {
-				$('#sample-btn').trigger('click');
-			});
+			// $(window).on('load', function() {
+			// 	$('#sample-btn').trigger('click');
+			// });
 			
 			$('#pt-pass .check-block .check').on('click', function() {
 				var $parent = $(this).parent();
