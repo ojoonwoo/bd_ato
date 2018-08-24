@@ -100,6 +100,19 @@
 				$parent.find('.check').not(this).removeClass('is-checked');
 				$(this).addClass('is-checked');
 				pt_type	= $(this).data("value");
+
+				// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
+				if (pt_type == "light")
+				{
+					$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
+					$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
+				}else if (pt_type == "medium"){
+					$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
+					$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
+				}else{
+					$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
+					$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
+				}
 				//				$('.tab-contents').find('.content').not(tabTarget).hide();
 				//				$('.tab-contents').find('.'+tabTarget).show();
 			});
@@ -186,6 +199,7 @@
 					},
 					url: "../main_exec.php",
 					success: function(response){
+
 						if (response == "Y")
 						{
 							bato.popup.close($("#pt-pass"));
