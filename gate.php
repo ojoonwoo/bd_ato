@@ -2,7 +2,7 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>BIODERMA - Atoderm</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<script src="./js/snap.svg-min.js"></script>
