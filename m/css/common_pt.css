@@ -1,0 +1,129 @@
+html{
+
+}
+body{
+	margin: 0 auto;
+}
+
+.main {
+   width: 750px;
+   height: auto;
+
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+.section{
+    position: relative;
+}
+
+.bg{
+
+}
+.header{
+    position: absolute;
+    width:  340px;
+    height: 45px;
+    top: 15px;
+    left: 17px;
+    right: 17px;
+    bottom: 0;
+}
+
+.wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/* 추가 */
+.wrapper .contents{
+    position: relative;
+}
+.logo{
+    position: absolute;
+    width: 75px;
+}
+
+.menu{
+    width: 26px;
+    float: right;
+}
+
+.images{
+    /* 삭제 */
+    /* width: 375px; */
+    top:202px;
+}
+.txt{
+    width: 182px;
+    margin: 67px auto 0 auto;
+}
+
+.button .button01 {
+    position: absolute;
+    width: 119px;
+    /* 변경 */
+    /* top: 438px; */
+    top: 27%;
+    /* left: 197px; */
+    right: 14%;
+}
+
+.button .button02 {
+    position: absolute;
+    width: 119px;
+    /* top:690px; */
+    top:55%;
+    /* left: 197px; */
+    right: 14%;
+}
+
+.button .button03 {
+    position: absolute;
+    width: 140px;
+    /* top: 945px; */
+    bottom: 12%;
+    /* left: 190px; */
+    right: 14%;
+}
+
+.footer {
+    position: absolute;
+    width: 375px;
+    height: 110px;
+    bottom: 0;
+}
+.footer .bg{
+    position: absolute;
+    width: 375px;
+    height: 110px;
+    background-color: white;
+    opacity: 0.5;
+    top:0;
+    bottom: 0;
+}
+.footer .footer01{
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 10px;
+	text-decoration: none;
+}
+
+.footer .footer02{
+    text-align: center;
+    font-size: 10px;
+    margin-top: 3px;
+    font-weight: 300;
+
+}
+.footer .footer03{
+    text-align: center;
+    font-size: 10px;
+    font-weight: 300;
+
+}

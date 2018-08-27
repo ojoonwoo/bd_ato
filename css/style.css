@@ -216,6 +216,7 @@ input[type="checkbox"]:focus {
 .content > .wrapper .visual-wrap {
 	position: relative;
 	display: inline-block;
+	z-index: 9;
 }
 .content.main > .wrapper .visual-wrap {
 	width: 800px;
