@@ -281,8 +281,8 @@ input[type="checkbox"]:focus {
 /*	width: 76%;*/
 	width: 100%;
 /*	height: 63.5%;*/
-	height: 89%;
-	background: url(../images/main_balls.png) 0 0 / cover no-repeat;
+	height: 89.6%;
+	background: url(../images/main_balls.png) center 0 / cover no-repeat;
 	z-index: 4;
 	pointer-events: none;
 }
@@ -313,29 +313,29 @@ input[type="checkbox"]:focus {
 .content.main .visual-wrap .back {
 /*	top: 56px;*/
 /*	top: 28px;*/
-	top: 8.16%;
+	top: 1.1%;
 /*	left: 50%;*/
-	margin-left: 5%;
-	width: 92%;
+	margin-left: 1.8%;
+	width: 52.5%;
 	z-index: 1;
 }
 .content.main .visual-wrap .people {
-	top: 3.6%;
-	margin-left: 14.1%;
+	top: 12.4%;
+	margin-left: 7.4%;
 	z-index: 2;
-	width: 59.4%;
+	width: 83.7%;
 }
 .content.main .visual-wrap .front {
 /*	top: 40%;*/
-	top: 42.6%;
-	width: 61.3%;
-	margin-left: 35.7%;
+	top: 35%;
+	width: 54.6%;
+	margin-left: 46%;
 	z-index: 3;
 }
 .content.main .visual-wrap .text-group {
 	position: absolute;
-	top: 76%;
-	margin-left: 60.8%;
+	top: 21.4%;
+	margin-left: 62.2%;
 	z-index: 4;
 }
 .content.main .visual-wrap .text-group p {
@@ -343,19 +343,21 @@ input[type="checkbox"]:focus {
 	font-weight: 300;
 	color: #4374a6;
 	text-align: left;
-	line-height: 9px;
+	line-height: 8px;
 	margin-top: 5px;
 	word-break: keep-all;
+	letter-spacing: -0.5px;
 }
 .content.main .visual-wrap .text-group p:first-child {
 	font-weight: 700;
 	margin-top: 0;
+	margin-bottom: 6px;
 	line-height: 1;
 }
 .content.main .btn-group {
 /*	position: absolute;*/
 	position: relative;
-	margin: 1.7% 0 15% 13%;
+	margin: 0 0 15% 13%;
 /*	top: 100%;*/
 	width: 45.2%;
 	z-index: 10;
@@ -364,11 +366,12 @@ input[type="checkbox"]:focus {
 	display: block;
 	width: 100%;
 	padding-bottom: 23.3%;
-	border-radius: 18px;
-	background-color: #4374a6;
+	border-radius: 20px;
 	font-size: 16px;
+	letter-spacing: -0.25px;
 	font-weight: 500;
 	color: #ffffff;
+	background-color: #84bce9;
 	position: relative;
 }
 .content.main .btn-group button span {
@@ -380,7 +383,7 @@ input[type="checkbox"]:focus {
 	transform: translate(-50%, -50%);
 }
 .content.main .btn-group button:last-child {
-	background-color: #84bce9;
+	background-color: #4374a6;
 	margin-top: 14px;
 }
 .content.sub > .wrapper {
@@ -1182,6 +1185,9 @@ html.popup-opened {
 
 /*popup*/
 @media all and (max-width: 340px) {
+	.content.main .visual-wrap .text-group {
+		top: 17.4%;
+	}
 	#footer ul li {
 		font-size: 10px;
 	}
