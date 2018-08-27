@@ -328,10 +328,28 @@ input[type="checkbox"]:focus {
 	height: 56px;
 	margin: 0 auto 15px;
 }
+.content.game .game-container .guide-obj {
+	display: none;
+}
+.content.game .game-container.started .pre-layer {
+/*	display: none;*/
+}
+.content.game .pre-layer {
+	display: none;
+	position: fixed;
+	top: 120px;
+	left: 0;
+	right: 0;
+	bottom: 133px;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+/*	height: calc(100% - 253px);*/
+}
 .content.sub > .wrapper .visual-wrap .title-group .text {
 	font-size: 32px;
 	font-weight: 500;
 	color: #333333;
+	letter-spacing: -0.25px;
 }
 .content.sub > .wrapper .visual-wrap .title-group .text b {
 	font-weight: 800;
@@ -355,23 +373,73 @@ input[type="checkbox"]:focus {
 }
 .content.game .visual-wrap .game-container .frame .timer {
 	position: absolute;
-	left: 30px;
-	top: 30px;
+	left: 20px;
+	top: 20px;
+	width: 91px;
+	height: 91px;
+	z-index: 101;
+}
+.content.game .visual-wrap .game-container .frame .timer .bg {
+	background: url(../images/game_timer.png) center / cover no-repeat;
+	height: 100%;
 }
 .content.game .visual-wrap .game-container .frame .timer #count {
-	font-size: 30px;
-	color: #333333;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.content.game .visual-wrap .game-container .frame .timer #count img {
+	position: absolute;
+	left: 16px;
+	top: 20px;
 }
 .content.game .visual-wrap .game-container .frame > .bg img {
 	width: 100%;
 }
 .content.game .visual-wrap .game-container .frame .hand {
 	position: absolute;
-	bottom: 0;
-	left: 300px;
+	bottom: -175px;
+	left: 17px;
+	z-index: 100;
 }
 .content.game .visual-wrap .game-container .frame .hand img {
-	width: 257px;
+	width: 397px;
+	height: 560px;
+}
+.content.game.body-selected .visual-wrap .game-container .frame .hand {
+	left: 216px;
+}
+.content.game.body-selected .visual-wrap .game-container .frame .hand img {
+	width: 248px;
+	height: 585px;
+}
+.content.game .visual-wrap .game-container .frame .guide-text {
+	position: absolute;
+	top: 32px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 100;
+}
+.content.game .visual-wrap .game-container .frame .guide-text .pre-count {
+	font-size: 60px;
+	font-weight: 700;
+	color: #84bce9;
+	letter-spacing: -0.5px;
+	margin-bottom: 20px;
+}
+.content.game .visual-wrap .game-container .frame .guide-text .text {
+	font-size: 24px;
+	letter-spacing: -0.25px;
+	color: #ffffff;
+}
+.content.game .visual-wrap .game-container .frame .guide-line {
+	position: absolute;
+	bottom: 174px;
+	left: 170px;
+	z-index: 100;
 }
 .content.game .visual-wrap .game-container .gage-wrap {
 	display: inline-block;
@@ -447,6 +515,7 @@ input[type="checkbox"]:focus {
 	color: #4374a6;
 }
 .content.sub {
+	min-width: 1200px;
 	overflow: hidden;
 }
 .content.sub .svg-wrapper {
@@ -1122,5 +1191,12 @@ html.popup-opened {
 	}
 	.content.game .visual-wrap .game-container .gage-wrap {
 		height: 525px;
+	}
+	.content.game .pre-layer {
+		top: 0;
+		bottom: 0;
+	}
+	.content.sub #footer {
+		background: none;
 	}
 }
