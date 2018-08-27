@@ -236,29 +236,39 @@ input[type="checkbox"]:focus {
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
+/*
 .content.main .visual-wrap .back {
 	top: 170px;
 	left: 50%;
 	margin-left: -353px;
 	z-index: 1;
 }
+*/
 .content.main .visual-wrap .people {
-	top: 55px;
+	top: 125px;
 	left: 50%;
-	margin-left: -260px;
+	margin-left: -314px;
 	z-index: 2;
 }
+/*
 .content.main .visual-wrap .front {
 	top: 343px;
 	left: 50%;
 	margin-left: -33px;
 	z-index: 3;
 }
+*/
+.content.main .visual-wrap .title {
+	top: 140px;
+	left: 50%;
+	margin-left: -400px;
+	z-index: 3;
+}
 .content.main .visual-wrap .text-group {
 	position: absolute;
-	top: 470px;
+	top: 224px;
 	left: 50%;
-	margin-left: 90px;
+	margin-left: 50px;
 	min-width: 450px;
 	z-index: 4;
 }
@@ -267,28 +277,34 @@ input[type="checkbox"]:focus {
 	font-weight: 300;
 	color: #4374a6;
 	text-align: left;
-	line-height: 1;
+	letter-spacing: -0.5px;
+	line-height: 14px;
 	margin-top: 5px;
 	word-break: keep-all;
 }
 .content.main .visual-wrap .text-group p:first-child {
 	font-weight: 700;
 	margin-top: 0;
+	margin-bottom: 12px;
 }
-.content.main .visual-wrap .text-group .btn-group {
-	margin-top: 45px;
+.content.main .visual-wrap .btn-group {
+	position: absolute;
+	top: 486px;
+	left: 50%;
+	margin-left: 210px;
+	z-index: 4;
 }
-.content.main .visual-wrap .text-group .btn-group button {
+.content.main .visual-wrap .btn-group button {
 	display: block;
 	width: 206px;
 	height: 50px;
-	border-radius: 15px;
+	border-radius: 23px;
 	background-color: #4374a6;
 	font-size: 19px;
 	font-weight: 500;
 	color: #ffffff;
 }
-.content.main .visual-wrap .text-group .btn-group button:last-child {
+.content.main .visual-wrap .btn-group button:last-child {
 	background-color: #84bce9;
 	margin-top: 19px;
 }
