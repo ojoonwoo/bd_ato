@@ -412,6 +412,7 @@ input[type="checkbox"]:focus {
 .content.sub > .wrapper .visual-wrap .title-group .text {
 	font-size: 18px;
 	font-weight: 500;
+	letter-spacing: -0.25px;
 	color: #333333;
 }
 .content.sub > .wrapper .visual-wrap .title-group .text b {
@@ -454,8 +455,6 @@ input[type="checkbox"]:focus {
 	bottom: -22.1%;
 	left: -10%;
 	width: 62.4%;
-}
-.content.game .visual-wrap .game-container .frame .hand img {
 }
 .content.game .visual-wrap .game-container .gage-wrap {
 	display: block;
