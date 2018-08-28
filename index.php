@@ -33,6 +33,7 @@
 	<script src="./js/snap.svg-min.js"></script>
 	<script src="./js/jquery-3.3.1.min.js"></script>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+	<script src="./js/main.js"></script>
 </head>
 <body>
 <div id="container">
