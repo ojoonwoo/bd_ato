@@ -70,7 +70,7 @@
 						</div>
 						<div class="text-group wave" data-wave="0.2">
 							<div class="desc">
-								<p>당신의 피부도<br>이제는 체력 관리가 필요합니다</p>
+								<p>당신의 스킨도<br>이제는 체력 관리가 필요합니다</p>
 								<p>바이오더마 PT클럽에서는<br>당신의 스킨에<br>가장 알맞은 PT를 제공합니다</p>
 							</div>
 						</div>
