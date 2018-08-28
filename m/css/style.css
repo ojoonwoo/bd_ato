@@ -102,6 +102,9 @@ input[type="checkbox"]:focus {
 	right: 0;
 	z-index: 98;
 }
+.is-scrolled #header {
+	background: rgba(255, 255, 255, 0.3);
+}
 #header .inner {
 	position: relative;
 	margin: 0 auto;
@@ -665,16 +668,13 @@ input[type="checkbox"]:focus {
 
 .content.find {
 /*	background: url(../images/find_texture_bg.png) center / cover no-repeat !important;*/
-	background: url(../images/find_ball_bg.png), url(../images/find_colorline_bg.png), url(../images/find_texture_bg.png);
-	background-size: 88.4% auto, cover, cover;
-	background-position: 43% 128px, 50% 128px, 50% 0;
-	background-repeat: no-repeat;
+/*	background: url(../images/find_ball_bg.png), url(../images/find_colorline_bg.png), url(../images/find_texture_bg.png);*/
+/*	background-size: 88.4% auto, cover, cover;*/
+/*	background-position: 43% 128px, 50% 128px, 50% 0;*/
+/*	background-repeat: no-repeat;*/
 	overflow: auto !important;
-	height: auto;
 }
-.content.find .scroll-content {
-	padding: 189px 0 45px;
-}
+
 .content.find .scroll-content .title-group {
 	margin: 0 0 39px;
 	text-align: center;

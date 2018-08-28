@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="./css/common_pt.css">
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
+		<script src="../js/jquery-3.3.1.min.js"></script>
         <title></title>
     </head>
     <body>
@@ -15,7 +16,7 @@
                     <img src="./images/PT/bg.jpg" alt="배경">
                 </div> -->
 		<div id="container">
-			<div class="content sub game">
+			<div class="content sub find">
 <?
 	include_once "header_area.php";
 ?>				
@@ -68,6 +69,14 @@
             </div>
         </div>
 
-
+		<script type="text/javascript">
+			$('.content').on('scroll', function() {
+				if($(this).scrollTop()>$('#header').height()) {
+					$('html').addClass('is-scrolled');
+				} else {
+					$('html').removeClass('is-scrolled');
+				}
+			});
+		</script>
     </body>
 </html>

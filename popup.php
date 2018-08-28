@@ -174,7 +174,8 @@
 			</div>
 		</div>
 		<div class="popup pt-result" id="pt-result">
-			<button type="button" class="popup-close" data-popup="@close"></button>
+			<!-- <button type="button" class="popup-close" data-popup="@close"></button> -->
+			<button type="button" class="popup-close" onclick="location.href='index.php';"></button>
 			<div class="inner">
 				<div class="title-block custom-border">
 					<img src="./images/popup_title_img_medi.png" alt="">
@@ -203,22 +204,22 @@
 						<div class="row">
 							<div class="col icon _1"></div>
 							<div class="col"><span>이름</span></div>
-							<div class="col"><span>안 다 영</span></div>
+							<div class="col"><span id="rs_name">안 다 영</span></div>
 						</div>
 						<div class="row">
 							<div class="col icon _2"></div>
 							<div class="col"><span>선택한 PT</span></div>
-							<div class="col"><span>미디움 PT</span></div>
+							<div class="col"><span id="rs_type">미디움 PT</span></div>
 						</div>
 						<div class="row">
 							<div class="col icon _3"></div>
 							<div class="col"><span>현재 상태</span></div>
-							<div class="col"><span>만성 건성</span></div>
+							<div class="col"><span id="rs_status">만성 건성</span></div>
 						</div>
 						<div class="row">
 							<div class="col icon _4"></div>
 							<div class="col"><span>필요한 PT 크림</span></div>
-							<div class="col"><span>아토덤 PP밤</span></div>
+							<div class="col"><span id="rs_goods">아토덤 PP밤</span></div>
 						</div>
 					</div>
 					<div class="guide-msg">(선택하신 PT에 맞는 샘플 키트는 다음주에 일괄 배송됩니다)</div>
