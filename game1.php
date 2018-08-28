@@ -68,7 +68,7 @@
 								<img src="./images/game_obj_clock.png" alt="">
 							</div>
 							<div class="text">
-								제한시간 동안 <b>아토덤으로 피부PT</b> 받으세요
+								제한시간 동안 <b>아토덤으로 스킨PT</b> 받으세요
 							</div>
 						</div>
 						<div class="game-container">
