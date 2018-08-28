@@ -1265,12 +1265,6 @@ html.popup-opened {
 
 /*popup*/
 @media all and (max-height: 1050px) {
-	#container {
-		height: 100%;
-	}
-	.content.main, .content.game, .content.gate {
-		height: 100%;
-	}
 	.content.main .visual-wrap .share-group {
 		bottom: 49px;
 	}

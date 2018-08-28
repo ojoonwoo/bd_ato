@@ -1394,10 +1394,18 @@ html.popup-opened {
 }
 
 @media all and (min-height: 680px) {
+	#container {
+		height: 100%;
+	}
+/*
+	.content.main, .content.game, .content.gate {
+		height: 100%;
+	}
+*/
 	.content.main,
 	.content.sub {
 		width: 100%;
-		height: 100vh;
+		height: 100%;
 		display: table;
 		table-layout: fixed;
 	}
