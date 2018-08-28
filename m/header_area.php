@@ -21,26 +21,26 @@
 					<div class="inner">
 						<ul>
 							<li>
-								<a href="#">
+								<a href="index.php">
 									HOME
 								</a>
 							</li>
 							<li>
-								<a href="#">
-									PT GAME
+								<a href="gate.php">
+									PT 시작
 								</a>
 							</li>
 							<li>
-								<a href="#">
-									PT CREAM
+								<a href="find_pt.php">
+									PT 찾기
 								</a>
 							</li>
 						</ul>
 						<div class="share-list">
-							<button type="button">
+							<button type="button" onclick="sns_share('fb', 'main')">
 								<img src="./images/share_fb.png" alt="">
 							</button>
-							<button type="button">
+							<button type="button" onclick="sns_share('kt', 'main')">
 								<img src="./images/share_ks.png" alt="">
 							</button>
 						</div>

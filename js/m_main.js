@@ -183,3 +183,66 @@ function lengthCheck(obj, ln) {
 		}
 	}
 }
+
+function sns_share(media, flag)
+{
+	if (media == "fb")
+	{
+        var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.atodermcare.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "./main_exec.php",
+			data:{
+				"exec"          : "insert_share_info",
+				"sns_media"     : media,
+				"sns_flag"		: flag
+			}
+		});
+	}else if (media == "kt"){
+		Kakao.Link.sendDefault({
+			objectType: 'feed',
+			content: {
+				title: '당신의 피부도 이제는 체력 관리가 필요하니까! 지금 바이오더마에서 당신에게 필요한 무료 PT를 받아보세요!',
+				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+				imageUrl: "http://www.atodermcare.com/images/share_img.jpg",
+				link: {
+					mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
+					webUrl: 'www.atodermcare.com/?media=share_fb'
+				}
+			},
+			buttons: [
+				{
+					title: '웹으로 보기',
+					link: {
+						mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
+						webUrl: 'www.atodermcare.com/?media=share_fb'
+					}
+				}
+			],
+			success: function(res) {
+				console.log("success");
+				console.log(res);
+			},
+			fail: function(res) {
+				console.log("fail");
+				console.log(res);
+			},
+			callback: function() {
+	//					console.log("callback:"+res);
+				// shareEnd();
+			}
+		});
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "./main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"sns_media" : media,
+				"sns_flag"		: flag
+			}
+		});
+	}
+}
