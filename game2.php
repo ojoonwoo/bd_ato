@@ -122,6 +122,7 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 			var pt_type		= "light";
 
 			$('#game-start').on('click', function() {
+				$('#hand').draggable("enable");
 				$('.content.game').addClass('started');
 				if(!gameController.firstPower) {
 					gameController.firstPower = true;
@@ -158,11 +159,12 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 				revertDuration: 250,
 				snap: true,
 				snapMode: "inner",
+				disabled: true,
 				start: function( event, ui ) {
-					if(!gameController.firstPower) {
-						gameController.firstPower = true;
-						timer(0);
-					}
+//					if(!gameController.firstPower) {
+//						gameController.firstPower = true;
+//						timer(0);
+//					}
 				},
 				drag: function( event, ui ) {
 					gameController.dragging = true;
