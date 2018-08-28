@@ -28,10 +28,10 @@
 							</div>
 						</div>
 						<div class="btn-group">
-							<a href="game.php" class="btn">
+							<a href="game1.php" class="btn">
 								<img src="./images/gate_btn_face.png" alt="">
 							</a>
-							<a href="game.php" class="btn">
+							<a href="game2.php" class="btn">
 								<img src="./images/gate_btn_body.png" alt="">
 							</a>
 						</div>
