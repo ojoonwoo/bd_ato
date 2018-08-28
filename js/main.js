@@ -478,6 +478,8 @@ function sns_share(media, flag)
 			}
 		});
 	}else if (media == "kt"){
+		Kakao.init('dce5eef1bd9bc3b9221ded3459d746ef');
+
 		Kakao.Link.sendDefault({
 			objectType: 'feed',
 			content: {

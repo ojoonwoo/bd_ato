@@ -17,6 +17,7 @@
 		<script src="../js/jquery.ui.touch-punch.min.js"></script>
 		<script src="../js/m_main.js"></script>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 	</head>
 	<body>
 		<div id="container">
