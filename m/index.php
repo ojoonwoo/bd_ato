@@ -22,7 +22,7 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="[바이오더마] Atoderm PT CLUB" />
 		<meta property="og:url" content="http://www.atodermcare.com" />
@@ -109,16 +109,6 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			$(window).on('load', function() {
-				alert('window:'+$(window).height());
-				alert('document:'+$(document).height());
-				alert('html:'+$('html').height());
-				alert('body:'+$('body').height());
-				alert('container:'+$('#container').height());
-				alert('content:'+$('.content').height());
-				alert('wrapper:'+$('.wrapper').height());
-				alert('visual-wrap:'+$('.visual-wrap').height());
-			});
 			var svg1 = document.getElementById("svg-shape1");
 			var svg2 = document.getElementById("svg-shape2");
 			var s1 = Snap(svg1);
