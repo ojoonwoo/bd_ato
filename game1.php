@@ -223,7 +223,7 @@
 					if(!gameController.clearFlag && !gameController.overFlag) {
 						setTimeout(function() {
 							gameController.time--;
-							console.log(gameController.point);
+							// console.log(gameController.point);
 							if(gameController.point<30) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_01.jpg');
 							} else if(gameController.point>=30 && gameController.point<45) {
