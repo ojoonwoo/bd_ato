@@ -58,6 +58,15 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+		$(window).on('scroll', function(e) {
+			var currentScroll = $(this).scrollTop();
+			
+			if (currentScroll != 0)
+				$("#header").css("background","rgba(255, 255 ,255 ,0.3)");
+			else
+				$("#header").css("background","none");
+		});
+
 		</script>
 	</body>
 </html>
