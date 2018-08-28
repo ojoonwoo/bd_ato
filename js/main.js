@@ -11,8 +11,6 @@ $(function(){
 	var locationArray = location.href.split('/');
 	var currentLocation = locationArray[locationArray.length-1].split('.')[0];
 	
-	var pt_type		= "light";
-
 	bato.popup = {
 		bind : function(){
 			$doc
@@ -273,6 +271,29 @@ $(function(){
 				if (response == "Y")
 				{
 					bato.popup.close($("#pt-pass"));
+					console.log(pt_type);
+					$("#rs_name").html(mb_name);
+					if (pt_type == "light")
+					{
+						$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
+						$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
+						$("#rs_type").html("라이트 PT");
+						$("#rs_status").html("계절성 건성");
+						$("#rs_goods").html("아토덤 크림");
+					}else if (pt_type == "medium"){
+						$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
+						$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
+						$("#rs_type").html("미디움 PT");
+						$("#rs_status").html("만성 건성");
+						$("#rs_goods").html("아토덤 PP밤");
+					}else{
+						$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
+						$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
+						$("#rs_type").html("헤비 PT");
+						$("#rs_status").html("문제성 건성");
+						$("#rs_goods").html("아토덤 인텐시브밤");
+					}
+	
 					bato.popup.show($("#pt-result"));
 				}else{
 					alert("참여자가 많습니다. 다시시도해 주세요!");

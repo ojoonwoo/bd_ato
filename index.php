@@ -10,7 +10,7 @@
     // print_r($_SERVER["HTTP_USER_AGENT"]);
     if ($mobileYN == "MOBILE")
     {
-        // echo "<script>location.href='m/index.php?media=".$_REQUEST["media"]."&r=".$_REQUEST["r"]."&ref=".$_REQUEST["ref"]."&w=".$_REQUEST["w"]."';</script>";
+        echo "<script>location.href='m/index.php?media=".$_REQUEST["media"]."';</script>";
     }else{
         $saveMedia     = $mnv_f->SaveMedia();
         $rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
@@ -22,40 +22,18 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>BIODERMA - Atoderm</title>
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<script src="./js/snap.svg-min.js"></script>
 	<script src="./js/jquery-3.3.1.min.js"></script>
-	<style>
-		#Layer_1 {
-			width: 300px;
-			height: 300px;
-		}
-		#Layer_1 .cls-1 {
-/*
-			paint-order: stroke;
-			stroke-dasharray: 0;
-			stroke-dashoffset: 0;
-*/
-		}
-	</style>
 </head>
 <body>
-	<div id="container">
+<div id="container">
 		<div class="content main">
-			<div id="header">
-				<div class="inner">
-					<div class="logo">
-						<img src="./images/header_logo.png" alt="">
-					</div>
-					<ul class="menu">
-						<li class="is-active"><a href="index.php">HOME</a></li>
-						<li><a href="gate.php">PT GAME</a></li>
-						<li><a href="javascript:void(0)">PT CREAM</a></li>
-					</ul>
-				</div>
-			</div>
+<?
+	include_once "header.php";
+?>
 			<div class="wrapper">
 <!--
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
@@ -65,6 +43,7 @@
 										 c23,0,32.5-13.5,37.7-27.1H139.5z"/>
 				</svg>
 -->
+				<div class="balls"></div>
 				<div class="visual-wrap">
 					<svg 
 						 xmlns="http://www.w3.org/2000/svg"
@@ -80,49 +59,38 @@
 						<path id="svg-path2" fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
 							  d="M306.399,10.323 C306.399,10.323 354.098,-4.481 406.666,2.263 C459.233,9.007 495.074,22.195 534.685,30.919 C574.296,39.643 623.842,69.430 653.753,98.082 C683.663,126.735 699.193,122.107 723.581,171.514 C747.970,220.921 762.454,282.309 774.610,320.168 C786.766,358.028 793.001,454.512 776.401,510.911 C759.800,567.311 748.769,594.315 707.467,638.073 C665.479,682.560 656.519,717.693 615.257,743.743 C573.996,769.794 488.790,797.531 417.409,792.996 C336.480,787.855 278.045,776.296 229.408,765.236 C180.771,754.175 144.993,713.680 121.979,690.013 C113.967,681.773 73.346,648.692 51.255,602.253 C32.447,562.715 6.818,523.669 2.017,485.837 C-2.784,448.005 5.675,380.590 2.017,358.675 C-1.641,336.760 4.287,260.365 56.627,200.170 C108.967,139.975 130.732,109.364 160.475,87.336 C190.217,65.309 271.939,13.576 306.399,10.323 Z"/>
 					</svg>
+<!--
 					<div class="title back wave" data-wave="0.8">
 						<img src="./images/main_title_back.png" alt="">
 					</div>
+-->
 					<div class="people wave" data-wave="0.5">
 						<img src="./images/main_visual_pp.png" alt="">
 					</div>
+					<div class="title wave" data-wave="0.8">
+						<img src="./images/main_title.png" alt="">
+					</div>
+<!--
 					<div class="title front wave" data-wave="0.8">
 						<img src="./images/main_title_front.png" alt="">
 					</div>
+-->
 					<div class="text-group wave" data-wave="0.2">
 						<div class="desc">
 							<p>당신의 피부도 이제는 체력 관리가 필요합니다</p>
 							<p>바이오더마 PT클럽에서는</p>
 							<p>당신의 피부에 가장 알맞은 PT를 제공합니다</p>
 						</div>
-						<div class="btn-group">
-							<button type="button" onclick="location.href='gate.php'">피부 PT 시작</button>
-							<button type="button">나에게 맞는 PT 찾기</button>
-						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" onclick="location.href='./gate.php';">스킨 PT 시작</button>
+						<button type="button" onclick="location.href='./find.php';">나에게 맞는 PT 찾기</button>
 					</div>
 				</div>
 			</div>
-			<div id="footer">
-				<ul>
-					<li><a href="#">바이오더마 소개</a></li>
-					<li><a href="#">온라인 고객센터</a></li>
-				</ul>
-				<ul>
-					<li>나오스코리아 유한회사</li>
-					<li>대표: 장이브데모트</li>
-					<li>사업자등록번호: 214-88-79685 <a href="#">(사업자정보확인)</a></li>
-				</ul>
-				<ul>
-					<li>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사</li>
-					<li>개인정보책임자: 김민정</li>
-				</ul>
-				<ul>
-					<li>이벤트 안내 번호: 070-4888-1640</li>
-					<li>통신판매업신고번호: 2015-서울서초-0215</li>
-					<li>E-MAIL: bioderma@bioderma.kr</li>
-				</ul>
-				<p>©2018  BIODERMA.  ALL RIGHT RESERVED</p>
-			</div>
+<?
+	include_once "./footer.php";
+?>
 		</div>
 	</div>
 	<script type="text/javascript">
@@ -175,11 +143,11 @@
 			$(window).on('mousemove', function(e){
 				x = (e.clientX - $(window).width()/2) / 50;
 				y = (e.clientY - $(window).height()/2) / 50;
-				waves.each(move);
+//				waves.each(move);
 			});
 
 			setInterval(function(){
-				waves.each(loop);
+//				waves.each(loop);
 			},33);
 		})(jQuery);
 

@@ -8,24 +8,15 @@
 		<script src="./js/snap.svg-min.js"></script>
 		<script src="./js/jquery-3.3.1.min.js"></script>
 		<script src="./js/jquery-ui.min.js"></script>
-		<script src="./js/main.js"></script>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+		<script src="./js/main.js"></script>
 	</head>
 	<body>
 		<div id="container">
-			<div class="content sub game">
-				<div id="header">
-					<div class="inner">
-						<div class="logo">
-							<img src="./images/header_logo.png" alt="">
-						</div>
-						<ul class="menu">
-							<li><a href="javascript:void(0)">HOME</a></li>
-							<li class="is-active"><a href="javascript:void(0)">PT GAME</a></li>
-							<li><a href="javascript:void(0)">PT CREAM</a></li>
-						</ul>
-					</div>
-				</div>
+			<div class="content sub game skin-selected">
+<?
+	include_once "header.php";
+?>
 				<div class="wrapper">
 					<div class="balls"></div>
 					<div class="svg-wrapper pink">
@@ -65,15 +56,33 @@
 							</div>
 						</div>
 						<div class="game-container">
+							<div class="pre-layer"></div>
 							<div class="frame">
 								<div class="bg">
-									<img src="./images/game_frame_bg@2x.jpg" alt="">
+									<img src="./images/game_skin_frame_01.jpg" alt="">
 								</div>
 								<div class="hand" id="hand">
-									<img src="./images/game_hand@2x.png" alt="">
+									<img src="./images/game_hand.png" alt="">
+								</div>
+								<div class="guide-text guide-obj">
+									<!-- <div class="pre-count">3</div> -->
+									<div class="text">
+										제한시간 10초동안<br>
+										<b>아토덤 크림을 빠르게 펴발라주면</b><br>
+										스킨PT성공! 
+									</div>
+									<button class="start-btn" id="game-start">
+										START
+									</button>
+								</div>
+								<div class="guide-line guide-obj">
+									<img src="./images/game_pre_line.png" alt="">
 								</div>
 								<div class="timer">
-									<span id="count">10</span>
+									<div class="bg"></div>
+									<div id="count">
+										<img src="./images/timer_10.png" alt="">
+									</div>
 								</div>
 							</div>
 							<div class="gage-wrap">
@@ -94,58 +103,37 @@
 						</div>
 					</div>
 				</div>
-				<div id="footer">
-					<ul>
-						<li><a href="#">바이오더마 소개</a></li>
-						<li><a href="#">온라인 고객센터</a></li>
-					</ul>
-					<ul>
-						<li>나오스코리아 유한회사</li>
-						<li>대표: 장이브데모트</li>
-						<li>사업자등록번호: 214-88-79685 <a href="#">(사업자정보확인)</a></li>
-					</ul>
-					<ul>
-						<li>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사</li>
-						<li>개인정보책임자: 김민정</li>
-					</ul>
-					<ul>
-						<li>이벤트 안내 번호: 070-4888-1640</li>
-						<li>통신판매업신고번호: 2015-서울서초-0215</li>
-						<li>E-MAIL: bioderma@bioderma.kr</li>
-					</ul>
-					<p>©2018  BIODERMA.  ALL RIGHT RESERVED</p>
-				</div>
+<?
+	include_once "./footer.php";
+?>
 			</div>
 		</div>
 <?
-	include_once "popup.php";
+	include_once "./popup.php";
 ?>		
-		<input type="button" id="sample-btn" data-popup="#pt-pass">
+<!--		<input type="button" id="sample-btn" data-popup="#pt-pass">-->
 		<script type="text/javascript">
-			// $(window).on('load', function() {
-			// 	$('#sample-btn').trigger('click');
-			// });
+			var pt_type		= "light";
+
+			$('#game-start').on('click', function() {
+				$('.content.game').addClass('started');
+				if(!gameController.firstPower) {
+					gameController.firstPower = true;
+					timer(1000);
+				}
+			});
+			$(window).on('load', function() {
+//				$('#sample-btn').trigger('click');
+			});
 			
 			$('#pt-pass .check-block .check').on('click', function() {
 				var $parent = $(this).parent();
 				$parent.find('.check').not(this).removeClass('is-checked');
 				$(this).addClass('is-checked');
-				pt_type	= $(this).data("value");
 //				$('.tab-contents').find('.content').not(tabTarget).hide();
 //				$('.tab-contents').find('.'+tabTarget).show();
+				pt_type	= $(this).data("value");
 				// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
-				if (pt_type == "light")
-				{
-					$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
-					$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
-				}else if (pt_type == "medium"){
-					$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
-					$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
-				}else{
-					$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
-					$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
-				}
-
 			});
 			
 			$('.tab-wrapper .tab').on('click', function() {
@@ -181,7 +169,8 @@
 							$('#gage').css('height', percentage+'%');
 						}, 10);
 					} else {
-						// alert("게임 클리어");
+						$('.frame .bg img').attr('src', './images/game_skin_frame_07.jpg');
+//						alert("게임 클리어")
 						bato.popup.show($("#pt-pass"));
 						gameController.clearFlag = true;
 						return false;
@@ -200,6 +189,7 @@
 				firstPower: false,
 				dragging: false,
 				clearFlag: false,
+				overFlag: false,
 				point: 0,
 				time: 10,
 				goalPoint: 300
@@ -221,21 +211,94 @@
 			
 			function timer(time) {
 				if(gameController.time>0) {
-					if(!gameController.clearFlag) {
+					if(!gameController.clearFlag && !gameController.overFlag) {
 						setTimeout(function() {
 							gameController.time--;
-							$('#count').text(gameController.time)
+							if(gameController.point<30) {
+								$('.frame .bg img').attr('src', './images/game_skin_frame_01.jpg');
+							} else if(gameController.point>30 && gameController.point<70) {
+								$('.frame .bg img').attr('src', './images/game_skin_frame_02.jpg');	
+							} else if(gameController.point>70 && gameController.point<150) {
+								$('.frame .bg img').attr('src', './images/game_skin_frame_03.jpg');	
+							} else if(gameController.point>150 && gameController.point<190) {
+								$('.frame .bg img').attr('src', './images/game_skin_frame_04.jpg');	
+							} else if(gameController.point>190 && gameController.point<240) {
+								$('.frame .bg img').attr('src', './images/game_skin_frame_05.jpg');	
+							} else if(gameController.point>240 && gameController.point<280) {
+								$('.frame .bg img').attr('src', './images/game_skin_frame_06.jpg');	
+							} else {
+								$('.frame .bg img').attr('src', './images/game_skin_frame_07.jpg');
+							}
+							$('#count img').attr('src', './images/timer_'+gameController.time+'.png');
 							timer(1000);
 						}, time);
 					}
 				} else {
 //					time out!
 					alert("게임 오버");
+					gameController.overFlag = true;
 					gameController.point = 0;
 					gameController.firstPower = false;
 					gameController.dragging = false;
 				}
 			}
+//			var svg1 = document.getElementById("svg-shape1");
+//			var svg2 = document.getElementById("svg-shape2");
+//			var s1 = Snap(svg1);
+//			var s2 = Snap(svg2);
+//
+//			var svgPath1 = Snap.select('#svg-path1');
+//			var svgPath2 = Snap.select('#svg-path2');
+//
+//			var svg1Points = svgPath1.node.getAttribute('d');
+//			var svg2Points = svgPath2.node.getAttribute('d');
+//
+//			svgPath1.animate({ d: svg2Points }, 1800, mina.easeinout, svgChange(svgPath1, svg2Points));  
+//			svgPath2.animate({ d: svg1Points }, 1800, mina.easeinout, svgChange(svgPath2, svg1Points));  
+//
+//
+//			function svgChange(el, currentPoints) {
+//				var targetPoints = '';
+//				if(currentPoints == svg1Points) {
+//					targetPoints = svg2Points;
+//				} else {
+//					targetPoints = svg1Points;
+//				}
+//				setTimeout(function() {
+//					el.animate({ d: targetPoints }, 1800, mina.easeinout, svgChange(el, targetPoints));
+//				}, 1800);
+//			}
+//
+//			(function($){
+//				var x;
+//				var y;
+//				var waves = $('.wave').each(function(){
+//					this.np = 0;
+//					this.ep = 0;
+//					this.yp = 0;
+//					this.lv = this.getAttribute('data-wave')*1;
+//				});
+//				function move(){
+//					this.ep = this.lv*x;
+//					this.yp = this.lv*y;
+//				}
+//				function loop() {
+//					this.np = this.np + (this.ep - this.np)*0.1;
+//					this.yp = this.yp + (this.yp - this.yp)*0.1;
+//					this.style.transform = "translate("+this.np+'px'+", "+this.yp+'px'+")";
+//					//			this.style.transform = "translate("+this.np+'px'+")";
+//				}
+//				$(window).on('mousemove', function(e){
+//					x = (e.clientX - $(window).width()/2) / 50;
+//					y = (e.clientY - $(window).height()/2) / 50;
+//					waves.each(move);
+//				});
+//
+//				setInterval(function(){
+//					waves.each(loop);
+//				},33);
+//			})(jQuery);
+
 		</script>
 	</body>
 </html>

@@ -2,25 +2,59 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no">
 		<title>BIODERMA - Atoderm</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
-		<script src="../js/snap.svg-min.js"></script>
-		<script src="../js/jquery-3.3.1.min.js"></script>
-		<script src="../js/jquery-ui.min.js"></script>
-		<script src="../js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../js/m_main.js"></script>
+		<script src="./js/snap.svg-min.js"></script>
+		<script src="./js/jquery-3.3.1.min.js"></script>
+		<script src="./js/jquery-ui.min.js"></script>
+		<script src="./js/main.js"></script>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 	</head>
 	<body>
 		<div id="container">
 			<div class="content sub game">
-<?
-	include_once "header_area.php";
-?>				
+				<div id="header">
+					<div class="inner">
+						<div class="logo">
+							<img src="./images/header_logo.png" alt="">
+						</div>
+						<ul class="menu">
+							<li><a href="javascript:void(0)">HOME</a></li>
+							<li class="is-active"><a href="javascript:void(0)">PT GAME</a></li>
+							<li><a href="javascript:void(0)">PT CREAM</a></li>
+						</ul>
+					</div>
+				</div>
 				<div class="wrapper">
 					<div class="balls"></div>
+					<div class="svg-wrapper pink">
+						<svg 
+							 xmlns="http://www.w3.org/2000/svg"
+							 xmlns:xlink="http://www.w3.org/1999/xlink"
+							 width="2166.8px" height="1004.8px" id="svg-line-pink" class="svg-line" preserveAspectRatio="none">
+							<path fill-rule="evenodd"  stroke="rgb(201, 62, 139)" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+								  d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452 262.264,274.469 425.600,302.600 C588.936,330.731 652.941,556.025 729.600,665.600 C819.631,794.290 983.456,854.587 1126.600,753.600 C1259.350,659.946 1359.053,516.624 1418.600,330.600 C1478.147,144.576 1531.098,-40.179 1728.600,8.600 C1890.069,48.479 1925.967,153.386 2165.600,187.600 L2164.600,1003.600 L101.600,1003.600 L0.600,750.600 Z"/>
+						</svg>
+<!--
+						<svg 
+							 xmlns="http://www.w3.org/2000/svg"
+							 xmlns:xlink="http://www.w3.org/1999/xlink"
+							 id="svg-line-pink" class="svg-line" viewbox="150 180 2166 1004" preserveAspectRatio="none">
+							<path fill-rule="evenodd"  stroke="rgb(201, 62, 139)" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+								  d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452 262.264,274.469 425.600,302.600 C588.936,330.731 652.941,556.025 729.600,665.600 C819.631,794.290 983.456,854.587 1126.600,753.600 C1259.350,659.946 1359.053,516.624 1418.600,330.600 C1478.147,144.576 1531.098,-40.179 1728.600,8.600 C1890.069,48.479 1925.967,153.386 2165.600,187.600 L2164.600,1003.600 L101.600,1003.600 L0.600,750.600 Z"/>
+						</svg>
+-->
+					</div>
+					<div class="svg-wrapper blue">
+						<svg 
+							 xmlns="http://www.w3.org/2000/svg"
+							 xmlns:xlink="http://www.w3.org/1999/xlink"
+							 width="2069.8px" height="1017.8px" id="svg-line-blue" class="svg-line">
+							<path fill-rule="evenodd"  stroke="rgb(23, 106, 193)" stroke-width="1.2px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
+								  d="M0.600,680.600 C0.600,680.600 82.155,757.290 171.600,649.600 C261.045,541.910 280.444,259.368 420.600,256.600 C560.756,253.832 566.897,515.139 630.600,677.600 C686.709,820.696 856.548,870.751 1031.600,804.600 C1176.747,749.750 1434.281,627.135 1475.783,381.813 C1497.025,256.250 1497.677,2.360 1674.600,0.600 C1859.533,-1.239 1914.162,397.679 2058.600,398.600 L2068.600,1016.600 L8.600,1016.600 L0.600,680.600 Z"/>
+						</svg>
+					</div>
 					<div class="visual-wrap">
 						<div class="title-group">
 							<div class="object">
@@ -31,9 +65,21 @@
 							</div>
 						</div>
 						<div class="game-container">
+							<div class="frame">
+								<div class="bg">
+									<img src="./images/game_frame_bg@2x.jpg" alt="">
+								</div>
+								<div class="hand" id="hand">
+									<img src="./images/game_hand@2x.png" alt="">
+								</div>
+								<div class="timer">
+									<span id="count">10</span>
+								</div>
+							</div>
 							<div class="gage-wrap">
 								<div class="msg-box">
-									<span>피부 체력 강화 지수</span>
+									<span>피부 체력</span>
+									<span>강화 지수</span>
 								</div>
 								<div class="inner">
 									<div class="percent">
@@ -43,17 +89,6 @@
 									<div class="gage-bg">
 										<div class="gage" id="gage"></div>
 									</div>
-								</div>
-							</div>
-							<div class="frame">
-								<div class="bg">
-									<img src="./images/game_frame_bg.png" alt="">
-								</div>
-								<div class="hand" id="hand">
-									<img src="./images/game_hand.png" alt="">
-								</div>
-								<div class="timer">
-									<span id="count">10</span>
 								</div>
 							</div>
 						</div>
@@ -67,18 +102,14 @@
 					<ul>
 						<li>나오스코리아 유한회사</li>
 						<li>대표: 장이브데모트</li>
-					</ul>
-					<ul>
 						<li>사업자등록번호: 214-88-79685 <a href="#">(사업자정보확인)</a></li>
 					</ul>
 					<ul>
 						<li>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사</li>
-					</ul>
-					<ul>
 						<li>개인정보책임자: 김민정</li>
-						<li>안내 번호: 070-4888-1640</li>
 					</ul>
 					<ul>
+						<li>이벤트 안내 번호: 070-4888-1640</li>
 						<li>통신판매업신고번호: 2015-서울서초-0215</li>
 						<li>E-MAIL: bioderma@bioderma.kr</li>
 					</ul>
@@ -88,23 +119,20 @@
 		</div>
 <?
 	include_once "popup.php";
-?>	
-		<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
-			<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="width:7%;cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
-		</div>
-
-<!--		<input type="button" id="sample-btn" data-popup="#terms2">-->
+?>		
+		<input type="button" id="sample-btn" data-popup="#pt-pass">
 		<script type="text/javascript">
-			$(window).on('load', function() {
-				$('#sample-btn').trigger('click');
-			});
-
+			// $(window).on('load', function() {
+			// 	$('#sample-btn').trigger('click');
+			// });
+			
 			$('#pt-pass .check-block .check').on('click', function() {
 				var $parent = $(this).parent();
 				$parent.find('.check').not(this).removeClass('is-checked');
 				$(this).addClass('is-checked');
 				pt_type	= $(this).data("value");
-
+//				$('.tab-contents').find('.content').not(tabTarget).hide();
+//				$('.tab-contents').find('.'+tabTarget).show();
 				// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
 				if (pt_type == "light")
 				{
@@ -117,103 +145,20 @@
 					$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
 					$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
 				}
-				//				$('.tab-contents').find('.content').not(tabTarget).hide();
-				//				$('.tab-contents').find('.'+tabTarget).show();
-			});
 
+			});
+			
 			$('.tab-wrapper .tab').on('click', function() {
 				var $parent = $(this).parent();
 				var tabTarget = $(this).data('tab-target');
 				if($parent.hasClass('init-state')) {
 					$('.tab-block .content-opened').show();
-					//					$('.tab-contents').find('.content').not(tabTarget).hide();
-					//					$('.tab-contents').find.(tabTarget).show();
+//					$('.tab-contents').find('.content').not(tabTarget).hide();
+//					$('.tab-contents').find.(tabTarget).show();
 				}
 				$('.tab-contents').find('.content').not(tabTarget).hide();
 				$('.tab-contents').find('.'+tabTarget).show();
-			});
-			$('#rs1').on('click', function() {
-				// console.log("1111");
-				bato.popup.close($("#pt-pass"));
-				bato.popup.show($("#pt-pass2"));
-			});
-			$('#rs2').on('click', function() {
-				var mb_name 	= $("#mb_name").val();
-				var mb_phone1 	= $("#mb_phone1").val();
-				var mb_phone2 	= $("#mb_phone2").val();
-				var mb_phone3 	= $("#mb_phone3").val();
-				var mb_addr1 	= $("#mb_addr1").val();
-				var mb_addr2 	= $("#mb_addr2").val();
-				var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
-
-				// console.log($('.mb_type').val());
-				if (mb_name == "") {
-					alert("이름을 입력해 주세요.");
-					$("#mb_name").focus();
-					return false;
-				}
-
-				if (mb_phone1 == "") {
-					alert("전화번호를 입력해 주세요.");
-					$("#mb_phone1").focus();
-					return false;
-				}
-				
-				if (mb_phone2 == "") {
-					alert("전화번호를 입력해 주세요.");
-					$("#mb_phone2").focus();
-					return false;
-				}
-				if (mb_phone3 == "") {
-					alert("전화번호를 입력해 주세요.");
-					$("#mb_phone3").focus();
-					return false;
-				}
-				if (mb_addr1 == "") {
-					alert("주소를 입력해 주세요.");
-					return false;
-				}
-				if (mb_addr2 == "") {
-					alert("상세주소를 입력해 주세요.");
-					$("#mb_addr2").focus();
-					return false;
-				}
-
-				if ($("#agree1").is(":checked") === false)
-				{
-					alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-					return false;
-				}
-
-				if ($("#agree2").is(":checked") === false)
-				{
-					alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-					return false;
-				}
-
-				$.ajax({
-					type:"POST",
-					data:{
-						"exec"				: "insert_member_info",
-						"mb_name"			: mb_name,
-						"mb_phone"			: mb_phone,
-						"mb_addr1"			: mb_addr1,
-						"mb_addr2"			: mb_addr2,
-						"mb_type"			: pt_type
-					},
-					url: "../main_exec.php",
-					success: function(response){
-
-						if (response == "Y")
-						{
-							bato.popup.close($("#pt-pass"));
-							bato.popup.show($("#pt-result"));
-						}else{
-							alert("참여자가 많습니다. 다시시도해 주세요!");
-						}
-					}
-				});
-			});
+			})
 			$('#hand').draggable({
 				axis: "x",
 				revert: true,
@@ -233,10 +178,10 @@
 							var percentage = Math.floor((gameController.point/gameController.goalPoint)*100);
 							gameController.point++;
 							$('#percent-num').text(percentage);
-							$('#gage').css('width', percentage+'%');
+							$('#gage').css('height', percentage+'%');
 						}, 10);
 					} else {
-						// alert("게임 클리어")
+						// alert("게임 클리어");
 						bato.popup.show($("#pt-pass"));
 						gameController.clearFlag = true;
 						return false;
@@ -249,8 +194,8 @@
 					}
 				}
 			});
-
-			//			수정 안되게
+			
+//			수정 안되게
 			var gameController = {
 				firstPower: false,
 				dragging: false,
@@ -259,21 +204,21 @@
 				time: 10,
 				goalPoint: 300
 			}
-
+			
 			function gageDown() {
 				if(!gameController.dragging && gameController.point>0) {
 					setTimeout(function() {
 						var percentage = Math.floor((gameController.point/gameController.goalPoint)*100);
 						gameController.point--;
 						$('#percent-num').text(percentage);
-						$('#gage').css('width', percentage+'%');
+						$('#gage').css('height', percentage+'%');
 						gageDown();
 					}, 30);
 				} else {
 					return false;
 				}
 			}
-
+			
 			function timer(time) {
 				if(gameController.time>0) {
 					if(!gameController.clearFlag) {
@@ -284,19 +229,13 @@
 						}, time);
 					}
 				} else {
-					//					time out!
+//					time out!
 					alert("게임 오버");
 					gameController.point = 0;
 					gameController.firstPower = false;
 					gameController.dragging = false;
 				}
 			}
-			$('.burger').on('click', function() {
-				$('html').addClass('menu-opened');
-			});
-			$('#menu-layer .btn-close').on('click', function() {
-				$('html').removeClass('menu-opened');
-			});
 		</script>
 	</body>
 </html>

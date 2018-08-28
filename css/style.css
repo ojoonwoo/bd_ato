@@ -577,6 +577,46 @@ input[type="checkbox"]:focus {
 .content.gate > .wrapper .visual-wrap .btn-group .btn:last-child {
 	margin-right: 0;
 }
+.content.gate > .wrapper .visual-wrap .btn-group a {
+	/* display: block; */
+	margin-right: 29px;
+}
+.content.gate > .wrapper .visual-wrap .btn-group a:last-child {
+	margin-right: 0;
+}
+.content.gate > .wrapper .visual-wrap .btn-group .go-area {
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transition: all 0.3s ease-in-out;
+}
+.content.gate > .wrapper .visual-wrap .btn-group .go-area:hover{
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+.content.gate > .wrapper .visual-wrap .btn-group .go-wrap {
+	position: relative;
+	display: inline-block;
+	width: 317px;
+	height: 409px;
+	overflow: hidden;
+	border-radius: 25px;
+	box-shadow: 0 0 11px 0px #d8d5d5;
+	/* -moz-box-shadow: 3px 3px 3px 3px #999;
+　  -webkit-box-shadow: 3px 3px 3px 3px #999; */
+}
+.content.gate > .wrapper .visual-wrap .btn-group .go-wrap .btn-area {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -115.5px;
+	margin-bottom: 26px;
+}
 
 .content.find {
 /*	background: url(../images/find_texture_bg.png) center / cover no-repeat !important;*/

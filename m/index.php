@@ -10,7 +10,7 @@
     // print_r($_SERVER["HTTP_USER_AGENT"]);
     if ($mobileYN == "PC")
     {
-        echo "<script>location.href='../index.php?media=".$_REQUEST["media"]."&r=".$_REQUEST["r"]."&ref=".$_REQUEST["ref"]."&w=".$_REQUEST["w"]."';</script>";
+        echo "<script>location.href='../index.php?media=".$_REQUEST["media"]."';</script>";
     }else{
         $saveMedia     = $mnv_f->SaveMedia();
         $rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
@@ -23,7 +23,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
-		<title>Document</title>
+		<title>BIODERMA - Atoderm</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<script src="../js/snap.svg-min.js"></script>
