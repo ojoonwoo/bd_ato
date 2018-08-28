@@ -218,7 +218,7 @@
 					},
 					url: "../main_exec.php",
 					success: function(response){
-
+console.log(response);
 						if (response == "Y")
 						{
 							bato.popup.close($("#pt-pass"));
