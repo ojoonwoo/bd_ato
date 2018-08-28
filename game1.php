@@ -174,7 +174,7 @@
 							gameController.point++;
 							$('#percent-num').text(percentage);
 							$('#gage').css('height', percentage+'%');
-						}, 10);
+						}, 30);
 					} else {
 						$('.frame .bg img').attr('src', './images/game_skin_frame_19.jpg');
 //						alert("게임 클리어")
