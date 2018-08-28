@@ -302,13 +302,13 @@ input[type="checkbox"]:focus {
 	width: 206px;
 	height: 50px;
 	border-radius: 23px;
-	background-color: #4374a6;
+	background-color: #84bce9;
 	font-size: 19px;
 	font-weight: 500;
 	color: #ffffff;
 }
 .content.main .visual-wrap .btn-group button:last-child {
-	background-color: #84bce9;
+	background-color: #4374a6;
 	margin-top: 19px;
 }
 .content.main .visual-wrap .share-group {
