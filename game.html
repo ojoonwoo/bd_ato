@@ -74,12 +74,14 @@
 									<img src="./images/game_hand.png" alt="">
 								</div>
 								<div class="guide-text guide-obj">
-									<div class="pre-count">3</div>
 									<div class="text">
 										제한시간 10초동안<br>
 										<b>아토덤 크림을 빠르게 펴발라주면</b><br>
 										스킨PT성공! 
 									</div>
+									<button class="start-btn" id="game-start">
+										START
+									</button>
 								</div>
 								<div class="guide-line guide-obj">
 									<img src="./images/game_pre_line.png" alt="">
@@ -383,6 +385,13 @@
 		</div>
 <!--		<input type="button" id="sample-btn" data-popup="#pt-pass">-->
 		<script type="text/javascript">
+			$('#game-start').on('click', function() {
+				$('.content.game').addClass('started');
+				if(!gameController.firstPower) {
+					gameController.firstPower = true;
+					timer(1000);
+				}
+			});
 			$(window).on('load', function() {
 //				$('#sample-btn').trigger('click');
 			});
@@ -413,10 +422,10 @@
 				snap: true,
 				snapMode: "inner",
 				start: function( event, ui ) {
-					if(!gameController.firstPower) {
-						gameController.firstPower = true;
-						timer(0);
-					}
+//					if(!gameController.firstPower) {
+//						gameController.firstPower = true;
+//						timer(0);
+//					}
 				},
 				drag: function( event, ui ) {
 					gameController.dragging = true;

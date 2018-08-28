@@ -330,14 +330,19 @@ input[type="checkbox"]:focus {
 	height: 56px;
 	margin: 0 auto 15px;
 }
-.content.game .game-container .guide-obj {
-	display: none;
+.content.game.started .game-container .guide-obj {
+	visibility: hidden;
+	opacity: 0;
 }
-.content.game .game-container.started .pre-layer {
-/*	display: none;*/
+.content.game.started .game-container .pre-layer {
+	visibility: hidden;
+	opacity: 0;
+}
+.content.game .game-container .guide-obj {
+	transition: all 0.3s ease;
 }
 .content.game .pre-layer {
-	display: none;
+/*	display: none;*/
 	position: fixed;
 	top: 120px;
 	left: 0;
@@ -345,6 +350,7 @@ input[type="checkbox"]:focus {
 	bottom: 133px;
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 100;
+	transition: all 0.3s ease;
 /*	height: calc(100% - 253px);*/
 }
 .content.sub > .wrapper .visual-wrap .title-group .text {
@@ -379,7 +385,6 @@ input[type="checkbox"]:focus {
 	top: 20px;
 	width: 91px;
 	height: 91px;
-	z-index: 101;
 }
 .content.game .visual-wrap .game-container .frame .timer .bg {
 	background: url(../images/game_timer.png) center / cover no-repeat;
@@ -425,16 +430,21 @@ input[type="checkbox"]:focus {
 	text-align: center;
 	z-index: 100;
 }
-.content.game .visual-wrap .game-container .frame .guide-text .pre-count {
-	font-size: 60px;
-	font-weight: 700;
-	color: #84bce9;
-	letter-spacing: -0.5px;
-	margin-bottom: 20px;
-}
 .content.game .visual-wrap .game-container .frame .guide-text .text {
 	font-size: 24px;
+	font-weight: 300;
 	letter-spacing: -0.25px;
+	color: #ffffff;
+}
+.content.game .visual-wrap .game-container .frame .guide-text .start-btn {
+	display: block;
+	width: 181px;
+	height: 46px;
+	margin: 36px auto 0;
+	font-size: 25px;
+	font-weight: 700;
+	background: #84bce9;
+	border-radius: 23px;
 	color: #ffffff;
 }
 .content.game .visual-wrap .game-container .frame .guide-line {

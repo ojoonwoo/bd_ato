@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div id="container">
-			<div class="content sub game">
+			<div class="content sub game body-selected">
 				<div id="header">
 					<div class="inner">
 						<div class="logo">
@@ -70,10 +70,10 @@
 							</div>
 							<div class="frame">
 								<div class="bg">
-									<img src="./images/game_skin_frame_01.jpg" alt="">
+									<img src="./images/game_body_frame_01.jpg" alt="">
 								</div>
 								<div class="hand" id="hand">
-									<img src="./images/game_hand.png" alt="">
+									<img src="./images/game_hand2.png" alt="">
 								</div>
 								<div class="timer">
 									<div class="bg"></div>
@@ -350,7 +350,7 @@
 				<img src="./images/popup_terms2_cnt.png" alt="">
 			</div>
 		</div>
-<!--		<input type="button" id="sample-btn" data-popup="#pt-pass2">-->
+		<!--		<input type="button" id="sample-btn" data-popup="#pt-pass2">-->
 		<script type="text/javascript">
 			$('#game-start').on('click', function() {
 				$('.content.game').addClass('started');
@@ -360,7 +360,7 @@
 				}
 			});
 			$(window).on('load', function() {
-//				$('#sample-btn').trigger('click');
+				//				$('#sample-btn').trigger('click');
 			});
 
 			$('#pt-pass .check-block .check').on('click', function() {
@@ -389,10 +389,10 @@
 				snap: true,
 				snapMode: "inner",
 				start: function( event, ui ) {
-//					if(!gameController.firstPower) {
-//						gameController.firstPower = true;
-//						timer(0);
-//					}
+					//					if(!gameController.firstPower) {
+					//						gameController.firstPower = true;
+					//						timer(0);
+					//					}
 				},
 				drag: function( event, ui ) {
 					gameController.dragging = true;
@@ -404,9 +404,9 @@
 							$('#gage').css('width', percentage+'%');
 						}, 10);
 					} else {
-//						alert("게임 클리어")
+						//						alert("게임 클리어")
 						gameController.clearFlag = true;
-						$('.frame .bg img').attr('src', './images/game_skin_frame_07.jpg');
+						$('.frame .bg img').attr('src', './images/game_body_frame_07.jpg');
 						return false;
 					}
 				},
@@ -449,19 +449,19 @@
 						setTimeout(function() {
 							gameController.time--;
 							if(gameController.point<30) {
-								$('.frame .bg img').attr('src', './images/game_skin_frame_01.jpg');
+								$('.frame .bg img').attr('src', './images/game_body_frame_01.jpg');
 							} else if(gameController.point>30 && gameController.point<70) {
-								$('.frame .bg img').attr('src', './images/game_skin_frame_02.jpg');	
+								$('.frame .bg img').attr('src', './images/game_body_frame_02.jpg');	
 							} else if(gameController.point>70 && gameController.point<150) {
-								$('.frame .bg img').attr('src', './images/game_skin_frame_03.jpg');	
+								$('.frame .bg img').attr('src', './images/game_body_frame_03.jpg');	
 							} else if(gameController.point>150 && gameController.point<190) {
-								$('.frame .bg img').attr('src', './images/game_skin_frame_04.jpg');	
+								$('.frame .bg img').attr('src', './images/game_body_frame_04.jpg');	
 							} else if(gameController.point>190 && gameController.point<240) {
-								$('.frame .bg img').attr('src', './images/game_skin_frame_05.jpg');	
+								$('.frame .bg img').attr('src', './images/game_body_frame_05.jpg');	
 							} else if(gameController.point>240 && gameController.point<280) {
-								$('.frame .bg img').attr('src', './images/game_skin_frame_06.jpg');	
+								$('.frame .bg img').attr('src', './images/game_body_frame_06.jpg');	
 							} else {
-								$('.frame .bg img').attr('src', './images/game_skin_frame_07.jpg');
+								$('.frame .bg img').attr('src', './images/game_body_frame_07.jpg');
 							}
 							$('#count img').attr('src', './images/timer_'+gameController.time+'.png');
 							timer(1000);
@@ -469,7 +469,7 @@
 					}
 				} else {
 					//					time out!
-//					alert("게임 오버");
+					//					alert("게임 오버");
 					gameController.overFlag = true;
 					gameController.point = 0;
 					gameController.firstPower = false;

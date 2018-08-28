@@ -431,6 +431,62 @@ input[type="checkbox"]:focus {
 	padding: 0 32px;
 	z-index: 4;
 }
+.content.game .game-container .guide-obj {
+/*	display: none;*/
+	transition: all 0.3s ease;
+}
+.content.game .pre-layer {
+/*	display: none;*/
+	position: fixed;
+	top: 46px;
+	left: 0;
+	right: 0;
+	bottom: 115px;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 100;
+	/*	height: calc(100% - 253px);*/
+	transition: all 0.3s ease;
+}
+.game.started .pre-layer {
+	visibility: hidden;
+	opacity: 0;
+}
+.game.started .game-container .guide-obj {
+	visibility: hidden;
+	opacity: 0;
+}
+.content.game .visual-wrap .game-container .guide-text {
+	position: absolute;
+	top: 33px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 100;
+}
+.content.game .visual-wrap .game-container .start-btn {
+	display: block;
+	width: 98px;
+	height: 25px;
+	margin: 23px auto 0;
+	font-size: 15px;
+	font-weight: 700;
+	background: #95bbe7;
+	border-radius: 23px;
+	color: #ffffff;
+}
+.content.game .visual-wrap .game-container .guide-text .text {
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: -0.25px;
+	color: #ffffff;
+}
+.content.game .visual-wrap .game-container .guide-line {
+	position: absolute;
+	bottom: 88px;
+	left: 25%;
+	z-index: 101;
+	width: 191px;
+}
 .content.game .visual-wrap .game-container .frame {
 	display: block;
 	position: relative;
@@ -440,21 +496,48 @@ input[type="checkbox"]:focus {
 }
 .content.game .visual-wrap .game-container .frame .timer {
 	position: absolute;
-	left: 30px;
-	top: 30px;
+	left: 9px;
+	top: 9px;
+	width: 57px;
+	height: 57px;
+}
+.content.game .visual-wrap .game-container .frame .timer .bg {
+	background: url(../images/game_timer.png) center / cover no-repeat;
+	height: 100%;
 }
 .content.game .visual-wrap .game-container .frame .timer #count {
-	font-size: 30px;
-	color: #333333;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.content.game .visual-wrap .game-container .frame .timer #count img {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 36px;
 }
 .content.game .visual-wrap .game-container .frame > .bg img {
 	width: 100%;
 }
 .content.game .visual-wrap .game-container .frame .hand {
 	position: absolute;
-	bottom: -22.1%;
-	left: -10%;
-	width: 62.4%;
+	bottom: -36%;
+	left: 0;
+	width: 63%;
+	z-index: 100;
+}
+.content.game.body-selected .visual-wrap .game-container .frame .hand {
+	bottom: -30%;
+	left: 29%;
+	width: 39.4%;
+}
+.content.game.body-selected .visual-wrap .game-container .guide-line {
+	left: 21%;
+}
+.content.game.body-selected .visual-wrap .game-container .frame .hand {
+	width: 39.4%;
 }
 .content.game .visual-wrap .game-container .gage-wrap {
 	display: block;
@@ -488,7 +571,7 @@ input[type="checkbox"]:focus {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	padding: 5px 43px 5px 6px;
+	padding: 5px 54px 5px 6px;
 	background: rgba(255, 255, 255, 0.68);
 	border-radius: 10px;
 }
@@ -1218,5 +1301,23 @@ html.popup-opened {
 	}
 	.content.game > .wrapper .visual-wrap .title-group {
 		margin-bottom: 12%;
+	}
+	.content.game .pre-layer {
+		bottom: 109px;
+	}
+	.content.game .visual-wrap .game-container .guide-text .text {
+		font-size: 14px;
+	}
+	.content.game .visual-wrap .game-container .guide-line {
+		bottom: 70px;
+		left: 25%;
+		width: 155px;
+	}
+	.content.game .visual-wrap .game-container .frame .timer {
+		width: 50px;
+		height: 50px;
+	}
+	.content.game .visual-wrap .game-container .frame .timer #count img {
+		width: 30px;
 	}
 }
