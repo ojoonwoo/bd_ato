@@ -154,10 +154,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="input-guide-msg">
+				<!-- <div class="input-guide-msg">
 					입력하신 정보로 경품이 발송되니 정확하게 입력해주세요<br>
 					부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다
-				</div>
+				</div> -->
 				<div class="terms-block">
 					<div class="terms-group">
 						<a class="view-terms" data-popup="#terms1">
@@ -187,6 +187,10 @@
 				<button type="button" class="btn-result" id="rs2">
 					PT 결과 보기
 				</button>
+				<div class="input-guide-msg">
+					입력하신 정보로 경품이 발송되니 정확하게 입력해주세요<br>
+					부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다
+				</div>
 			</div>
 		</div>
 		<div class="popup pt-result" id="pt-result">
