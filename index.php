@@ -38,9 +38,20 @@
 <body>
 <div id="container">
 		<div class="content main">
-<?
-	include_once "header.php";
-?>
+			<div id="header">
+				<div class="inner">
+					<div class="logo">
+                        <a href="index.php">
+                            <img src="./images/header_logo.png" alt="logo">
+                        </a>
+					</div>
+					<ul class="menu">
+						<li class="is-active"><a href="index.php">HOME</a></li>
+						<li><a href="gate.php">PT 시작</a></li>
+						<li><a href="find.php">PT 찾기</a></li>
+					</ul>
+				</div>
+			</div>
 			<div class="wrapper">
 <!--
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
