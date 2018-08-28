@@ -249,7 +249,7 @@
 			</div>
 		</div>
 		<div class="popup pt-fail" id="pt-fail">
-			<button type="button" class="popup-close" data-popup="@close"></button>
+			<button type="button" class="popup-close" onclick="location.reload();"></button>
 			<div class="inner">
 				<div class="title-block">
 					<img src="./images/popup_title_img_health.png" alt="">
@@ -260,7 +260,7 @@
 						PT에 통과하세요!
 					</p>
 				</div>
-				<button class="btn-retry">
+				<button class="btn-retry" onclick="location.reload();">
 					재도전
 				</button>
 			</div>

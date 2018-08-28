@@ -235,7 +235,8 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 					}
 				} else {
 					//					time out!
-					alert("게임 오버");
+//					alert("게임 오버");
+					bato.popup.show($('#pt-fail'));
 					gameController.overFlag = true;
 					gameController.point = 0;
 					gameController.firstPower = false;
