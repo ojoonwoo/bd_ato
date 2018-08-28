@@ -487,16 +487,16 @@ function sns_share(media, flag)
 				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
 				imageUrl: "http://www.atodermcare.com/images/share_img.jpg",
 				link: {
-					mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
-					webUrl: 'www.atodermcare.com/?media=share_fb'
+					mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
+					webUrl: 'http://www.atodermcare.com/?media=share_fb'
 				}
 			},
 			buttons: [
 				{
 					title: '웹으로 보기',
 					link: {
-						mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
-						webUrl: 'www.atodermcare.com/?media=share_fb'
+						mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
+						webUrl: 'http://www.atodermcare.com/?media=share_fb'
 					}
 				}
 			],
