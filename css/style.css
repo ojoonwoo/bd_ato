@@ -1294,6 +1294,6 @@ html.popup-opened {
 		bottom: 0;
 	}
 	.content.sub #footer {
-		background: none;
+		/* background: none; */
 	}
 }
