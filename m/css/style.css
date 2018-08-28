@@ -446,7 +446,7 @@ input[type="checkbox"]:focus {
 	color: #4374a6;
 }
 .content.game #footer {
-	position: fixed;
+/*	position: fixed;*/
 }
 .content.game > .wrapper {
 	padding-bottom: 60px;
@@ -464,10 +464,12 @@ input[type="checkbox"]:focus {
 .content.game .pre-layer {
 /*	display: none;*/
 	position: fixed;
-	top: 46px;
+/*	top: 46px;*/
+	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 109px;
+/*	bottom: 109px;*/
+	bottom: 0;
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 100;
 	/*	height: calc(100% - 253px);*/
