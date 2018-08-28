@@ -184,6 +184,12 @@ function lengthCheck(obj, ln) {
 	}
 }
 
+function confirm_close()
+{
+	if (confirm("창을 닫으시면 이벤트 참여가 취소됩니다. 닫으시겠습니까?"))
+		location.href = "index.php";
+}
+
 function sns_share(media, flag)
 {
 	if (media == "fb")
@@ -201,6 +207,7 @@ function sns_share(media, flag)
 			}
 		});
 	}else if (media == "kt"){
+		Kakao.init('dce5eef1bd9bc3b9221ded3459d746ef');
 		Kakao.Link.sendDefault({
 			objectType: 'feed',
 			content: {
@@ -208,16 +215,16 @@ function sns_share(media, flag)
 				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
 				imageUrl: "http://www.atodermcare.com/images/share_img.jpg",
 				link: {
-					mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
-					webUrl: 'www.atodermcare.com/?media=share_fb'
+					mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
+					webUrl: 'http://www.atodermcare.com/?media=share_fb'
 				}
 			},
 			buttons: [
 				{
 					title: '웹으로 보기',
 					link: {
-						mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
-						webUrl: 'www.atodermcare.com/?media=share_fb'
+						mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
+						webUrl: 'http://www.atodermcare.com/?media=share_fb'
 					}
 				}
 			],

@@ -17,7 +17,7 @@ switch ($_REQUEST['exec'])
 
         $query		= "INSERT INTO member_info(mb_ipaddr, mb_name, mb_phone, mb_type, mb_addr1, mb_addr2, mb_gubun, mb_media, mb_regdate) values('".$_SERVER['REMOTE_ADDR']."','".$mb_name."','".$mb_phone."','".$mb_type."','".$mb_addr1."','".$mb_addr2."','".$gubun."','".$_SESSION['ss_media']."',now())";
         $result		= mysqli_query($my_db, $query);
-print_r($query);
+// print_r($query);
         if ($result)
             $flag = "Y";
         else
