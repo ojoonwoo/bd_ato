@@ -110,7 +110,6 @@
 			<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="width:7%;cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
 		</div>
 
-<!--		<input type="button" id="sample-btn" data-popup="#terms2">-->
 		<script type="text/javascript">
 			function preloading (imageArray) { var n = imageArray.length; for (var i = 0; i < n; i++) { var img = new Image(); img.src = imageArray[i]; } } preloading([ './images/game_skin_frame_02.jpg', './images/game_skin_frame_03.jpg', './images/game_skin_frame_02.jpg', './images/game_skin_frame_04.jpg', './images/game_skin_frame_05.jpg', './images/game_skin_frame_06.jpg', './images/game_skin_frame_07.jpg' ]);
 			
@@ -123,7 +122,7 @@
 				}
 			});
 			$(window).on('load', function() {
-				$('#sample-btn').trigger('click');
+//				$('#sample-btn').trigger('click');
 			});
 
 			$('#pt-pass .check-block .check').on('click', function() {

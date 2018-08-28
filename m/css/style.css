@@ -58,6 +58,7 @@ html, body {
 	line-height: 1.2;
 	color: #333333;
 	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 img {
 	width: 100%;
@@ -279,7 +280,7 @@ input[type="checkbox"]:focus {
 }
 .content.sub {
 	position: relative;
-	height: 100vh;
+/*	height: 100vh;*/
 	background: url(../images/main_bg.png);
 	background-position: 50% 100%;
 	background-size: cover;
@@ -413,20 +414,24 @@ input[type="checkbox"]:focus {
 	margin-right: 13px;
 }
 .content.sub > .wrapper {
+/*
 	display: table;
 	table-layout: fixed;
+*/
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
-	background: url(../images/sub_svgline_bg.png) 100% 0 / cover no-repeat;
+	padding-top: 76px;
+/*	overflow: hidden;*/
+/*	background: url(../images/sub_svgline_bg.png) 100% 0 / cover no-repeat;*/
+	background: url(../images/sub_svgline_bg.png) 100% 50% / cover no-repeat;
 }
 .content.sub .balls {
 	background: url(../images/sub_balls.png) 0 0 / cover no-repeat;
 }
 .content.sub > .wrapper .visual-wrap {
 	width: 100%;
-	display: table-cell;
-	vertical-align: middle;
+/*	display: table-cell;*/
+/*	vertical-align: middle;*/
 }
 .content.sub > .wrapper .visual-wrap .title-group {
 	margin-bottom: 9.8%;
@@ -445,11 +450,12 @@ input[type="checkbox"]:focus {
 	font-weight: 800;
 	color: #4374a6;
 }
-.content.game #footer {
+.content.sub #footer {
 /*	position: fixed;*/
+	margin-top: 41px;
 }
 .content.game > .wrapper {
-	padding-bottom: 60px;
+/*	padding-bottom: 60px;*/
 }
 .content.game .visual-wrap .game-container {
 	font-size: 0;
@@ -645,7 +651,7 @@ input[type="checkbox"]:focus {
 	color: #4374a6;
 }
 .content.sub {
-	overflow: hidden;
+/*	overflow: hidden;*/
 }
 .content.sub .svg-wrapper {
 	position: absolute;
@@ -658,7 +664,7 @@ input[type="checkbox"]:focus {
 */
 
 .content.gate #footer {
-	position: fixed;
+/*	position: fixed;*/
 }
 .content.gate > .wrapper {
 	padding-bottom: 60px;
@@ -699,6 +705,10 @@ input[type="checkbox"]:focus {
 /*	background-repeat: no-repeat;*/
 	overflow: auto !important;
 }
+.content.find > .wrapper {
+	padding-top: 0;
+}
+
 
 .content.find .scroll-content .title-group {
 	margin: 0 0 39px;
