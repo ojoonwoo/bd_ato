@@ -7,6 +7,19 @@
 					<h5>PT에 통과하셨습니다<i>!</i></h5>
 					<p>당신에게 맞는 PT크림을 보내드릴게요</p>
 				</div>
+				<div class="check-block">
+					<div class="check-wrapper">
+						<div class="check is-checked" data-value="light">
+							<div class="checkbox"></div>
+						</div>
+						<div class="check" data-value="medium">
+							<div class="checkbox"></div>
+						</div>
+						<div class="check" data-value="heavy">
+							<div class="checkbox"></div>
+						</div>
+					</div>
+				</div>
 				<div class="tab-block">
 					<div class="tab-wrapper init-state">
 						<div class="tab light" data-tab-target="light">
@@ -83,19 +96,6 @@
 							<div class="content heavy">
 								<img src="./images/tab_content_heavy.jpg" alt="">
 							</div>
-						</div>
-					</div>
-				</div>
-				<div class="check-block">
-					<div class="check-wrapper">
-						<div class="check is-checked" data-value="light">
-							<div class="checkbox"></div>
-						</div>
-						<div class="check" data-value="medium">
-							<div class="checkbox"></div>
-						</div>
-						<div class="check" data-value="heavy">
-							<div class="checkbox"></div>
 						</div>
 					</div>
 				</div>

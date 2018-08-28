@@ -7,6 +7,19 @@
 					<h5>PT에 통과하셨습니다<i>!</i></h5>
 					<p>당신에게 맞는 PT크림을 보내드릴게요</p>
 				</div>
+				<div class="check-block">
+					<div class="check-wrapper">
+						<div class="check is-checked" data-value="light">
+							<div class="checkbox"></div>
+						</div>
+						<div class="check" data-value="medium">
+							<div class="checkbox"></div>
+						</div>
+						<div class="check" data-value="heavy">
+							<div class="checkbox"></div>
+						</div>
+					</div>
+				</div>
 				<div class="tab-block">
 					<div class="tab-wrapper init-state">
 						<div class="tab light" data-tab-target="light">
@@ -86,19 +99,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="check-block">
-					<div class="check-wrapper">
-						<div class="check is-checked" data-value="light">
-							<div class="checkbox"></div>
-						</div>
-						<div class="check" data-value="medium">
-							<div class="checkbox"></div>
-						</div>
-						<div class="check" data-value="heavy">
-							<div class="checkbox"></div>
-						</div>
-					</div>
-				</div>
 				<div class="check-guide-msg">
 					체크리스트를 확인하고 나에게 맞는 PT 크림을 선택해주세요
 				</div>
@@ -141,10 +141,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="input-guide-msg">
-					입력하신 정보로 경품이 발송되니 정확하게 입력해주세요<br>
-					부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다
-				</div>
 				<div class="terms-block">
 					<div class="terms-group">
 						<a class="view-terms" data-popup="#terms1">
@@ -174,6 +170,10 @@
 				<button type="button" class="btn-result">
 					PT 결과 보기
 				</button>
+				<div class="input-guide-msg">
+					입력하신 정보로 경품이 발송되니 정확하게 입력해주세요<br>
+					부정확한 정보 입력으로 경품 미발송은 책임지지 않습니다
+				</div>
 			</div>
 		</div>
 		<div class="popup pt-result" id="pt-result">
