@@ -865,7 +865,7 @@ html.popup-opened {
 .popup.pt-pass .tab-block {
 	width: 250px;
 	position: relative;
-	margin: 0 auto;
+	margin: 11px auto;
 	overflow: hidden;
 }
 .popup.pt-pass .tab-block .tab-wrapper {
@@ -982,7 +982,6 @@ html.popup-opened {
 
 .popup.pt-pass .check-block {
 	width: 250px;
-	padding: 11px 0;
 	margin: 0 auto;
 	font-size: 0;
 }
