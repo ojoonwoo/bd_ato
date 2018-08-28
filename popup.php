@@ -115,11 +115,11 @@
 							<span>전화번호</span>
 						</div>
 						<div class="input">
-							<input type="tel" id="mb_phone1">
+							<input type="tel" id="mb_phone1" onkeyup="lengthCheck(this, 3)">
 							<span>-</span>
-							<input type="tel" id="mb_phone2">
+							<input type="tel" id="mb_phone2" onkeyup="lengthCheck(this, 4)">
 							<span>-</span>
-							<input type="tel" id="mb_phone3">
+							<input type="tel" id="mb_phone3" onkeyup="lengthCheck(this, 4)">
 						</div>
 					</div>
 					<div class="input-group">

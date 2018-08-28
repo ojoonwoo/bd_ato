@@ -442,37 +442,21 @@ function chk_strlen(obj, maxByte, num) {
 	}
 }
 
-function event1(depth){
-	// console.log(depth);
-	$.ajax({
-		url : "http://vtag15.midas-i.com/vat-tag?cmp_no=3565&depth=" + depth,
-		dataType : "jsonp",
-		async : true, 
-		timeout: 500,
-		success: function(data) {
-			// console.log("1111");
-					// location.href=url;
-		}, 
-		error : function(e) {
-			// console.log(e);
-					// location.href=url;
-		}
-	});
-	return false;
-}
-
-function openWinner() {
-	// popup.open("#popup-winner");
-	var $popup = $("#popup-winner"),
-	$wrap = $popup.parent();
-
-	if($popup.length) {
-		if (!$('html').hasClass('popup-opened')){
-			setTimeout(function() {
-				$wrap.addClass('is-opened');
-				$('html').addClass('popup-opened');
-			},10);
+function lengthCheck(obj, ln) {
+	var $obj = $(obj);
+	var regExp = /^[0-9]+$/;
+	
+	if(!regExp.test($obj.val())) {
+		$obj.val($obj.val().replace(/[^0-9]/g, ""));
+	} else {
+		if($obj.val().length>=ln) {
+			// $obj.is('input:last-child') ? $obj.blur() : $obj.next().focus();
+			if ($obj.attr("id") == "mb_phone1")
+				$("#mb_phone2").focus();
+			else if ($obj.attr("id") == "mb_phone2")
+				$("#mb_phone3").focus();
+			else
+				$obj.blur();
 		}
 	}
-
 }
