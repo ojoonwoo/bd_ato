@@ -1,7 +1,9 @@
 			<div id="header">
 				<div class="inner">
 					<div class="logo">
-						<img src="./images/header_logo.png" alt="">
+                        <a href="index.php">
+                            <img src="./images/header_logo.png" alt="logo">
+                        </a>
 					</div>
 					<ul class="menu">
 						<li class="is-active"><a href="index.php">HOME</a></li>

@@ -1,7 +1,9 @@
 				<div id="header">
 					<div class="inner">
 						<div class="logo">
-							<img src="./images/header_logo.png" alt="">
+							<a href="index.php">
+                                <img src="./images/header_logo.png" alt="logo">
+                            </a>
 						</div>
 						<div class="burger">
 							<span class="line top"></span>
