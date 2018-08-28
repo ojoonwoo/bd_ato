@@ -176,9 +176,11 @@
 							$('#gage').css('height', percentage+'%');
 						}, 10);
 					} else {
-						$('.frame .bg img').attr('src', './images/game_skin_frame_07.jpg');
+						$('.frame .bg img').attr('src', './images/game_skin_frame_19.jpg');
 //						alert("게임 클리어")
-						bato.popup.show($("#pt-pass"));
+						setTimeout(function(){
+							bato.popup.show($("#pt-pass"));
+						},1000);
 						gameController.clearFlag = true;
 						return false;
 					}
