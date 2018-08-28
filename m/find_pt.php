@@ -76,7 +76,15 @@
 				} else {
 					$('html').removeClass('is-scrolled');
 				}
+            });
+            
+            $('.burger').on('click', function() {
+				$('html').addClass('menu-opened');
 			});
+			$('#menu-layer .btn-close').on('click', function() {
+				$('html').removeClass('menu-opened');
+			});
+
 		</script>
     </body>
 </html>
