@@ -703,7 +703,7 @@ input[type="checkbox"]:focus {
 /*	background-size: 88.4% auto, cover, cover;*/
 /*	background-position: 43% 128px, 50% 128px, 50% 0;*/
 /*	background-repeat: no-repeat;*/
-	overflow: auto !important;
+	overflow: scroll !important;
 }
 .content.find > .wrapper {
 	padding-top: 0;
