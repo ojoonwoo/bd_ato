@@ -28,6 +28,7 @@
 		<link rel="stylesheet" href="./css/style.css">
 		<script src="../js/snap.svg-min.js"></script>
 		<script src="../js/jquery-3.3.1.min.js"></script>
+		<script src="../js/m_main.js"></script>
 	</head>
 	<body>
 		<div id="container">
