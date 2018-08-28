@@ -362,7 +362,8 @@ input[type="checkbox"]:focus {
 	font-weight: 300;
 	color: #4374a6;
 	text-align: left;
-	line-height: 8px;
+	/* line-height: 8px; */
+	line-height: 10px;
 	margin-top: 5px;
 	word-break: keep-all;
 	letter-spacing: -0.5px;
