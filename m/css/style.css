@@ -1398,7 +1398,7 @@ html.popup-opened {
 		table-layout: fixed;
 	}
 	.content.main .btn-group {
-		margin: 0 0 0 13%;
+/*		margin: 0 0 0 13%;*/
 	}
 	.content > .wrapper {
 		display: table-cell;
