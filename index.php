@@ -96,7 +96,7 @@
 							<img src="./images/share_fb.png" alt="">
 						</button>
 						<button class="kt" onclick="sns_share('kt', 'main')">
-							<img src="./images/share_ks.png" alt="">
+							<img src="./images/share_kt.png" alt="">
 						</button>
 					</div>
 				</div>

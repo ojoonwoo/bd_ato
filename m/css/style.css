@@ -1300,6 +1300,40 @@ html.popup-opened {
 .popup.terms._1 img {width: 83.1%;}
 .popup.terms._2 img {width: 84.7%;}
 
+.popup.pt-fail {
+	width: 226px;
+}
+.popup.pt-fail .inner {
+	padding: 25px 0;
+	background: url(../images/popup_pt_inner_bg.png) center 104px / cover no-repeat #ffffff;
+}
+.popup.pt-fail .title-block {
+	margin-bottom: 15px;
+}
+.popup.pt-fail .title-block img {
+	width: 30px;
+}
+.popup.pt-fail .title-block h5 {
+	margin: 8px 0 6px;	
+	font-size: 15px;
+	font-weight: 800;
+	color: #333333;
+}
+.popup.pt-fail .title-block p {
+	font-size: 10px;
+	font-weight: 500;
+}
+.popup.pt-fail .btn-retry {
+	display: block;
+	width: 105px;
+	height: 29px;
+	margin: 0 auto;
+	background: #4374a6;
+	border-radius: 23px;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+}
 /*popup*/
 @media all and (max-width: 340px) {
 	.content.main .btn-group button {

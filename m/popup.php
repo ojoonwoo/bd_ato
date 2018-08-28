@@ -237,3 +237,20 @@
 				<img src="./images/popup_terms2_cnt.png" alt="">
 			</div>
 		</div>
+		<div class="popup pt-fail" id="pt-fail">
+			<button type="button" class="popup-close" data-popup="@close"></button>
+			<div class="inner">
+				<div class="title-block">
+					<img src="./images/popup_title_img_health.png" alt="">
+					<h5>PT에 재도전해주세요<i>!</i></h5>
+					<p>
+						아쉽게 PT 도전에 실패하셨습니다<br>
+						다시 한 번 더 빠르게 아토덤을 발라<br>
+						PT에 통과하세요!
+					</p>
+				</div>
+				<button class="btn-retry">
+					재도전
+				</button>
+			</div>
+		</div>
