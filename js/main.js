@@ -461,6 +461,12 @@ function lengthCheck(obj, ln) {
 	}
 }
 
+function confirm_close()
+{
+	if (confirm("창을 닫으시면 이벤트 참여가 취소됩니다. 닫으시겠습니까?"))
+		location.href = "index.php";
+}
+
 function sns_share(media, flag)
 {
 	if (media == "fb")
