@@ -130,15 +130,19 @@ input[type="checkbox"]:focus {
 }
 .menu-opened #menu-layer {
 	display: block;
+	opacity: 1;
+	visibility: visible;
 }
 #menu-layer {
-	display: none;
 	position: fixed;
 	height: 100vh;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 100;
+	transition: all 0.3s ease;
+	opacity: 0;
+	visibility: hidden;
 }
 #menu-layer .black-area {
 	background: rgba(0, 0, 0, 0.5);
@@ -155,6 +159,13 @@ input[type="checkbox"]:focus {
 	padding: 81px 0 60px;
 	background: #4374a6;
 	z-index: 2;
+	transform: translateY(-100%);
+	opacity: 0;
+}
+.menu-opened #menu-layer .inner {
+	transform: translateY(0);
+	opacity: 1;
+	transition: all 0.4s ease 0.12s;
 }
 #menu-layer .btn-close {
 	position: absolute;
@@ -226,7 +237,7 @@ input[type="checkbox"]:focus {
 #footer ul li {
 	display: inline-block;
 	position: relative;
-	font-size: 11px;
+	font-size: 10px;
 	letter-spacing: -0.75px;
 	margin-right: 8px;
 	font-weight: 300;
@@ -234,6 +245,9 @@ input[type="checkbox"]:focus {
 }
 #footer ul li:last-child {
 	margin-right: 0;
+}
+#footer ul li:last-child:after {
+	content: none;
 }
 #footer ul:first-child li {
 	font-weight: 500;
@@ -389,6 +403,14 @@ input[type="checkbox"]:focus {
 	background-color: #4374a6;
 	margin-top: 14px;
 }
+.content.main .visual-wrap .share-group {
+	position: absolute;
+	bottom: 0;
+	left: -123px;
+}
+.content.main .visual-wrap .share-group button:first-child {
+	margin-right: 13px;
+}
 .content.sub > .wrapper {
 	display: table;
 	table-layout: fixed;
@@ -444,7 +466,7 @@ input[type="checkbox"]:focus {
 	top: 46px;
 	left: 0;
 	right: 0;
-	bottom: 115px;
+	bottom: 109px;
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 100;
 	/*	height: calc(100% - 253px);*/
@@ -1267,11 +1289,11 @@ html.popup-opened {
 
 /*popup*/
 @media all and (max-width: 340px) {
+	.content.main .btn-group button {
+		font-size: 14px;
+	}
 	.content.main .visual-wrap .text-group {
 		top: 17.4%;
-	}
-	#footer ul li {
-		font-size: 10px;
 	}
 	.popup.pt-pass .input-guide-msg {
 		margin-left: 45px;
@@ -1301,9 +1323,6 @@ html.popup-opened {
 	}
 	.content.game > .wrapper .visual-wrap .title-group {
 		margin-bottom: 12%;
-	}
-	.content.game .pre-layer {
-		bottom: 109px;
 	}
 	.content.game .visual-wrap .game-container .guide-text .text {
 		font-size: 14px;

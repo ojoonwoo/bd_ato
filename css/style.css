@@ -311,6 +311,14 @@ input[type="checkbox"]:focus {
 	background-color: #84bce9;
 	margin-top: 19px;
 }
+.content.main .visual-wrap .share-group {
+	position: absolute;
+	bottom: 0;
+	left: -123px;
+}
+.content.main .visual-wrap .share-group button:first-child {
+	margin-right: 13px;
+}
 .content.sub > .wrapper {
 	display: table;
 	table-layout: fixed;
