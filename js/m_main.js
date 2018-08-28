@@ -16,8 +16,6 @@ $(function(){
 	var agree1 	= "N";
 	var agree2 	= "N";
 
-	var pt_type		= "light";
-
 	bato.popup = {
 		bind : function(){
 			$doc
@@ -208,76 +206,6 @@ $(function(){
 	//	}
 	//	share.bind();
 
-
-	$(".input-submit-btn").on("click", function(){
-		var mb_name 	= $("#mb_name").val();
-		var mb_phone1 	= $("#mb_phone1").val();
-		var mb_phone2 	= $("#mb_phone2").val();
-		var mb_phone3 	= $("#mb_phone3").val();
-		var mb_addr1 	= $("#mb_addr1").val();
-		var mb_addr2 	= $("#mb_addr2").val();
-		var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
-
-		if (mb_name == "") {
-			alert("이름을 입력해 주세요.");
-			$("#mb_name").focus();
-			return false;
-		}
-
-		if (mb_phone1 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone1").focus();
-			return false;
-		}
-
-		if (mb_phone2 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone2").focus();
-			return false;
-		}
-		if (mb_phone3 == "") {
-			alert("전화번호를 입력해 주세요.");
-			$("#mb_phone3").focus();
-			return false;
-		}
-		if (mb_addr1 == "") {
-			alert("주소를 입력해 주세요.");
-			return false;
-		}
-		if (mb_addr2 == "") {
-			alert("상세주소를 입력해 주세요.");
-			$("#mb_addr2").focus();
-			return false;
-		}
-
-
-		if (agree1 == "N") {
-			alert("개인정보 수집 약관에 동의해 주셔야만 이벤트에 참여하실 수 있습니다.");
-			return false;
-		}
-
-		if (agree2 == "N") {
-			alert("개인정보 취급 약관에 동의해 주셔야만 이벤트에 참여하실 수 있습니다.");
-			return false;
-		}
-
-		$.ajax({
-			type:"POST",
-			data:{
-				"exec"				: "insert_member_info",
-				"mb_name"			: mb_name,
-				"mb_phone"			: mb_phone,
-				"mb_addr1"			: mb_addr1,
-				"mb_addr2"			: mb_addr2
-			},
-			url: "./main_exec.php",
-			success: function(response){
-				alert("이벤트에 참여해 주셔서 감사합니다!");
-				location.href = "index.php";
-			}
-		});
-
-	});
 
 	// $(".find-addr").on("click", function(){
 	// 	new daum.Postcode({

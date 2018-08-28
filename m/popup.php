@@ -189,7 +189,8 @@
 			</div>
 		</div>
 		<div class="popup pt-result" id="pt-result">
-			<button type="button" class="popup-close" data-popup="@close"></button>
+			<!-- <button type="button" class="popup-close" data-popup="@close"></button> -->
+			<button type="button" class="popup-close" onclick="location.href='index.php';"></button>
 			<div class="inner">
 				<div class="title-block custom-border">
 					<img src="./images/popup_title_img_medi.png" alt="">

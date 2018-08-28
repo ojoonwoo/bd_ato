@@ -15,7 +15,7 @@
 	</head>
 	<body>
 		<div id="container">
-			<div class="content sub game">
+			<div class="content sub game body-selected">
 <?
 	include_once "header_area.php";
 ?>				
@@ -61,10 +61,10 @@
 							</div>
 							<div class="frame">
 								<div class="bg">
-									<img src="./images/game_skin_frame_01.jpg" alt="">
+									<img src="./images/game_body_frame_01.jpg" alt="">
 								</div>
 								<div class="hand" id="hand">
-									<img src="./images/game_hand.png" alt="">
+									<img src="./images/game_hand2.png" alt="">
 								</div>
 								<div class="timer">
 									<div class="bg"></div>
@@ -112,8 +112,16 @@
 
 <!--		<input type="button" id="sample-btn" data-popup="#terms2">-->
 		<script type="text/javascript">
+			var pt_type		= "light";
+			$('#game-start').on('click', function() {
+				$('.content.game').addClass('started');
+				if(!gameController.firstPower) {
+					gameController.firstPower = true;
+					timer(1000);
+				}
+			});
 			$(window).on('load', function() {
-				$('#sample-btn').trigger('click');
+				//				$('#sample-btn').trigger('click');
 			});
 
 			$('#pt-pass .check-block .check').on('click', function() {
@@ -121,19 +129,6 @@
 				$parent.find('.check').not(this).removeClass('is-checked');
 				$(this).addClass('is-checked');
 				pt_type	= $(this).data("value");
-
-				// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
-				if (pt_type == "light")
-				{
-					$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
-					$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
-				}else if (pt_type == "medium"){
-					$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
-					$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
-				}else{
-					$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
-					$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
-				}
 				//				$('.tab-contents').find('.content').not(tabTarget).hide();
 				//				$('.tab-contents').find('.'+tabTarget).show();
 			});
@@ -148,7 +143,7 @@
 				}
 				$('.tab-contents').find('.content').not(tabTarget).hide();
 				$('.tab-contents').find('.'+tabTarget).show();
-			});
+			})
 			$('#rs1').on('click', function() {
 				// console.log("1111");
 				bato.popup.close($("#pt-pass"));
@@ -224,6 +219,18 @@
 						if (response == "Y")
 						{
 							bato.popup.close($("#pt-pass"));
+							// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
+							if (pt_type == "light")
+							{
+								$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
+								$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
+							}else if (pt_type == "medium"){
+								$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
+								$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
+							}else{
+								$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
+								$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
+							}
 							bato.popup.show($("#pt-result"));
 						}else{
 							alert("참여자가 많습니다. 다시시도해 주세요!");
@@ -238,10 +245,10 @@
 				snap: true,
 				snapMode: "inner",
 				start: function( event, ui ) {
-					if(!gameController.firstPower) {
-						gameController.firstPower = true;
-						timer(0);
-					}
+					//					if(!gameController.firstPower) {
+					//						gameController.firstPower = true;
+					//						timer(0);
+					//					}
 				},
 				drag: function( event, ui ) {
 					gameController.dragging = true;
@@ -253,9 +260,10 @@
 							$('#gage').css('width', percentage+'%');
 						}, 10);
 					} else {
-						// alert("게임 클리어")
+						//						alert("게임 클리어")
 						bato.popup.show($("#pt-pass"));
 						gameController.clearFlag = true;
+						$('.frame .bg img').attr('src', './images/game_body_frame_07.jpg');
 						return false;
 					}
 				},
@@ -272,6 +280,7 @@
 				firstPower: false,
 				dragging: false,
 				clearFlag: false,
+				overFlag: false,
 				point: 0,
 				time: 10,
 				goalPoint: 300
@@ -293,16 +302,32 @@
 
 			function timer(time) {
 				if(gameController.time>0) {
-					if(!gameController.clearFlag) {
+					if(!gameController.clearFlag && !gameController.overFlag) {
 						setTimeout(function() {
 							gameController.time--;
-							$('#count').text(gameController.time)
+							if(gameController.point<30) {
+								$('.frame .bg img').attr('src', './images/game_body_frame_01.jpg');
+							} else if(gameController.point>30 && gameController.point<70) {
+								$('.frame .bg img').attr('src', './images/game_body_frame_02.jpg');	
+							} else if(gameController.point>70 && gameController.point<150) {
+								$('.frame .bg img').attr('src', './images/game_body_frame_03.jpg');	
+							} else if(gameController.point>150 && gameController.point<190) {
+								$('.frame .bg img').attr('src', './images/game_body_frame_04.jpg');	
+							} else if(gameController.point>190 && gameController.point<240) {
+								$('.frame .bg img').attr('src', './images/game_body_frame_05.jpg');	
+							} else if(gameController.point>240 && gameController.point<280) {
+								$('.frame .bg img').attr('src', './images/game_body_frame_06.jpg');	
+							} else {
+								$('.frame .bg img').attr('src', './images/game_body_frame_07.jpg');
+							}
+							$('#count img').attr('src', './images/timer_'+gameController.time+'.png');
 							timer(1000);
 						}, time);
 					}
 				} else {
 					//					time out!
-					alert("게임 오버");
+					//					alert("게임 오버");
+					gameController.overFlag = true;
 					gameController.point = 0;
 					gameController.firstPower = false;
 					gameController.dragging = false;
