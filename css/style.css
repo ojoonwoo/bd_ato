@@ -239,34 +239,32 @@ input[type="checkbox"]:focus {
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
-/*
-.content.main .visual-wrap .back {
-	top: 170px;
+.content.main .visual-wrap .left {
+	top: 140px;
 	left: 50%;
-	margin-left: -353px;
+	margin-left: -404px;
 	z-index: 1;
 }
-*/
 .content.main .visual-wrap .people {
 	top: 125px;
 	left: 50%;
 	margin-left: -314px;
 	z-index: 2;
 }
-/*
-.content.main .visual-wrap .front {
-	top: 343px;
+.content.main .visual-wrap .right {
+	top: 280px;
 	left: 50%;
-	margin-left: -33px;
+	margin-left: -30px;
 	z-index: 3;
 }
-*/
+/*
 .content.main .visual-wrap .title {
 	top: 140px;
 	left: 50%;
 	margin-left: -404px;
 	z-index: 3;
 }
+*/
 .content.main .visual-wrap .text-group {
 	position: absolute;
 	top: 224px;
@@ -1276,6 +1274,9 @@ html.popup-opened {
 	.content.game .visual-wrap .game-container .frame {
 		width: 600px;
 		height: 569px;
+	}
+	.content.game .visual-wrap .game-container .frame .guide-text {
+		top: 0;
 	}
 	.content.gate > .wrapper .visual-wrap .title-group {
 		margin-bottom: 40px;
