@@ -280,18 +280,21 @@ $(function(){
 						$("#rs_type").html("라이트 PT");
 						$("#rs_status").html("계절성 건성");
 						$("#rs_goods").html("아토덤 크림");
+						$("#rs_goods_img").attr("src","./images/popup_atoderm_cream.png");
 					}else if (pt_type == "medium"){
 						$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
 						$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
 						$("#rs_type").html("미디움 PT");
 						$("#rs_status").html("만성 건성");
 						$("#rs_goods").html("아토덤 PP밤");
+						$("#rs_goods_img").attr("src","./images/popup_atoderm_pp.png");
 					}else{
 						$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
 						$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
 						$("#rs_type").html("헤비 PT");
 						$("#rs_status").html("문제성 건성");
 						$("#rs_goods").html("아토덤 인텐시브밤");
+						$("#rs_goods_img").attr("src","./images/popup_atoderm_intensive.png");
 					}
 	
 					bato.popup.show($("#pt-result"));
@@ -439,37 +442,85 @@ function chk_strlen(obj, maxByte, num) {
 	}
 }
 
-function event1(depth){
-	// console.log(depth);
-	$.ajax({
-		url : "http://vtag15.midas-i.com/vat-tag?cmp_no=3565&depth=" + depth,
-		dataType : "jsonp",
-		async : true, 
-		timeout: 500,
-		success: function(data) {
-			// console.log("1111");
-					// location.href=url;
-		}, 
-		error : function(e) {
-			// console.log(e);
-					// location.href=url;
-		}
-	});
-	return false;
-}
-
-function openWinner() {
-	// popup.open("#popup-winner");
-	var $popup = $("#popup-winner"),
-	$wrap = $popup.parent();
-
-	if($popup.length) {
-		if (!$('html').hasClass('popup-opened')){
-			setTimeout(function() {
-				$wrap.addClass('is-opened');
-				$('html').addClass('popup-opened');
-			},10);
+function lengthCheck(obj, ln) {
+	var $obj = $(obj);
+	var regExp = /^[0-9]+$/;
+	
+	if(!regExp.test($obj.val())) {
+		$obj.val($obj.val().replace(/[^0-9]/g, ""));
+	} else {
+		if($obj.val().length>=ln) {
+			// $obj.is('input:last-child') ? $obj.blur() : $obj.next().focus();
+			if ($obj.attr("id") == "mb_phone1")
+				$("#mb_phone2").focus();
+			else if ($obj.attr("id") == "mb_phone2")
+				$("#mb_phone3").focus();
+			else
+				$obj.blur();
 		}
 	}
-
 }
+
+function sns_share(media, flag)
+{
+	if (media == "fb")
+	{
+        var newWindow = window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('http://www.atodermcare.com/?media=share_fb'),'sharer','toolbar=0,status=0,width=600,height=325');
+
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "./main_exec.php",
+			data:{
+				"exec"          : "insert_share_info",
+				"sns_media"     : media,
+				"sns_flag"		: flag
+			}
+		});
+	}else if (media == "kt"){
+		Kakao.Link.sendDefault({
+			objectType: 'feed',
+			content: {
+				title: '당신의 피부도 이제는 체력 관리가 필요하니까! 지금 바이오더마에서 당신에게 필요한 무료 PT를 받아보세요!',
+				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+				imageUrl: "http://www.atodermcare.com/images/share_img.jpg",
+				link: {
+					mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
+					webUrl: 'www.atodermcare.com/?media=share_fb'
+				}
+			},
+			buttons: [
+				{
+					title: '웹으로 보기',
+					link: {
+						mobileWebUrl: 'www.atodermcare.com/m/index.php?media=share_fb',
+						webUrl: 'www.atodermcare.com/?media=share_fb'
+					}
+				}
+			],
+			success: function(res) {
+				console.log("success");
+				console.log(res);
+			},
+			fail: function(res) {
+				console.log("fail");
+				console.log(res);
+			},
+			callback: function() {
+	//					console.log("callback:"+res);
+				// shareEnd();
+			}
+		});
+		$.ajax({
+			type   : "POST",
+			async  : false,
+			url    : "./main_exec.php",
+			data:{
+				"exec" : "insert_share_info",
+				"sns_media" : media,
+				"sns_flag"		: flag
+			}
+		});
+	}
+}
+

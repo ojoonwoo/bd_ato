@@ -115,11 +115,11 @@
 							<span>전화번호</span>
 						</div>
 						<div class="input">
-							<input type="tel" id="mb_phone1">
+							<input type="tel" id="mb_phone1" onkeyup="lengthCheck(this, 3)">
 							<span>-</span>
-							<input type="tel" id="mb_phone2">
+							<input type="tel" id="mb_phone2" onkeyup="lengthCheck(this, 4)">
 							<span>-</span>
-							<input type="tel" id="mb_phone3">
+							<input type="tel" id="mb_phone3" onkeyup="lengthCheck(this, 4)">
 						</div>
 					</div>
 					<div class="input-group">
@@ -154,6 +154,7 @@
 							<label for="agree1">개인 정보 수집 및 이용에 동의합니다</label>
 							<input type="checkbox" class="" id="agree1">
 							<span class="checkbox"></span>
+							<label for="agree1" class="check-target"></label>
 						</div>
 					</div>
 					<div class="terms-group">
@@ -165,6 +166,7 @@
 							<label for="agree2">개인 정보 취급 위탁에 동의합니다</label>
 							<input type="checkbox" id="agree2">
 							<span class="checkbox"></span>
+							<label for="agree2" class="check-target"></label>
 						</div>
 					</div>
 				</div>
@@ -197,7 +199,7 @@
 					</p>
 				</div>
 				<div class="img-block">
-					<img src="./images/popup_atoderm_img.png" alt="">
+					<img src="./images/popup_atoderm_img.png" alt="" id="rs_goods_img">
 				</div>
 				<div class="table-block custom-border">
 					<div class="table">
