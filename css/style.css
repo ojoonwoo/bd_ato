@@ -1237,6 +1237,9 @@ html.popup-opened {
 
 /*popup*/
 @media all and (max-height: 1050px) {
+	.content.main .visual-wrap .share-group {
+		bottom: 49px;
+	}
 	#footer {
 		position: absolute;
 	}
