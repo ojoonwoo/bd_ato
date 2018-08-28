@@ -64,7 +64,7 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 							<div class="pre-layer"></div>
 							<div class="frame">
 								<div class="bg">
-									<img src="./images/game_body_frame_01.png" alt="">
+									<img src="./images/game_body_frame_01.jpg" alt="">
 								</div>
 								<div class="hand" id="hand">
 									<img src="./images/game_hand2.png" alt="">
@@ -174,7 +174,7 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 							$('#gage').css('height', percentage+'%');
 						}, 10);
 					} else {
-						$('.frame .bg img').attr('src', './images/game_body_frame_19.png');
+						$('.frame .bg img').attr('src', './images/game_body_frame_19.jpg');
 						//						alert("게임 클리어")
 						setTimeout(function(){
 							bato.popup.show($("#pt-pass"));
