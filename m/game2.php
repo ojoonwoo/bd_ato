@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="[바이오더마] Atoderm PT CLUB" />
+		<meta property="og:url" content="http://www.atodermcare.com" />
+		<meta property="og:image" content="http://www.atodermcare.com/images/share_img.jpg" />
+		<meta property="og:description" content="당신의 피부도 이제는 체력 관리가 필요하니까! 지금 바이오더마에서 당신에게 필요한 무료 PT를 받아보세요!" />
 		<title>BIODERMA - Atoderm</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
