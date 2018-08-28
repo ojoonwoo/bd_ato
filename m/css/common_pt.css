@@ -22,15 +22,6 @@ img {
 .bg{
 
 }
-.header{
-    position: absolute;
-    width:  340px;
-    height: 45px;
-    top: 15px;
-    left: 17px;
-    right: 17px;
-    bottom: 0;
-}
 
 .wrapper{
     position: absolute;
@@ -77,16 +68,16 @@ img {
     position: absolute;
     width: 119px;
     /* top:690px; */
-    top:55%;
+    top:55.5%;
     /* left: 197px; */
-    right: 14%;
+    right: 15%;
 }
 
 .button .button03 {
     position: absolute;
     width: 140px;
     /* top: 945px; */
-    bottom: 12%;
+    bottom: 13%;
     /* left: 190px; */
     right: 14%;
 }
