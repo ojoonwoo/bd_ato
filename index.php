@@ -86,6 +86,14 @@
 						<button type="button" onclick="location.href='./gate.php';">스킨 PT 시작</button>
 						<button type="button" onclick="location.href='./find.php';">나에게 맞는 PT 찾기</button>
 					</div>
+					<div class="share-group">
+						<button class="fb">
+							<img src="./images/share_fb.png" alt="">
+						</button>
+						<button class="kt">
+							<img src="./images/share_ks.png" alt="">
+						</button>
+					</div>
 				</div>
 			</div>
 <?
