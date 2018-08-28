@@ -204,7 +204,7 @@
 					</div>
 				</div>
 				<div class="img-block">
-					<img src="./images/popup_atoderm_img.png" alt="">
+					<img src="./images/popup_atoderm_img.png" alt="" id="rs_goods">
 				</div>
 				<div class="text-block custom-border">
 					<p class="your-status">

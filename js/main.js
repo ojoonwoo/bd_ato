@@ -280,18 +280,21 @@ $(function(){
 						$("#rs_type").html("라이트 PT");
 						$("#rs_status").html("계절성 건성");
 						$("#rs_goods").html("아토덤 크림");
+						$("#rs_goods_img").attr("src","./images/popup_atoderm_cream.png");
 					}else if (pt_type == "medium"){
 						$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
 						$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
 						$("#rs_type").html("미디움 PT");
 						$("#rs_status").html("만성 건성");
 						$("#rs_goods").html("아토덤 PP밤");
+						$("#rs_goods_img").attr("src","./images/popup_atoderm_pp.png");
 					}else{
 						$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
 						$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
 						$("#rs_type").html("헤비 PT");
 						$("#rs_status").html("문제성 건성");
 						$("#rs_goods").html("아토덤 인텐시브밤");
+						$("#rs_goods_img").attr("src","./images/popup_atoderm_intensive.png");
 					}
 	
 					bato.popup.show($("#pt-result"));
