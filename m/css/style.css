@@ -753,7 +753,8 @@ input[type="checkbox"]:focus {
 .content.find .scroll-content .checklist button.problem {top:1477px;}
 
 .content.find #footer {
-	position: static;
+	margin-top: 41px;
+	position: static !important;
 }
 
 
@@ -1415,7 +1416,12 @@ html.popup-opened {
 		top: 46px;
 		bottom: 109px;
 	}
-	#footer {
+	.content.gate > .wrapper {
+		padding: 0;
+	}
+	.content.sub #footer,
+	.content.main #footer {
+		margin-top: 0;
 		position: fixed;
 	}
 }
