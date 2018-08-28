@@ -1401,6 +1401,9 @@ html.popup-opened {
 		display: table;
 		table-layout: fixed;
 	}
+	.content.main .btn-group {
+		margin: 0 0 0 13%;
+	}
 	.content > .wrapper {
 		display: table-cell;
 		vertical-align: middle;
