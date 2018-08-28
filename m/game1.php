@@ -122,6 +122,7 @@
 			
 			var pt_type		= "light";
 			$('#game-start').on('click', function() {
+				$('#hand').draggable("enable");
 				$('.content.game').addClass('started');
 				if(!gameController.firstPower) {
 					gameController.firstPower = true;
@@ -256,6 +257,7 @@ console.log(response);
 				revertDuration: 250,
 				snap: true,
 				snapMode: "inner",
+				disabled: true,
 				start: function( event, ui ) {
 //					if(!gameController.firstPower) {
 //						gameController.firstPower = true;
