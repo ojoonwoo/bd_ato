@@ -223,39 +223,39 @@
 							gameController.time--;
 							if(gameController.point<30) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_01.jpg');
-							} else if(gameController.point>30 && gameController.point<45) {
+							} else if(gameController.point>=30 && gameController.point<45) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_02.jpg');	
-							} else if(gameController.point>45 && gameController.point<60) {
+							} else if(gameController.point>=45 && gameController.point<60) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_03.jpg');	
-							} else if(gameController.point>60 && gameController.point<75) {
+							} else if(gameController.point>=60 && gameController.point<75) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_04.jpg');	
-							} else if(gameController.point>75 && gameController.point<90) {
+							} else if(gameController.point>=75 && gameController.point<90) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_05.jpg');	
-							} else if(gameController.point>90 && gameController.point<110) {
+							} else if(gameController.point>=90 && gameController.point<110) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_06.jpg');	
-							} else if(gameController.point>110 && gameController.point<125) {
+							} else if(gameController.point>=110 && gameController.point<125) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_07.jpg');	
-							} else if(gameController.point>125 && gameController.point<135) {
+							} else if(gameController.point>=125 && gameController.point<135) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_08.jpg');	
-							} else if(gameController.point>135 && gameController.point<150) {
+							} else if(gameController.point>=135 && gameController.point<150) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_09.jpg');	
-							} else if(gameController.point>150 && gameController.point<165) {
+							} else if(gameController.point>=150 && gameController.point<165) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_10.jpg');	
-							} else if(gameController.point>165 && gameController.point<180) {
+							} else if(gameController.point>=165 && gameController.point<180) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_11.jpg');	
-							} else if(gameController.point>180 && gameController.point<190) {
+							} else if(gameController.point>=180 && gameController.point<190) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_12.jpg');	
-							} else if(gameController.point>190 && gameController.point<210) {
+							} else if(gameController.point>=190 && gameController.point<210) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_13.jpg');	
-							} else if(gameController.point>210 && gameController.point<225) {
+							} else if(gameController.point>=210 && gameController.point<225) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_14.jpg');	
-							} else if(gameController.point>225 && gameController.point<240) {
+							} else if(gameController.point>=225 && gameController.point<240) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_15.jpg');	
-							} else if(gameController.point>240 && gameController.point<255) {
+							} else if(gameController.point>=240 && gameController.point<255) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_16.jpg');	
-							} else if(gameController.point>255 && gameController.point<270) {
+							} else if(gameController.point>=255 && gameController.point<270) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_17.jpg');	
-							} else if(gameController.point>270 && gameController.point<280) {
+							} else if(gameController.point>=270 && gameController.point<280) {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_18.jpg');	
 							} else {
 								$('.frame .bg img').attr('src', './images/game_skin_frame_19.jpg');
