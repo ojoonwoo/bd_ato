@@ -2,7 +2,7 @@
     include_once "./include/autoload.php";
 
     $mnv_f 			= new mnv_function();
-    $my_db         = $mnv_f->Connect_MySQL();
+//    $my_db         = $mnv_f->Connect_MySQL();
     $mobileYN      = $mnv_f->MobileCheck();
     // $obYN          = $mnv_f->BrowserCheck();
     $IEYN          = $mnv_f->IECheck();
@@ -77,22 +77,15 @@
 						<path id="svg-path2" fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
 							  d="M306.399,10.323 C306.399,10.323 354.098,-4.481 406.666,2.263 C459.233,9.007 495.074,22.195 534.685,30.919 C574.296,39.643 623.842,69.430 653.753,98.082 C683.663,126.735 699.193,122.107 723.581,171.514 C747.970,220.921 762.454,282.309 774.610,320.168 C786.766,358.028 793.001,454.512 776.401,510.911 C759.800,567.311 748.769,594.315 707.467,638.073 C665.479,682.560 656.519,717.693 615.257,743.743 C573.996,769.794 488.790,797.531 417.409,792.996 C336.480,787.855 278.045,776.296 229.408,765.236 C180.771,754.175 144.993,713.680 121.979,690.013 C113.967,681.773 73.346,648.692 51.255,602.253 C32.447,562.715 6.818,523.669 2.017,485.837 C-2.784,448.005 5.675,380.590 2.017,358.675 C-1.641,336.760 4.287,260.365 56.627,200.170 C108.967,139.975 130.732,109.364 160.475,87.336 C190.217,65.309 271.939,13.576 306.399,10.323 Z"/>
 					</svg>
-<!--
-					<div class="title back wave" data-wave="0.8">
-						<img src="./images/main_title_back.png" alt="">
-					</div>
--->
 					<div class="people wave" data-wave="0.5">
 						<img src="./images/main_visual_pp.png" alt="">
 					</div>
-					<div class="title wave" data-wave="0.8">
-						<img src="./images/main_title.png" alt="">
+					<div class="title left wave" data-wave="0.8">
+						<img src="./images/main_title_left.png" alt="">
 					</div>
-<!--
-					<div class="title front wave" data-wave="0.8">
-						<img src="./images/main_title_front.png" alt="">
+					<div class="title right wave" data-wave="0.8">
+						<img src="./images/main_title_right.png" alt="">
 					</div>
--->
 					<div class="text-group wave" data-wave="0.2">
 						<div class="desc">
 							<p>당신의 피부도 이제는 체력 관리가 필요합니다</p>

@@ -1388,3 +1388,34 @@ html.popup-opened {
 		width: 30px;
 	}
 }
+
+@media all and (min-height: 680px) {
+	.content.main,
+	.content.sub {
+		width: 100%;
+		height: 100vh;
+		display: table;
+		table-layout: fixed;
+	}
+	.content > .wrapper {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+	}
+	.content.sub > .wrapper {
+		padding-top: 0;
+	}
+	.content.sub > .wrapper .visual-wrap {
+		margin-top: -23%;
+	}
+	.content.main > .wrapper .visual-wrap {
+		margin-top: 0;
+	}
+	.content.game .pre-layer {
+		top: 46px;
+		bottom: 109px;
+	}
+	#footer {
+		position: fixed;
+	}
+}
