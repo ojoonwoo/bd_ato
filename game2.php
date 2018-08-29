@@ -188,10 +188,9 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 				snapMode: "inner",
 				disabled: true,
 				start: function( event, ui ) {
-//					if(!gameController.firstPower) {
-//						gameController.firstPower = true;
-//						timer(0);
-//					}
+					$('#hand').css({
+						cursor: 'grabbing'
+					});
 				},
 				drag: function( event, ui ) {
 					gameController.dragging = true;
@@ -254,6 +253,9 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 					}
 				},
 				stop: function( event, ui) {
+					$('#hand').css({
+						cursor: 'grab'
+					});
 					gameController.dragging = false;
 					if(!gameController.clearFlag) {
 						gageDown();

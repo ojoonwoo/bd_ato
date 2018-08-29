@@ -1027,6 +1027,9 @@ html.popup-opened {
 .popup.pt-pass .input-block .input-group.n3 .input input[type="tel"] {
 	width: 69px;
 }
+#mb_addr1 {
+	text-overflow: ellipsis;
+}
 .popup.pt-pass .input-block .input-group.n3 .input span {
 	display: inline-block;
 	width: 18px;

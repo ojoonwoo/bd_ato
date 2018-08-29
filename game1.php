@@ -190,10 +190,9 @@
 				snapMode: "inner",
 				disabled: true,
 				start: function( event, ui ) {
-//					if(!gameController.firstPower) {
-//						gameController.firstPower = true;
-//						timer(0);
-//					}
+					$('#hand').css({
+						cursor: 'grabbing'
+					});
 				},
 				drag: function( event, ui ) {
 					gameController.dragging = true;
@@ -256,6 +255,9 @@
 					}
 				},
 				stop: function( event, ui) {
+					$('#hand').css({
+						cursor: 'grab'
+					});
 					gameController.dragging = false;
 					if(!gameController.clearFlag) {
 						gageDown();
