@@ -91,6 +91,108 @@ $(function(){
 		}
 	};
 	bato.popup.bind();
+	
+	$('#rs1').on('click', function() {
+		// console.log("1111");
+		bato.popup.close($("#pt-pass"));
+		bato.popup.show($("#pt-pass2"));
+	});
+	$('#rs2').on('click', function() {
+		var mb_name 	= $("#mb_name").val();
+		var mb_phone1 	= $("#mb_phone1").val();
+		var mb_phone2 	= $("#mb_phone2").val();
+		var mb_phone3 	= $("#mb_phone3").val();
+		var mb_addr1 	= $("#mb_addr1").val();
+		var mb_addr2 	= $("#mb_addr2").val();
+		var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
+
+		// console.log($('.mb_type').val());
+		if (mb_name == "") {
+			alert("이름을 입력해 주세요.");
+			$("#mb_name").focus();
+			return false;
+		}
+
+		if (mb_phone1 == "") {
+			alert("전화번호를 입력해 주세요.");
+			$("#mb_phone1").focus();
+			return false;
+		}
+
+		if (mb_phone2 == "") {
+			alert("전화번호를 입력해 주세요.");
+			$("#mb_phone2").focus();
+			return false;
+		}
+		if (mb_phone3 == "") {
+			alert("전화번호를 입력해 주세요.");
+			$("#mb_phone3").focus();
+			return false;
+		}
+		if (mb_addr1 == "") {
+			alert("주소를 입력해 주세요.");
+			return false;
+		}
+		if (mb_addr2 == "") {
+			alert("상세주소를 입력해 주세요.");
+			$("#mb_addr2").focus();
+			return false;
+		}
+
+		if ($("#agree1").is(":checked") === false)
+		{
+			alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
+			return false;
+		}
+
+		if ($("#agree2").is(":checked") === false)
+		{
+			alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
+			return false;
+		}
+
+		$.ajax({
+			type:"POST",
+			data:{
+				"exec"				: "insert_member_info",
+				"mb_name"			: mb_name,
+				"mb_phone"			: mb_phone,
+				"mb_addr1"			: mb_addr1,
+				"mb_addr2"			: mb_addr2,
+				"mb_type"			: pt_type
+			},
+			url: "../main_exec.php",
+			success: function(response){
+				console.log(response);
+				if (response == "Y")
+				{
+					bato.popup.close($("#pt-pass"));
+					// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
+					if (pt_type == "light")
+					{
+						$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
+						$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
+						$("#rs_goods").attr("src","./images/popup_atoderm_cream.png")
+					}else if (pt_type == "medium"){
+						$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
+						$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
+						$("#rs_goods").attr("src","./images/popup_atoderm_pp.png")
+					}else{
+						$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
+						$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
+						$("#rs_goods").attr("src","./images/popup_atoderm_intensive.png")
+					}
+					bato.popup.show($("#pt-result"));
+				}else if (response == "D") {
+					alert("이미 참여하셨습니다. 감사합니다!");
+					location.reload();
+				}else{
+					alert("참여자가 많습니다. 다시시도해 주세요!");
+					location.reload();
+				}
+			}
+		});
+	});
 
 	$(".find-addr").on("click", function(){
 		// sample2_execDaumPostcode();
@@ -144,6 +246,7 @@ $(function(){
 	});
 
 });
+
 
 function closeDaumPostcode() {
 	// iframe을 넣은 element를 안보이게 한다.

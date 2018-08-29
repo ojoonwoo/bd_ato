@@ -142,6 +142,7 @@ input[type="checkbox"]:focus {
 	left: 0;
 	right: 0;
 	z-index: 100;
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	opacity: 0;
 	visibility: hidden;
@@ -161,12 +162,15 @@ input[type="checkbox"]:focus {
 	padding: 81px 0 60px;
 	background: #4374a6;
 	z-index: 2;
+	-webkit-transform: translateY(-100%);
 	transform: translateY(-100%);
 	opacity: 0;
 }
 .menu-opened #menu-layer .inner {
+	-webkit-transform: translateY(0);
 	transform: translateY(0);
 	opacity: 1;
+	-webkit-transition: all 0.4s ease 0.12s;
 	transition: all 0.4s ease 0.12s;
 }
 #menu-layer .btn-close {
@@ -181,6 +185,7 @@ input[type="checkbox"]:focus {
 	height: 25px;
 	padding: 17px;
 	z-index: 100;
+	-webkit-box-sizing: content-box;
 	box-sizing: content-box;
 }
 #menu-layer .btn-close span.line {
@@ -191,9 +196,11 @@ input[type="checkbox"]:focus {
 	background: #ffffff;
 }
 #menu-layer .btn-close span.line._1 {
+	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 #menu-layer .btn-close span.line._2 {
+	-webkit-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 #menu-layer .inner ul li {
@@ -360,7 +367,7 @@ input[type="checkbox"]:focus {
 .content.main .visual-wrap .text-group p {
 	font-size: 10px;
 	font-weight: 300;
-	color: #4374a6;
+	color: #666666;
 	text-align: left;
 	/* line-height: 8px; */
 	line-height: 12px;
@@ -372,6 +379,7 @@ input[type="checkbox"]:focus {
 	font-weight: 700;
 	margin-top: 0;
 	margin-bottom: 6px;
+	color: #4374a6;
 	line-height: 12px;
 }
 .content.main .btn-group {
@@ -391,7 +399,7 @@ input[type="checkbox"]:focus {
 	letter-spacing: -0.25px;
 	font-weight: 500;
 	color: #ffffff;
-	background-color: #84bce9;
+	background-color: #e63e8c;
 	position: relative;
 }
 .content.main .btn-group button span {
@@ -400,6 +408,7 @@ input[type="checkbox"]:focus {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 .content.main .btn-group button:last-child {
@@ -466,6 +475,7 @@ input[type="checkbox"]:focus {
 }
 .content.game .game-container .guide-obj {
 /*	display: none;*/
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .content.game .pre-layer {
@@ -480,6 +490,7 @@ input[type="checkbox"]:focus {
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 100;
 	/*	height: calc(100% - 253px);*/
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .game.started .pre-layer {
@@ -956,6 +967,7 @@ html.popup-opened {
 	width: 100%;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	font-size: 11px;
 	font-weight: 700;
@@ -1176,7 +1188,7 @@ html.popup-opened {
 	width: 127px;
 	height: 29px;
 	margin: 0 auto;
-	background: #4374a6;
+	background: #e63e8c;
 	border-radius: 23px;
 	color: #ffffff;
 	font-size: 12px;
@@ -1333,7 +1345,7 @@ html.popup-opened {
 	width: 105px;
 	height: 29px;
 	margin: 0 auto;
-	background: #4374a6;
+	background: #e63e8c;
 	border-radius: 23px;
 	color: #ffffff;
 	font-size: 12px;
@@ -1390,6 +1402,13 @@ html.popup-opened {
 	}
 	.content.game .visual-wrap .game-container .frame .timer #count img {
 		width: 30px;
+	}
+	.button .button01,
+	.button .button02 {
+		width: 108px;
+	}
+	.button .button03 {
+		width: 120px;
 	}
 }
 

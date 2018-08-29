@@ -83,31 +83,9 @@
 						</div>
 					</div>
 				</div>
-				<div id="footer">
-					<ul>
-						<li><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank">바이오더마 소개</a></li>
-						<li><a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank">온라인 고객센터</a></li>
-					</ul>
-					<ul>
-						<li>나오스코리아 유한회사</li>
-						<li>대표: 장이브데모트</li>
-					</ul>
-					<ul>
-						<li>사업자등록번호: 214-88-79685 <a href="#">(사업자정보확인)</a></li>
-					</ul>
-					<ul>
-						<li>주소: 서울특별시 서초구 서초중앙로 138 우림빌딩 7층 나오스코리아 유한회사</li>
-					</ul>
-					<ul>
-						<li>개인정보책임자: 김민정</li>
-						<li>안내 번호: 070-4888-1164</li>
-					</ul>
-					<ul>
-						<li>통신판매업신고번호: 2015-서울서초-0215</li>
-						<li>E-MAIL: bioderma@bioderma.kr</li>
-					</ul>
-					<p>©2018  BIODERMA.  ALL RIGHT RESERVED</p>
-				</div>
+<?
+	include_once "footer_area.php";
+?>
 			</div>
 		</div>
 <?
@@ -168,107 +146,7 @@
 				$('.tab-contents').find('.content').not(tabTarget).hide();
 				$('.tab-contents').find('.'+tabTarget).show();
 			})
-			$('#rs1').on('click', function() {
-				// console.log("1111");
-				bato.popup.close($("#pt-pass"));
-				bato.popup.show($("#pt-pass2"));
-			});
-			$('#rs2').on('click', function() {
-				var mb_name 	= $("#mb_name").val();
-				var mb_phone1 	= $("#mb_phone1").val();
-				var mb_phone2 	= $("#mb_phone2").val();
-				var mb_phone3 	= $("#mb_phone3").val();
-				var mb_addr1 	= $("#mb_addr1").val();
-				var mb_addr2 	= $("#mb_addr2").val();
-				var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
-
-				// console.log($('.mb_type').val());
-				if (mb_name == "") {
-					alert("이름을 입력해 주세요.");
-					$("#mb_name").focus();
-					return false;
-				}
-
-				if (mb_phone1 == "") {
-					alert("전화번호를 입력해 주세요.");
-					$("#mb_phone1").focus();
-					return false;
-				}
-				
-				if (mb_phone2 == "") {
-					alert("전화번호를 입력해 주세요.");
-					$("#mb_phone2").focus();
-					return false;
-				}
-				if (mb_phone3 == "") {
-					alert("전화번호를 입력해 주세요.");
-					$("#mb_phone3").focus();
-					return false;
-				}
-				if (mb_addr1 == "") {
-					alert("주소를 입력해 주세요.");
-					return false;
-				}
-				if (mb_addr2 == "") {
-					alert("상세주소를 입력해 주세요.");
-					$("#mb_addr2").focus();
-					return false;
-				}
-
-				if ($("#agree1").is(":checked") === false)
-				{
-					alert('개인정보 수집 및 이용약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-					return false;
-				}
-
-				if ($("#agree2").is(":checked") === false)
-				{
-					alert('개인정보 취급 위탁 약관에 동의하셔야만 이벤트 참여가 가능합니다.');
-					return false;
-				}
-
-				$.ajax({
-					type:"POST",
-					data:{
-						"exec"				: "insert_member_info",
-						"mb_name"			: mb_name,
-						"mb_phone"			: mb_phone,
-						"mb_addr1"			: mb_addr1,
-						"mb_addr2"			: mb_addr2,
-						"mb_type"			: pt_type
-					},
-					url: "../main_exec.php",
-					success: function(response){
-
-						if (response == "Y")
-						{
-							bato.popup.close($("#pt-pass"));
-							// 사용자가 선택한 피부타입에 맞는 제품 및 문구 변경
-							if (pt_type == "light")
-							{
-								$(".your-status").html("라이트 PT를 선택한 당신은 <b>계절성 건성</b>입니다");
-								$(".need").html("아토덤 크림으로 스킨 PT가 필요합니다");
-								$("#rs_goods").attr("src","./images/popup_atoderm_cream.png")
-							}else if (pt_type == "medium"){
-								$(".your-status").html("미디움 PT를 선택한 당신은 <b>만성 건성</b>입니다");
-								$(".need").html("아토덤 PP밤으로 스킨 PT가 필요합니다");
-								$("#rs_goods").attr("src","./images/popup_atoderm_pp.png")
-							}else{
-								$(".your-status").html("헤비 PT를 선택한 당신은 <b>문제성 건성</b>입니다");
-								$(".need").html("아토덤 인텐시브밤으로 스킨 PT가 필요합니다");
-								$("#rs_goods").attr("src","./images/popup_atoderm_intensive.png")
-							}
-							bato.popup.show($("#pt-result"));
-						}else if (response == "D") {
-							alert("이미 참여하셨습니다. 감사합니다!");
-							location.reload();
-						}else{
-							alert("참여자가 많습니다. 다시시도해 주세요!");
-							location.reload();
-						}
-					}
-				});
-			});
+			
 			$('#hand').draggable({
 				axis: "x",
 				revert: true,

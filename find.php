@@ -42,13 +42,13 @@
 						</div>
 					</div>
 					<div class="checklist">
-						<button type="button" class="season">
+						<button type="button" class="season" onclick="location.href='http://www.bioderma.co.kr/front/product_view.php?id=028067B'">
 							<img src="./images/find_btn_season.png" alt="">
 						</button>
-						<button type="button" class="chronic">
+						<button type="button" class="chronic" onclick="location.href='http://www.bioderma.co.kr/front/product_view.php?id=028106'">
 							<img src="./images/find_btn_chronic.png" alt="">
 						</button>
-						<button type="button" class="problem">
+						<button type="button" class="problem" onclick="location.href='http://www.bioderma.co.kr/front/product_view.php?id=028104S'">
 							<img src="./images/find_btn_problem.png" alt="">
 						</button>
 					</div>

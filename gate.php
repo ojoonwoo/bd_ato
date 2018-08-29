@@ -66,7 +66,7 @@
 							<a href="game1.php">
 								<div class="go-wrap">
 									<div class="go-area">
-										<img src="./images/gate_btn_face2.png" alt="">
+										<img src="./images/gate_btn_face2.jpg" alt="">
 									</div>
 									<div class="btn-area">
 										<button>
@@ -78,7 +78,7 @@
 							<a href="game2.php">
 								<div class="go-wrap">
 									<div class="go-area">
-										<img src="./images/gate_btn_body2.png" alt="">
+										<img src="./images/gate_btn_body2.jpg" alt="">
 									</div>
 									<div class="btn-area">
 										<button>

@@ -118,9 +118,10 @@ input[type="checkbox"]:focus {
 	display: inline-block;
 	position: relative;
 	padding: 0 30px;
-	font-size: 15px;
+	font-size: 19px;
 	font-weight: 700;
 	color: #4374a6;
+	-webkit-transition: all 0.6s ease;
 	transition: all 0.6s ease;
 }
 #header .menu li:hover,
@@ -242,17 +243,19 @@ input[type="checkbox"]:focus {
 .content.main #title-c-head .title-c {
 	stroke-dasharray: 300;
 	stroke-dashoffset: 300;
+	-webkit-transition: all 1.33s linear 0.1s;
 	transition: all 1.33s linear 0.1s;
 }
 .content.main #title-c-tail {
 	width: 82px;
-	top: 389px;
+	top: 388px;
 	left: 423px;
 	z-index: 1;
 }
 .content.main #title-c-tail .title-c {
 	stroke-dasharray: 100;
 	stroke-dashoffset: 100;
+	-webkit-transition: all 0.5s linear 1.1s;
 	transition: all 0.5s linear 1.1s;
 }
 
@@ -271,12 +274,15 @@ input[type="checkbox"]:focus {
 .content.main .visual-wrap .title,
 .content.main .visual-wrap .text-group {
 	opacity: 0;
+	-webkit-transform: translateY(30px);
 	transform: translateY(30px);
+	-webkit-transition: all 1.15s ease;
 	transition: all 1.15s ease;
 }
 .all-load .content.main .visual-wrap .title,
 .all-load .content.main .visual-wrap .text-group{
 	opacity: 1;
+	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
 .content.main .visual-wrap .left {
@@ -316,17 +322,19 @@ input[type="checkbox"]:focus {
 .content.main .visual-wrap .text-group p {
 	font-size: 18px;
 	font-weight: 300;
-	color: #4374a6;
 	text-align: left;
 	letter-spacing: -0.5px;
-	line-height: 14px;
+	line-height: 15px;
 	margin-top: 5px;
 	word-break: keep-all;
+	color: #666666;
 }
 .content.main .visual-wrap .text-group p:first-child {
-	font-weight: 700;
 	margin-top: 0;
 	margin-bottom: 12px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #4374a6;
 }
 .content.main .visual-wrap .btn-group {
 	position: absolute;
@@ -335,11 +343,14 @@ input[type="checkbox"]:focus {
 	margin-left: 210px;
 	z-index: 4;
 	opacity: 0;
+	-webkit-transform: translateX(10px);
 	transform: translateX(10px);
+	-webkit-transition: all 1.34s ease 1.2s;
 	transition: all 1.34s ease 1.2s;
 }
 .all-load .content.main .visual-wrap .btn-group {
 	opacity: 1;
+	-webkit-transform: translateX(0);
 	transform: translateX(0);
 	
 }
@@ -348,7 +359,7 @@ input[type="checkbox"]:focus {
 	width: 206px;
 	height: 50px;
 	border-radius: 23px;
-	background-color: #84bce9;
+	background-color: #e63e8c;
 	font-size: 19px;
 	font-weight: 500;
 	color: #ffffff;
@@ -396,6 +407,7 @@ input[type="checkbox"]:focus {
 	opacity: 0;
 }
 .content.game .game-container .guide-obj {
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .content.game .pre-layer {
@@ -407,6 +419,7 @@ input[type="checkbox"]:focus {
 	bottom: 133px;
 	background: rgba(0, 0, 0, 0.8);
 	z-index: 100;
+	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 /*	height: calc(100% - 253px);*/
 }
@@ -467,6 +480,8 @@ input[type="checkbox"]:focus {
 	bottom: -175px;
 	left: 17px;
 	z-index: 100;
+	cursor: -webkit-grab;
+	cursor: grab;
 }
 .content.game .visual-wrap .game-container .frame .hand img {
 	width: 397px;
@@ -636,6 +651,7 @@ input[type="checkbox"]:focus {
 	-moz-transform: scale(1);
 	-ms-transform: scale(1);
 	-o-transform: scale(1);
+	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 .content.gate > .wrapper .visual-wrap .btn-group .go-area:hover{
@@ -651,7 +667,8 @@ input[type="checkbox"]:focus {
 	width: 317px;
 	height: 409px;
 	overflow: hidden;
-	border-radius: 25px;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 11px 0px #d8d5d5;
 	box-shadow: 0 0 11px 0px #d8d5d5;
 	/* -moz-box-shadow: 3px 3px 3px 3px #999;
 　  -webkit-box-shadow: 3px 3px 3px 3px #999; */
@@ -710,7 +727,7 @@ input[type="checkbox"]:focus {
 }
 .content.find .scroll-content .checklist button {
 	position: absolute;
-	left: 508px;
+	left: 470px;
 	cursor: pointer;
 }
 .content.find .scroll-content .checklist button.season {top:518px;}
@@ -790,7 +807,7 @@ html.popup-opened {
 	width: 28px;
 	height: 28px;
 	border-radius: 50%;
-	background: url(../images/popup_close.png) center / 14px 14px no-repeat #c93e8b;
+	background: url(../images/popup_close.png) center / 14px 14px no-repeat #a3a3a3;
 }
 .popup .inner {
 	background: #ffffff;
@@ -916,6 +933,7 @@ html.popup-opened {
 	width: 100%;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	font-size: 17px;
 	font-weight: 700;
@@ -1120,7 +1138,7 @@ html.popup-opened {
 	width: 190px;
 	height: 46px;
 	margin: 19px auto 24px;
-	background: #4374a6;
+	background: #e63e8c;
 	border-radius: 23px;
 	color: #ffffff;
 	font-size: 19px;
@@ -1304,7 +1322,7 @@ html.popup-opened {
 	width: 190px;
 	height: 46px;
 	margin: 34px auto 0;
-	background: #4374a6;
+	background: #e63e8c;
 	border-radius: 23px;
 	color: #ffffff;
 	font-size: 19px;
