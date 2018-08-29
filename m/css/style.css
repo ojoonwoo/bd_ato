@@ -636,7 +636,7 @@ input[type="checkbox"]:focus {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background: #84bce9;
+	background: #aecce5;
 	border-radius: 10px;
 	-webkit-transition: height 0.07s ease-in-out;
 	transition: height 0.07s ease-in-out;
@@ -1327,7 +1327,7 @@ html.popup-opened {
 	margin-bottom: 15px;
 }
 .popup.pt-fail .title-block img {
-	width: 30px;
+	width: 24px;
 }
 .popup.pt-fail .title-block h5 {
 	margin: 8px 0 6px;	
