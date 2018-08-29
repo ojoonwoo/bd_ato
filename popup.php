@@ -205,24 +205,20 @@
 				<div class="table-block custom-border">
 					<div class="table">
 						<div class="row">
-							<div class="col icon _1"></div>
-							<div class="col"><span>이름</span></div>
-							<div class="col"><span id="rs_name">안 다 영</span></div>
+							<div class="col icon _1"><span>이름</span></div>
+							<div class="col"><span>안 다 영</span></div>
 						</div>
 						<div class="row">
-							<div class="col icon _2"></div>
-							<div class="col"><span>선택한 PT</span></div>
-							<div class="col"><span id="rs_type">미디움 PT</span></div>
+							<div class="col icon _2"><span>선택한 PT</span></div>
+							<div class="col"><span>미디움 PT</span></div>
 						</div>
 						<div class="row">
-							<div class="col icon _3"></div>
-							<div class="col"><span>현재 상태</span></div>
-							<div class="col"><span id="rs_status">만성 건성</span></div>
+							<div class="col icon _3"><span>현재 상태</span></div>
+							<div class="col"><span>만성 건성</span></div>
 						</div>
 						<div class="row">
-							<div class="col icon _4"></div>
-							<div class="col"><span>필요한 PT 크림</span></div>
-							<div class="col"><span id="rs_goods">아토덤 PP밤</span></div>
+							<div class="col icon _4"><span>필요한 PT 크림</span></div>
+							<div class="col"><span>아토덤 PP밤</span></div>
 						</div>
 					</div>
 					<div class="guide-msg">(선택하신 PT에 맞는 샘플 키트는 9월 17일 이후 일괄 배송됩니다)</div>

@@ -480,6 +480,7 @@ input[type="checkbox"]:focus {
 	bottom: -175px;
 	left: 17px;
 	z-index: 100;
+	cursor: pointer;
 	cursor: -webkit-grab;
 	cursor: grab;
 }
@@ -614,7 +615,7 @@ input[type="checkbox"]:focus {
 	margin-bottom: 64px;
 }
 .content.gate > .wrapper .visual-wrap .title-group .object {
-	width: 52px;
+	width: 41px;
 	height: 40px;
 	margin: 0 auto 17px;
 }
@@ -694,7 +695,7 @@ input[type="checkbox"]:focus {
 	padding: 189px 0 45px;
 }
 .content.find .scroll-content .title-group {
-	margin: 0 0 39px;
+	margin: 0 0 14px;
 	text-align: center;
 }
 .content.find .scroll-content .title-group .object {
@@ -703,19 +704,14 @@ input[type="checkbox"]:focus {
 .content.find .scroll-content .title-group .text h3 {
 	font-size: 32px;
 	font-weight: 500;
-	margin-bottom: 24px;
+	margin-bottom: 5px;
 }
 .content.find .scroll-content .title-group .text h3 b {
 	color: #4374a6;
 	font-weight: 800;
 }
-.content.find .scroll-content .title-group .text p {
-	font-size: 22px;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
 .content.find .scroll-content .title-group .text span {
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 500;
 }
 .content.find .scroll-content .checklist {
@@ -857,8 +853,8 @@ html.popup-opened {
 .popup.pt-pass .tab-block .tab-wrapper .tab:last-child {
 	width: 131px;
 }
-.popup.pt-pass .tab-block .tab-wrapper .tab.light {background: #84b1e0;}
-.popup.pt-pass .tab-block .tab-wrapper .tab.medium {background: #5e94cb;}
+.popup.pt-pass .tab-block .tab-wrapper .tab.light {background: #aecce5;}
+.popup.pt-pass .tab-block .tab-wrapper .tab.medium {background: #6d92bf;}
 .popup.pt-pass .tab-block .tab-wrapper .tab.heavy {background: #4374a6;}
 
 .popup.pt-pass .tab-block .tab-wrapper.init-state .tab {
@@ -955,8 +951,8 @@ html.popup-opened {
 	height: 100%;
 	padding-top: 26px;
 }
-.popup.pt-pass .tab-block .content.light {background: #84b1e0;}
-.popup.pt-pass .tab-block .content.medium {background: #5e94cb;}
+.popup.pt-pass .tab-block .content.light {background: #aecce5;}
+.popup.pt-pass .tab-block .content.medium {background: #6d92bf;}
 .popup.pt-pass .tab-block .content.heavy {background: #4374a6;}
 .popup.pt-pass .check-block {
 	width: 391px;
@@ -1225,33 +1221,38 @@ html.popup-opened {
 }
 .popup.pt-result .table-block .row .col {
 	display: inline-block;
-	width: 142px;
+	width: 160px;
 	height: 27px;
 	margin-right: 3px;
 	background: #f8f8f8;
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: 400;
 	vertical-align: middle;
 	text-align: left;
-	padding-left: 22px;
+	padding-left: 43px;
+	position: relative;
 }
 .popup.pt-result .table-block .row:last-child {
 	margin-bottom: 0;
 }
 .popup.pt-result .table-block .row .col:last-child {
+	width: 142px;
 	margin-right: 0;
+	padding-left: 15px;
 }
 .popup.pt-result .table-block .row .col span {
-	vertical-align: middle;
+	vertical-align: top;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .popup.pt-result .table-block .row .col.icon {
-	width: 59px;
-	text-align: center;
+	color: #4374a6;
 }
-.popup.pt-result .table-block .row .icon._1 {background: url(../images/popup_result_table_icon_1.png) center / 12px 15px no-repeat #f8f8f8;}
-.popup.pt-result .table-block .row .icon._2 {background: url(../images/popup_result_table_icon_2.png) center / 14px 14px no-repeat #f8f8f8;}
-.popup.pt-result .table-block .row .icon._3 {background: url(../images/popup_result_table_icon_3.png) center / 17px 9px no-repeat #f8f8f8;}
-.popup.pt-result .table-block .row .icon._4 {background: url(../images/popup_result_table_icon_4.png) center / 10px 19px no-repeat #f8f8f8;}
+.popup.pt-result .table-block .row .icon._1 {background: url(../images/popup_result_table_icon_1.png) 15px center / 12px 15px no-repeat #f8f8f8;}
+.popup.pt-result .table-block .row .icon._2 {background: url(../images/popup_result_table_icon_2.png) 14px center / 14px 14px no-repeat #f8f8f8;}
+.popup.pt-result .table-block .row .icon._3 {background: url(../images/popup_result_table_icon_3.png) 12px center / 17px 9px no-repeat #f8f8f8;}
+.popup.pt-result .table-block .row .icon._4 {background: url(../images/popup_result_table_icon_4.png) 16px center / 10px 19px no-repeat #f8f8f8;}
 
 .popup.pt-result .table-block .guide-msg {
 	margin-top: 15px;

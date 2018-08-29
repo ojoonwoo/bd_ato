@@ -371,14 +371,13 @@ input[type="checkbox"]:focus {
 	text-align: left;
 	/* line-height: 8px; */
 	line-height: 12px;
-	margin-top: 5px;
 	word-break: keep-all;
 	letter-spacing: -0.5px;
 }
 .content.main .visual-wrap .text-group p:first-child {
 	font-weight: 700;
 	margin-top: 0;
-	margin-bottom: 6px;
+	margin-bottom: 4px;
 	color: #4374a6;
 	line-height: 12px;
 }
@@ -685,7 +684,7 @@ input[type="checkbox"]:focus {
 	margin-bottom: 30px;
 }
 .content.gate > .wrapper .visual-wrap .title-group .object {
-	width: 33px;
+	width: 26px;
 	margin: 0 auto 14px;
 }
 .content.gate > .wrapper .visual-wrap .title-group span {
@@ -890,8 +889,8 @@ html.popup-opened {
 .popup.pt-pass .tab-block .tab-wrapper .tab:last-child {
 	width: 33.4%;
 }
-.popup.pt-pass .tab-block .tab-wrapper .tab.light {background: #84b1e0;}
-.popup.pt-pass .tab-block .tab-wrapper .tab.medium {background: #5e94cb;}
+.popup.pt-pass .tab-block .tab-wrapper .tab.light {background: #aecce5;}
+.popup.pt-pass .tab-block .tab-wrapper .tab.medium {background: #6d92bf;}
 .popup.pt-pass .tab-block .tab-wrapper .tab.heavy {background: #4374a6;}
 
 .popup.pt-pass .tab-block .tab-wrapper.init-state .tab {
@@ -986,10 +985,10 @@ html.popup-opened {
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	padding: 15px 20px 25px;
+	padding: 23px 20px 0;
 }
-.popup.pt-pass .tab-block .content.light {background: #84b1e0;}
-.popup.pt-pass .tab-block .content.medium {background: #5e94cb;}
+.popup.pt-pass .tab-block .content.light {background: #aecce5;}
+.popup.pt-pass .tab-block .content.medium {background: #6d92bf;}
 .popup.pt-pass .tab-block .content.heavy {background: #4374a6;}
 
 .popup.pt-pass .check-block {

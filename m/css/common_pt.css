@@ -59,7 +59,7 @@ img {
 
 .button .button01 {
     position: absolute;
-    width: 119px;
+    width: 130px;
     /* 변경 */
     /* top: 438px; */
     top: 27%;
@@ -69,7 +69,7 @@ img {
 
 .button .button02 {
     position: absolute;
-    width: 119px;
+    width: 130px;
     /* top:690px; */
     top:55.5%;
     /* left: 197px; */
@@ -78,9 +78,9 @@ img {
 
 .button .button03 {
     position: absolute;
-    width: 140px;
+    width: 130px;
     /* top: 945px; */
-    bottom: 13%;
+    top: 84%;
     /* left: 190px; */
     left: 49%;
 }
