@@ -1013,7 +1013,8 @@ html.popup-opened {
 }
 .popup.pt-pass .input-block {
 	padding: 0 43px;
-	margin: 29px auto 28px;
+	/* margin: 29px auto 28px; */
+	margin: 29px auto 16px;
 }
 .popup.pt-pass .input-block .input-group {
 	font-size: 0;
@@ -1075,15 +1076,17 @@ html.popup-opened {
 }
 .popup.pt-pass .input-guide-msg {
 	position: relative;
-	width: 100%;
-	margin: 0 0 30px 90px;
-	padding-left: 5px;
+	/* width: 100%; */
+	/* margin: 0 0 30px 90px; */
+	/* padding-left: 5px; */
 	font-size: 10px;
 	color: #464646;
 	letter-spacing: -0.75px;
 	font-weight: 400;
+	text-align: center;
+	margin-top: 10px;
 }
-.popup.pt-pass .input-guide-msg:before {
+/* .popup.pt-pass .input-guide-msg:before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -1091,10 +1094,11 @@ html.popup-opened {
 	width: 2px;
 	height: 100%;
 	background: #5573a3;
-}
+} */
 .popup.pt-pass .terms-block {
 	padding-left: 90px;
-	margin: 0 auto 52px;
+	/* margin: 0 auto 52px; */
+	margin: 0 auto 14px;
 }
 .popup.pt-pass .terms-block .terms-group {
 	display: inline-block;

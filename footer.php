@@ -1,7 +1,7 @@
 			<div id="footer">
 				<ul>
-					<li><a href="#">바이오더마 소개</a></li>
-					<li><a href="#">온라인 고객센터</a></li>
+					<li><a href="http://www.bioderma.co.kr/page/brand_philosophy.php" target="_blank">바이오더마 소개</a></li>
+					<li><a href="http://www.bioderma.co.kr/front/board.php?bbs_id=notice" target="_blank">온라인 고객센터</a></li>
 				</ul>
 				<ul>
 					<li>나오스코리아 유한회사</li>
