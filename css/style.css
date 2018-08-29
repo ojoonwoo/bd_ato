@@ -324,7 +324,7 @@ input[type="checkbox"]:focus {
 	height: 100%;
 	overflow: hidden;
 	position: relative;
-	z-index: 99;
+/*	z-index: 99;*/
 }
 .content.sub > .wrapper .visual-wrap {
 	width: 100%;
