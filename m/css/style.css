@@ -363,7 +363,7 @@ input[type="checkbox"]:focus {
 	color: #4374a6;
 	text-align: left;
 	/* line-height: 8px; */
-	line-height: 10px;
+	line-height: 12px;
 	margin-top: 5px;
 	word-break: keep-all;
 	letter-spacing: -0.5px;
@@ -372,7 +372,7 @@ input[type="checkbox"]:focus {
 	font-weight: 700;
 	margin-top: 0;
 	margin-bottom: 6px;
-	line-height: 1;
+	line-height: 12px;
 }
 .content.main .btn-group {
 /*	position: absolute;*/

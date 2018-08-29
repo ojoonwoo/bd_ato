@@ -383,6 +383,13 @@ console.log(response);
 					gameController.dragging = false;
 				}
 			}
+//			$('body').on('scroll', function() {
+//				if($(this).scrollTop()>$('#header').height() && !$('html').hasClass('is-scrolled')) {
+//					$('html').addClass('is-scrolled');
+//				} else {
+//					$('html').removeClass('is-scrolled');
+//				}
+//			});
 			$('.burger').on('click', function() {
 				$('html').addClass('menu-opened');
 			});
