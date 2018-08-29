@@ -8,6 +8,7 @@
 		<meta property="og:url" content="http://www.atodermcare.com" />
 		<meta property="og:image" content="http://www.atodermcare.com/images/share_img.jpg" />
 		<meta property="og:description" content="당신의 스킨도 이제는 체력 관리가 필요하니까! 지금 바이오더마에서 당신에게 필요한 무료 스킨 PT를 받아보세요!" />
+		<link type="image/icon" rel="shortcut icon" href="http://www.atodermcare.com/images/favicon.ico" />
 		<title>BIODERMA - Atoderm</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
@@ -99,7 +100,7 @@
 					</ul>
 					<ul>
 						<li>개인정보책임자: 김민정</li>
-						<li>안내 번호: 070-4888-1640</li>
+						<li>안내 번호: 070-4888-1164</li>
 					</ul>
 					<ul>
 						<li>통신판매업신고번호: 2015-서울서초-0215</li>
@@ -258,8 +259,12 @@
 								$("#rs_goods").attr("src","./images/popup_atoderm_intensive.png")
 							}
 							bato.popup.show($("#pt-result"));
+						}else if (response == "D") {
+							alert("이미 참여하셨습니다. 감사합니다!");
+							location.reload();
 						}else{
 							alert("참여자가 많습니다. 다시시도해 주세요!");
+							location.reload();
 						}
 					}
 				});

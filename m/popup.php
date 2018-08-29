@@ -218,7 +218,7 @@
 					<p class="need">
 						아토덤 PP밤으로 피부 PT가 필요합니다
 					</p>
-					<div class="msg">(선택하신 PT에 맞는 샘플 키트는 다음주에 일괄 배송됩니다)</div>
+					<div class="msg">(선택하신 PT에 맞는 샘플 키트는 9월 17일 이후 일괄 배송됩니다)</div>
 				</div>
 				<div class="caution-block">
 					<p>- 부정한 방법으로 이벤트 참여시 당첨 선발에서 제외됩니다.</p>

@@ -298,8 +298,12 @@ $(function(){
 					}
 	
 					bato.popup.show($("#pt-result"));
+				}else if (response == "D") {
+					alert("이미 참여하셨습니다. 감사합니다!");
+					location.reload();
 				}else{
 					alert("참여자가 많습니다. 다시시도해 주세요!");
+					location.reload();
 				}
 			}
 		});

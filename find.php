@@ -2,9 +2,10 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>BIODERMA - Atoderm</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
+		<link type="image/icon" rel="shortcut icon" href="http://www.atodermcare.com/images/favicon.ico" />
 		<script src="./js/snap.svg-min.js"></script>
 		<script src="./js/jquery-3.3.1.min.js"></script>
 		<script src="./js/jquery-ui.min.js"></script>
