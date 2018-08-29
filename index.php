@@ -61,7 +61,7 @@
 										 c23,0,32.5-13.5,37.7-27.1H139.5z"/>
 				</svg>
 -->
-				<div class="balls"></div>
+				<div class="balls wave"></div>
 				<div class="visual-wrap">
 					<svg 
 						 xmlns="http://www.w3.org/2000/svg"
@@ -77,16 +77,18 @@
 						<path id="svg-path2" fill-rule="evenodd"  stroke="rgb(255, 255, 255)" stroke-width="1px" stroke-linecap="butt" stroke-linejoin="miter" fill="none"
 							  d="M306.399,10.323 C306.399,10.323 354.098,-4.481 406.666,2.263 C459.233,9.007 495.074,22.195 534.685,30.919 C574.296,39.643 623.842,69.430 653.753,98.082 C683.663,126.735 699.193,122.107 723.581,171.514 C747.970,220.921 762.454,282.309 774.610,320.168 C786.766,358.028 793.001,454.512 776.401,510.911 C759.800,567.311 748.769,594.315 707.467,638.073 C665.479,682.560 656.519,717.693 615.257,743.743 C573.996,769.794 488.790,797.531 417.409,792.996 C336.480,787.855 278.045,776.296 229.408,765.236 C180.771,754.175 144.993,713.680 121.979,690.013 C113.967,681.773 73.346,648.692 51.255,602.253 C32.447,562.715 6.818,523.669 2.017,485.837 C-2.784,448.005 5.675,380.590 2.017,358.675 C-1.641,336.760 4.287,260.365 56.627,200.170 C108.967,139.975 130.732,109.364 160.475,87.336 C190.217,65.309 271.939,13.576 306.399,10.323 Z"/>
 					</svg>
-					<div class="people wave" data-wave="0.5">
+					<div class="people">
 						<img src="./images/main_visual_pp.png" alt="">
 					</div>
-					<div class="title left wave" data-wave="0.8">
+					<div class="title left">
 						<img src="./images/main_title_left.png" alt="">
 					</div>
-					<div class="title right wave" data-wave="0.8">
+					<div class="title right">
 						<img src="./images/main_title_right.png" alt="">
 					</div>
-					<div class="text-group wave" data-wave="0.2">
+					<svg id="title-c-head" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.88 146.8"><defs><style>.title-c.head{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c head" d="M258.43,104.6s-36.58-36.82-83-24.5c-56.49,15-66.5,74.82-47,113" transform="translate(-97.81 -56.08)"/></svg>
+					<svg id="title-c-tail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.42 71.73"><defs><style>.title-c.tail{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c tail" d="M121.56,138.78c17.19,37.19,75.13,64.66,134.63,11.86" transform="translate(-102.04 -129.76)"/></svg>
+					<div class="text-group">
 						<div class="desc">
 							<p>당신의 스킨도 이제는 체력 관리가 필요합니다</p>
 							<p>바이오더마 PT클럽에서는</p>
@@ -113,6 +115,11 @@
 		</div>
 	</div>
 	<script type="text/javascript">
+		$(window).on('load', function() {
+			setTimeout(function() {
+				$('html').addClass('all-load');
+			}, 1000);
+		});
 		var svg1 = document.getElementById("svg-shape1");
 		var svg2 = document.getElementById("svg-shape2");
 		var s1 = Snap(svg1);
@@ -157,17 +164,17 @@
 				this.np = this.np + (this.ep - this.np)*0.1;
 				this.yp = this.yp + (this.yp - this.yp)*0.1;
 				this.style.transform = "translate("+this.np+'px'+", "+this.yp+'px'+")";
-				//			this.style.transform = "translate("+this.np+'px'+")";
+//				this.style.transform = "translate("+this.np+'px'+")";
 			}
-			$(window).on('mousemove', function(e){
-				x = (e.clientX - $(window).width()/2) / 50;
-				y = (e.clientY - $(window).height()/2) / 50;
+//			$(window).on('mousemove', function(e){
+//				x = (e.clientX - $(window).width()/2) / 50;
+//				y = (e.clientY - $(window).height()/2) / 50;
 //				waves.each(move);
-			});
-
-			setInterval(function(){
+//			});
+//
+//			setInterval(function(){
 //				waves.each(loop);
-			},33);
+//			},33);
 		})(jQuery);
 
 	</script>

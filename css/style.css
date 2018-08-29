@@ -121,6 +121,7 @@ input[type="checkbox"]:focus {
 	font-size: 15px;
 	font-weight: 700;
 	color: #4374a6;
+	transition: all 0.6s ease;
 }
 #header .menu li:hover,
 #header .menu li.is-active {
@@ -232,12 +233,51 @@ input[type="checkbox"]:focus {
 	top: 0;
 	left: 0;
 }
+.content.main #title-c-head {
+	width: 86px;
+	top: 328px;
+	left: 418px;
+	z-index: 3;
+}
+.content.main #title-c-head .title-c {
+	stroke-dasharray: 300;
+	stroke-dashoffset: 300;
+	transition: all 1.33s linear 0.1s;
+}
+.content.main #title-c-tail {
+	width: 82px;
+	top: 389px;
+	left: 423px;
+	z-index: 1;
+}
+.content.main #title-c-tail .title-c {
+	stroke-dasharray: 100;
+	stroke-dashoffset: 100;
+	transition: all 0.5s linear 1.1s;
+}
+
+.all-load .title-c {
+	stroke-dashoffset: 0 !important;
+}
 .content.main .visual-wrap .title,
 .content.main .visual-wrap .people {
 	position: absolute;
+/*
 	will-change: transform;
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
+*/
+}
+.content.main .visual-wrap .title,
+.content.main .visual-wrap .text-group {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 1.15s ease;
+}
+.all-load .content.main .visual-wrap .title,
+.all-load .content.main .visual-wrap .text-group{
+	opacity: 1;
+	transform: translateY(0);
 }
 .content.main .visual-wrap .left {
 	top: 140px;
@@ -254,7 +294,7 @@ input[type="checkbox"]:focus {
 .content.main .visual-wrap .right {
 	top: 280px;
 	left: 50%;
-	margin-left: -30px;
+	margin-left: 63px;
 	z-index: 3;
 }
 /*
@@ -294,6 +334,14 @@ input[type="checkbox"]:focus {
 	left: 50%;
 	margin-left: 210px;
 	z-index: 4;
+	opacity: 0;
+	transform: translateX(10px);
+	transition: all 1.34s ease 1.2s;
+}
+.all-load .content.main .visual-wrap .btn-group {
+	opacity: 1;
+	transform: translateX(0);
+	
 }
 .content.main .visual-wrap .btn-group button {
 	display: block;
