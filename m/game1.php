@@ -119,6 +119,14 @@
 		</div>
 
 		<script type="text/javascript">
+			var imageArray = [];
+			for(var i = 2; i <= 19; i++) {
+				var j = i;
+				if(i<10) {
+					j = '0'+i;
+				}
+				imageArray.push('./images/game_skin_frame_'+j+'.jpg');
+			}
 			function preloading (imageArray) {
 				var n = imageArray.length;
 				for (var i = 0; i < n; i++) {
@@ -126,7 +134,9 @@
 					img.src = imageArray[i];
 				}
 			}
-			preloading([ './images/game_skin_frame_02.jpg', './images/game_skin_frame_03.jpg', './images/game_skin_frame_02.jpg', './images/game_skin_frame_04.jpg', './images/game_skin_frame_05.jpg', './images/game_skin_frame_06.jpg', './images/game_skin_frame_07.jpg' ]);
+			preloading(imageArray);
+				
+			
 			
 			var pt_type		= "light";
 			$('#game-start').on('click', function() {
