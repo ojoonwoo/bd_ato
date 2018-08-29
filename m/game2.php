@@ -118,7 +118,22 @@
 
 <!--		<input type="button" id="sample-btn" data-popup="#terms2">-->
 		<script type="text/javascript">
-			function preloading (imageArray) { var n = imageArray.length; for (var i = 0; i < n; i++) { var img = new Image(); img.src = imageArray[i]; } } preloading([ './images/game_body_frame_02.jpg', './images/game_body_frame_03.jpg', './images/game_body_frame_02.jpg', './images/game_body_frame_04.jpg', './images/game_body_frame_05.jpg', './images/game_body_frame_06.jpg', './images/game_body_frame_07.jpg']);
+			var imageArray = [];
+			for(var i = 2; i <= 19; i++) {
+				var j = i;
+				if(i<10) {
+					j = '0'+i;
+				}
+				imageArray.push('./images/game_body_frame_'+j+'.jpg');
+			}
+			function preloading (imageArray) {
+				var n = imageArray.length;
+				for (var i = 0; i < n; i++) {
+					var img = new Image();
+					img.src = imageArray[i];
+				}
+			}
+			preloading(imageArray);
 			var pt_type		= "light";
 			$('#game-start').on('click', function() {
 				$('#hand').draggable("enable");

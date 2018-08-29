@@ -129,7 +129,22 @@
 ?>		
 <!--		<input type="button" id="sample-btn" data-popup="#pt-fail">-->
 		<script type="text/javascript">
-			function preloading (imageArray) { var n = imageArray.length; for (var i = 0; i < n; i++) { var img = new Image(); img.src = imageArray[i]; } } preloading([ './images/game_skin_frame_02.jpg', './images/game_skin_frame_03.jpg', './images/game_skin_frame_02.jpg', './images/game_skin_frame_04.jpg', './images/game_skin_frame_05.jpg', './images/game_skin_frame_06.jpg', './images/game_skin_frame_07.jpg' ]);
+			var imageArray = [];
+			for(var i = 2; i <= 19; i++) {
+				var j = i;
+				if(i<10) {
+					j = '0'+i;
+				}
+				imageArray.push('./images/game_skin_frame_'+j+'.jpg');
+			}
+			function preloading (imageArray) {
+				var n = imageArray.length;
+				for (var i = 0; i < n; i++) {
+					var img = new Image();
+					img.src = imageArray[i];
+				}
+			}
+			preloading(imageArray);
 
 			var pt_type		= "light";
 
@@ -277,46 +292,7 @@
 					if(!gameController.clearFlag && !gameController.overFlag) {
 						setTimeout(function() {
 							gameController.time--;
-							// console.log(gameController.point);
-//							if(gameController.point<30) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_01.jpg');
-//							} else if(gameController.point>=30 && gameController.point<45) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_02.jpg');	
-//							} else if(gameController.point>=45 && gameController.point<60) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_03.jpg');	
-//							} else if(gameController.point>=60 && gameController.point<75) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_04.jpg');	
-//							} else if(gameController.point>=75 && gameController.point<90) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_05.jpg');	
-//							} else if(gameController.point>=90 && gameController.point<110) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_06.jpg');	
-//							} else if(gameController.point>=110 && gameController.point<125) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_07.jpg');	
-//							} else if(gameController.point>=125 && gameController.point<135) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_08.jpg');	
-//							} else if(gameController.point>=135 && gameController.point<150) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_09.jpg');	
-//							} else if(gameController.point>=150 && gameController.point<165) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_10.jpg');	
-//							} else if(gameController.point>=165 && gameController.point<180) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_11.jpg');	
-//							} else if(gameController.point>=180 && gameController.point<190) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_12.jpg');	
-//							} else if(gameController.point>=190 && gameController.point<210) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_13.jpg');	
-//							} else if(gameController.point>=210 && gameController.point<225) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_14.jpg');	
-//							} else if(gameController.point>=225 && gameController.point<240) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_15.jpg');	
-//							} else if(gameController.point>=240 && gameController.point<255) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_16.jpg');	
-//							} else if(gameController.point>=255 && gameController.point<270) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_17.jpg');	
-//							} else if(gameController.point>=270 && gameController.point<280) {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_18.jpg');	
-//							} else {
-//								$('.frame .bg img').attr('src', './images/game_skin_frame_19.jpg');
-//							}
+							
 							$('#count img').attr('src', './images/timer_'+gameController.time+'.png');
 							timer(1000);
 						}, time);
