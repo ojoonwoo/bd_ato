@@ -2,7 +2,7 @@
 <html lang="ko">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>BIODERMA - Atoderm</title>
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/style.css">
 		<link type="image/icon" rel="shortcut icon" href="http://www.atodermcare.com/images/favicon.ico" />
