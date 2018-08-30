@@ -107,7 +107,7 @@
 				</button>
 			</div>
 		</div>
-		<div class="popup pt-pass _2" id="pt-pass2">
+		<div class="popup pt-pass _2" id="pt-pass2" onclick="confirm_close()">
 			<button type="button" class="popup-close" data-popup="@close"></button>
 			<div class="inner">
 				<div class="title-block">
