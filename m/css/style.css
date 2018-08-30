@@ -104,6 +104,9 @@ input[type="checkbox"]:focus {
 	right: 0;
 	z-index: 98;
 }
+.find #header {
+	position: relative;
+}
 .is-scrolled #header {
 	background: rgba(255, 255, 255, 0.3);
 }
@@ -385,7 +388,8 @@ input[type="checkbox"]:focus {
 .content.main .btn-group {
 /*	position: absolute;*/
 	position: relative;
-	margin: 0 0 15% 13%;
+/*	margin: 0 0 15% 13%;*/
+	margin: 0 auto 15% auto;
 /*	top: 100%;*/
 	width: 45.2%;
 	z-index: 10;
@@ -1018,8 +1022,11 @@ html.popup-opened {
 	border: 1px solid #c93e8b;
 }
 .popup.pt-pass .check-guide-msg {
+	
+}
+.popup.pt-pass .msg {
 	text-align: center;
-	margin-bottom: 23px;
+		margin-bottom: 23px;
 	font-size: 10px;
 	font-weight: 300;
 }
@@ -1360,7 +1367,7 @@ html.popup-opened {
 		top: 17.4%;
 	}
 	.popup.pt-pass .input-guide-msg {
-		margin-left: 45px;
+/*		margin-left: 45px;*/
 	}
 	.popup.pt-pass .terms-block {
 		padding-left: 0;

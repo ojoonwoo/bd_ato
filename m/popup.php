@@ -5,7 +5,9 @@
 				<div class="title-block">
 					<img src="./images/popup_title_img_cup.png" alt="">
 					<h5>PT에 통과하셨습니다<i>!</i></h5>
-					<p>당신에게 맞는 PT크림을 보내드릴게요</p>
+					<p class="check-guide-msg">
+						체크리스트를 확인하고 나에게 맞는 PT 크림을 선택해주세요
+					</p>
 				</div>
 				<div class="check-block">
 					<div class="check-wrapper">
@@ -99,9 +101,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="check-guide-msg">
-					체크리스트를 확인하고 나에게 맞는 PT 크림을 선택해주세요
-				</div>
+<!--				<p class="msg">당신에게 맞는 PT크림을 보내드릴게요</p>-->
 				<button type="button" class="btn-result" id="rs1">
 					다음 단계
 				</button>
