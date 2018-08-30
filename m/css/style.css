@@ -361,7 +361,7 @@ input[type="checkbox"]:focus {
 .content.main .visual-wrap .text-group {
 	position: absolute;
 	top: 21.4%;
-	margin-left: 62.2%;
+	margin-left: 58.2%;
 	z-index: 4;
 }
 .content.main .visual-wrap .text-group p {
@@ -380,6 +380,7 @@ input[type="checkbox"]:focus {
 	margin-bottom: 4px;
 	color: #4374a6;
 	line-height: 12px;
+	font-size: 11px;
 }
 .content.main .btn-group {
 /*	position: absolute;*/
