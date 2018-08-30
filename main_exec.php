@@ -46,14 +46,15 @@ switch ($_REQUEST['exec'])
 
     break;
 
-    // case "insert_click_info" :
-    //     $mnv_f          = new mnv_function();
-    //     $my_db          = $mnv_f->Connect_MySQL();
-    //     $gubun          = $mnv_f->MobileCheck();
-    //     $sns_media		= $_REQUEST['sns_media'];
+    case "insert_click_info" :
+        $mnv_f          = new mnv_function();
+        $my_db          = $mnv_f->Connect_MySQL();
+        $gubun          = $mnv_f->MobileCheck();
 
-    //     $query 		= "INSERT INTO click_info(click_name, click_refferer, click_ipaddr, click_gubun, click_media, click_date) values('".$sns_media."','".$gubun."','".$_SERVER['REMOTE_ADDR']."','".$_SESSION['ss_media']."','".date("Y-m-d H:i:s")."')";
-    //     $result 	= mysqli_query($my_db, $query);
+        $click_name		= $_REQUEST['click_name'];
 
-    // break;
+        $query 		= "INSERT INTO click_info(click_name, click_refferer, click_ipaddr, click_gubun, click_media, click_date) values('".$click_name."','".$_SERVER['HTTP_REFERER']."','".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$_SESSION['ss_media']."','".date("Y-m-d H:i:s")."')";
+        $result 	= mysqli_query($my_db, $query);
+
+    break;
 }

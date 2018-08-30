@@ -166,6 +166,17 @@
 					gameController.firstPower = true;
 					timer(1000);
 				}
+
+				$.ajax({
+					type   : "POST",
+					async  : false,
+					url    : "./main_exec.php",
+					data:{
+						"exec"          : "insert_click_info",
+						"click_name"    : "얼굴게임시작"
+					}
+				});
+
 			});
 			$(window).on('load', function() {
 //				$('#sample-btn').trigger('click');
