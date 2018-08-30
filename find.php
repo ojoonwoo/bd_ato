@@ -9,6 +9,15 @@
 		<script src="./js/snap.svg-min.js"></script>
 		<script src="./js/jquery-3.3.1.min.js"></script>
 		<script src="./js/jquery-ui.min.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124914521-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124914521-1');
+</script>
 	</head>
 	<body>
 		<div id="container">
