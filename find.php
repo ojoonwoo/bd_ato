@@ -16,7 +16,7 @@
 				<div id="header">
 					<div class="inner">
 						<div class="logo">
-							<a href="index.php">
+							<a href="http://www.bioderma.co.kr/" target="_blank">
 								<img src="./images/header_logo.png" alt="logo">
 							</a>
 						</div>
