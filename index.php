@@ -15,11 +15,13 @@
         $saveMedia     = $mnv_f->SaveMedia();
         $rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
     }
-
+	
+	if($IEYN == "Y")
+		$ieClass = "explorer";
     // include_once "./head.php";
 ?>
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="<?=$ieClass?>">
 <head>
 	<meta charset="UTF-8">
     <meta property="og:type" content="website" />
@@ -87,8 +89,8 @@
 					<div class="title right">
 						<img src="./images/main_title_right.png" alt="">
 					</div>
-					<svg id="title-c-head" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 147"><defs><style>.title-c.head{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c head" d="M258.43,104.6s-36.58-36.82-83-24.5c-56.49,15-66.5,74.82-47,113" transform="translate(-97 -56)"/></svg>
-					<svg id="title-c-tail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 72"><defs><style>.title-c.tail{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c tail" d="M121.56,138.78c17.19,37.19,75.13,64.66,134.63,11.86" transform="translate(-102 -129)"/></svg>
+					<svg id="title-c-head" class="title-c-group" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 147"><defs><style>.title-c.head{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c head" d="M258.43,104.6s-36.58-36.82-83-24.5c-56.49,15-66.5,74.82-47,113" transform="translate(-97 -56)"/></svg>
+					<svg id="title-c-tail" class="title-c-group" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 72"><defs><style>.title-c.tail{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c tail" d="M121.56,138.78c17.19,37.19,75.13,64.66,134.63,11.86" transform="translate(-102 -129)"/></svg>
 					<div class="text-group">
 						<div class="desc">
 							<p>당신의 스킨도 이제는 체력 관리가 필요합니다</p>

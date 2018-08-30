@@ -251,6 +251,9 @@ input[type="checkbox"]:focus {
 	-webkit-transition: all 1.33s linear 0.1s;
 	transition: all 1.33s linear 0.1s;
 }
+.explorer .content.main .title-c-group .title-c {
+	stroke-dashoffset: 0 !important;
+}
 .content.main #title-c-tail {
 	width: 82px;
 	height: 36px;
@@ -278,15 +281,20 @@ input[type="checkbox"]:focus {
 */
 }
 .content.main .visual-wrap .title,
-.content.main .visual-wrap .text-group {
+.content.main .visual-wrap .text-group,
+.explorer .content.main .visual-wrap .title-c-group {
 	opacity: 0;
 	-webkit-transform: translateY(30px);
 	transform: translateY(30px);
 	-webkit-transition: all 1.15s ease;
 	transition: all 1.15s ease;
 }
+
+
+
 .all-load .content.main .visual-wrap .title,
-.all-load .content.main .visual-wrap .text-group{
+.all-load .content.main .visual-wrap .text-group,
+.explorer.all-load .content.main .title-c-group {
 	opacity: 1;
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
