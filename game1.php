@@ -303,11 +303,13 @@
 				} else {
 //					time out!
 //					alert("게임 오버");
-					bato.popup.show($('#pt-fail'));
-					gameController.overFlag = true;
-					gameController.point = 0;
-					gameController.firstPower = false;
-					gameController.dragging = false;
+					if(!gameController.clearFlag) {
+						bato.popup.show($('#pt-fail'));
+						gameController.overFlag = true;
+						gameController.point = 0;
+						gameController.firstPower = false;
+						gameController.dragging = false;
+					}
 				}
 			}
 //			var svg1 = document.getElementById("svg-shape1");
