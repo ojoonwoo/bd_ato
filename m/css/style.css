@@ -379,17 +379,22 @@ input[type="checkbox"]:focus {
 }
 .content.main #title-c-tail {
 	width: 11.4%;
-	margin: -0.1% 0 0 0.1%;
 /*	height: 36px;*/
 	top: 50.2%;
 	left: 52.4%;
+/*	width: 11.6%;*/
+/*	left: 52.7%;	*/
+/*
+	-webkit-transform: rotate(-0.7deg);	
+	transform: rotate(-0.7deg);
+*/
 	z-index: 1;
 }
 .content.main #title-c-tail .title-c {
-	stroke-dasharray: 100;
-	stroke-dashoffset: 100;
-	-webkit-transition: all 0.5s linear 1.1s;
-	transition: all 0.5s linear 1.1s;
+	stroke-dasharray: 300;
+	stroke-dashoffset: 300;
+	-webkit-transition: all 1s linear 1.1s;
+	transition: all 1s linear 1.1s;
 }
 .all-load .title-c {
 	stroke-dashoffset: 0 !important;
