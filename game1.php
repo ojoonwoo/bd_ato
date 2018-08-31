@@ -16,6 +16,16 @@
 		<script src="./js/jquery-ui.min.js"></script>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 		<script src="./js/main.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124914521-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124914521-1');
+</script>
+
 	</head>
 	<body>
 		<div id="container">
@@ -156,6 +166,17 @@
 					gameController.firstPower = true;
 					timer(1000);
 				}
+
+				$.ajax({
+					type   : "POST",
+					async  : false,
+					url    : "./main_exec.php",
+					data:{
+						"exec"          : "insert_click_info",
+						"click_name"    : "얼굴게임시작"
+					}
+				});
+
 			});
 			$(window).on('load', function() {
 //				$('#sample-btn').trigger('click');

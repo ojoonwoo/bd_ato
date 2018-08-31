@@ -31,7 +31,7 @@ switch ($_REQUEST['exec'])
             else
                 $flag = "N";
         }
-        
+
 		echo $flag;
     break;
     
@@ -42,6 +42,18 @@ switch ($_REQUEST['exec'])
         $sns_media		= $_REQUEST['sns_media'];
 
         $query 		= "INSERT INTO share_info(sns_media, sns_gubun, sns_ipaddr, inner_media, sns_regdate) values('".$sns_media."','".$gubun."','".$_SERVER['REMOTE_ADDR']."','".$_SESSION['ss_media']."','".date("Y-m-d H:i:s")."')";
+        $result 	= mysqli_query($my_db, $query);
+
+    break;
+
+    case "insert_click_info" :
+        $mnv_f          = new mnv_function();
+        $my_db          = $mnv_f->Connect_MySQL();
+        $gubun          = $mnv_f->MobileCheck();
+
+        $click_name		= $_REQUEST['click_name'];
+
+        $query 		= "INSERT INTO click_info(click_name, click_refferer, click_ipaddr, click_gubun, click_media, click_date) values('".$click_name."','".$_SERVER['HTTP_REFERER']."','".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$_SESSION['ss_media']."','".date("Y-m-d H:i:s")."')";
         $result 	= mysqli_query($my_db, $query);
 
     break;

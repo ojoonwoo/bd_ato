@@ -379,6 +379,7 @@ input[type="checkbox"]:focus {
 }
 .content.main #title-c-tail {
 	width: 11.4%;
+	margin: -0.1% 0 0 0.1%;
 /*	height: 36px;*/
 	top: 50.2%;
 	left: 52.4%;

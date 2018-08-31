@@ -108,7 +108,7 @@
 			</div>
 		</div>
 		<div class="popup pt-pass _2" id="pt-pass2">
-			<button type="button" class="popup-close" data-popup="@close"></button>
+			<button type="button" class="popup-close" onclick="confirm_close()"></button>
 			<div class="inner">
 				<div class="title-block">
 					<img src="./images/popup_title_img_cup.png" alt="">
