@@ -138,7 +138,7 @@
 <?
 	include_once "./popup.php";
 ?>		
-<!--		<input type="button" id="sample-btn" data-popup="#pt-fail">-->
+<!--		<input type="button" id="sample-btn" data-popup="#pt-result">-->
 		<script type="text/javascript">
 			var imageArray = [];
 			for(var i = 2; i <= 19; i++) {

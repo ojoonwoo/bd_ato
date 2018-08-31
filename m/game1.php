@@ -101,7 +101,7 @@
 <?
 	include_once "popup.php";
 ?>	
-		<!-- <input type="button" id="sample-btn" data-popup="#pt-pass2"> -->
+<!--		 <input type="button" id="sample-btn" data-popup="#pt-result"> -->
 		<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:9999;-webkit-overflow-scrolling:touch;">
 			<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnCloseLayer" style="width:7%;cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
 		</div>
@@ -146,7 +146,7 @@
 				});
 			});
 			$(window).on('load', function() {
-				// $('#sample-btn').trigger('click');
+//				 $('#sample-btn').trigger('click');
 			});
 
 			$('#pt-pass .check-block .check').on('click', function() {
