@@ -357,10 +357,57 @@ input[type="checkbox"]:focus {
 .content.main .visual-wrap .front {
 /*	top: 40%;*/
 	top: 35%;
-	width: 54.6%;
-	margin-left: 46%;
+/*	width: 54.6%;*/
+	width: 43%;
+/*	margin-left: 46%;*/
+	margin-left: 58.2%;
 	z-index: 3;
 }
+
+.content.main #title-c-head {
+	width: 12%;
+/*	height: 72px;*/
+	top: 41.5%;
+	left: 52%;
+	z-index: 3;
+}
+.content.main #title-c-head .title-c {
+	stroke-dasharray: 300;
+	stroke-dashoffset: 300;
+	-webkit-transition: all 1.33s linear 0.1s;
+	transition: all 1.33s linear 0.1s;
+}
+.content.main #title-c-tail {
+	width: 11.4%;
+/*	height: 36px;*/
+	top: 50.2%;
+	left: 52.4%;
+	z-index: 1;
+}
+.content.main #title-c-tail .title-c {
+	stroke-dasharray: 100;
+	stroke-dashoffset: 100;
+	-webkit-transition: all 0.5s linear 1.1s;
+	transition: all 0.5s linear 1.1s;
+}
+.all-load .title-c {
+	stroke-dashoffset: 0 !important;
+}
+.content.main .visual-wrap .title,
+.content.main .visual-wrap .text-group {
+	opacity: 0;
+	-webkit-transform: translateY(30px);
+	transform: translateY(30px);
+	-webkit-transition: all 1.15s ease;
+	transition: all 1.15s ease;
+}
+.all-load .content.main .visual-wrap .title,
+.all-load .content.main .visual-wrap .text-group {
+	opacity: 1;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+
 .content.main .visual-wrap .text-group {
 	position: absolute;
 	top: 21.4%;
@@ -393,6 +440,17 @@ input[type="checkbox"]:focus {
 /*	top: 100%;*/
 	width: 45.2%;
 	z-index: 10;
+	opacity: 0;
+	-webkit-transform: translateX(10px);
+	transform: translateX(10px);
+	-webkit-transition: all 1.34s ease 1.2s;
+	transition: all 1.34s ease 1.2s;
+}
+.all-load .content.main .btn-group {
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+
 }
 .content.main .btn-group button {
 	display: block;

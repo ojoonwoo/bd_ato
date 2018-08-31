@@ -76,6 +76,10 @@
 								<p>바이오더마 PT클럽에서는<br>당신의 스킨에<br>가장 알맞은 PT를 제공합니다</p>
 							</div>
 						</div>
+						
+						<svg id="title-c-head" class="title-c-group" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 147"><defs><style>.title-c.head{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c head" d="M258.43,104.6s-36.58-36.82-83-24.5c-56.49,15-66.5,74.82-47,113" transform="translate(-97 -56)"/></svg>
+						<svg id="title-c-tail" class="title-c-group" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 169 72"><defs><style>.title-c.tail{fill:none;stroke:#4075a9;stroke-miterlimit:10;stroke-width:43px;}</style></defs><path class="title-c tail" d="M121.56,138.78c17.19,37.19,75.13,64.66,134.63,11.86" transform="translate(-102 -129)"/></svg>
+						
 					</div>
 					<div class="btn-group">
 						<button type="button" onclick="location.href='gate.php'"><span>스킨 PT 시작</span></button>
@@ -88,6 +92,11 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			$(window).on('load', function() {
+				setTimeout(function() {
+					$('html').addClass('all-load');
+				}, 1000);
+			});
 			var svg1 = document.getElementById("svg-shape1");
 			var svg2 = document.getElementById("svg-shape2");
 			var s1 = Snap(svg1);
@@ -115,35 +124,35 @@
 				}, 1600);
 			}
 
-			(function($){
-				var x;
-				var y;
-				var waves = $('.wave').each(function(){
-					this.np = 0;
-					this.ep = 0;
-					this.yp = 0;
-					this.lv = this.getAttribute('data-wave')*1;
-				});
-				function move(){
-					this.ep = this.lv*x;
-					this.yp = this.lv*y;
-				}
-				function loop() {
-					this.np = this.np + (this.ep - this.np)*0.1;
-					this.yp = this.yp + (this.yp - this.yp)*0.1;
-					this.style.transform = "translate("+this.np+'px'+", "+this.yp+'px'+")";
-					//			this.style.transform = "translate("+this.np+'px'+")";
-				}
-				$(window).on('mousemove', function(e){
-					x = (e.clientX - $(window).width()/2) / 50;
-					y = (e.clientY - $(window).height()/2) / 50;
-					waves.each(move);
-				});
-
-				setInterval(function(){
-					waves.each(loop);
-				},33);
-			})(jQuery);
+//			(function($){
+//				var x;
+//				var y;
+//				var waves = $('.wave').each(function(){
+//					this.np = 0;
+//					this.ep = 0;
+//					this.yp = 0;
+//					this.lv = this.getAttribute('data-wave')*1;
+//				});
+//				function move(){
+//					this.ep = this.lv*x;
+//					this.yp = this.lv*y;
+//				}
+//				function loop() {
+//					this.np = this.np + (this.ep - this.np)*0.1;
+//					this.yp = this.yp + (this.yp - this.yp)*0.1;
+//					this.style.transform = "translate("+this.np+'px'+", "+this.yp+'px'+")";
+//					//			this.style.transform = "translate("+this.np+'px'+")";
+//				}
+//				$(window).on('mousemove', function(e){
+//					x = (e.clientX - $(window).width()/2) / 50;
+//					y = (e.clientY - $(window).height()/2) / 50;
+//					waves.each(move);
+//				});
+//
+//				setInterval(function(){
+//					waves.each(loop);
+//				},33);
+//			})(jQuery);
 
 			
 			$('.burger').on('click', function() {
