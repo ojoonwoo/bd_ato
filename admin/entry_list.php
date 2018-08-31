@@ -100,10 +100,10 @@
                 <th>순번</th>
                 <th>이름</th>
                 <th>전화번호</th>
+                <th>타입</th>
                 <th>주소</th>
-                <th>당첨된 경품</th>
-                <th>유입매체</th>
                 <th>유입구분</th>
+                <th>유입매체</th>
                 <th>참여일자</th>
               </tr>
             </thead>
@@ -121,12 +121,12 @@
 	$buyer_count_query = "SELECT count(*) FROM member_info WHERE  1 ".$where."";
 	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
 	// print_r($buyer_count);
-	$PAGE_CLASS = new Page($pg,$buyer_count,$page_size,$block_size);
+	$PAGE_CLASS = new mnv_page($pg,$buyer_count,$page_size,$block_size);
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 	$buyer_list_query = "SELECT * FROM member_info WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $buyer_list_query);
-print_r($buyer_list_query);
+//print_r($buyer_list_query);
 	while ($buyer_data = @mysqli_fetch_array($res))
 	{
 		$buyer_info[] = $buyer_data;
@@ -134,15 +134,16 @@ print_r($buyer_list_query);
 
 	foreach($buyer_info as $key => $val)
 	{
+		$address = $buyer_info[$key]['mb_addr1'].' '.$buyer_info[$key]['mb_addr2'];
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT--?></td>
                 <td><?php echo $buyer_info[$key]['mb_name']?></td>
                 <td><?php echo $buyer_info[$key]['mb_phone']?></td>
-                <td><?php echo $buyer_info[$key]['mb_addr']?></td>
-                <td><?php echo $buyer_info[$key]['mb_winner']?></td>
-                <td><?php echo $buyer_info[$key]['mb_media']?></td>
+                <td><?php echo $buyer_info[$key]['mb_type']?></td>
+                <td><?php echo $address?></td>
                 <td><?php echo $buyer_info[$key]['mb_gubun']?></td>
+                <td><?php echo $buyer_info[$key]['mb_media']?></td>
                 <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
               </tr>
 <?php

@@ -1,6 +1,6 @@
 <?
 // class Page
-class Page
+class mnv_page
 {
 	var $pg; //-- 현제 페이지
 	var $tot_no; //--전체 게시물수
@@ -18,7 +18,7 @@ class Page
 	var $block_list; //--불럭의 내용을 담을 변수
 	var $script; //-- 페이지관련 자바스크립트
 	
-	function Page($class_pg,$class_tot_no,$class_page_size,$class_block_size){
+	function mnv_page($class_pg,$class_tot_no,$class_page_size,$class_block_size){
 		$this->pg = $class_pg;
 		$this->tot_no = $class_tot_no;
 		$this->page_size = $class_page_size;
