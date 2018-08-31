@@ -495,7 +495,7 @@ function sns_share(media, flag)
 			content: {
 				title: '당신의 스킨도 이제는 체력 관리가 필요하니까! 지금 바이오더마에서 당신에게 필요한 무료 스킨 PT를 받아보세요!',
 				// description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-				imageUrl: "http://www.atodermcare.com/images/kakao_share.jpg",
+				imageUrl: "http://www.atodermcare.com/images/kakao_share2.jpg",
 				link: {
 					mobileWebUrl: 'http://www.atodermcare.com/m/index.php?media=share_fb',
 					webUrl: 'http://www.atodermcare.com/?media=share_fb'
