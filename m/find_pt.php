@@ -47,13 +47,13 @@
                             <img src="./images/PT/contents.png">
                         </div>
                         <div class="button">
-							<a class="button01" href="http://www.bioderma.co.kr/front/product_view.php?id=028067B">
+							<a class="button01" href="http://www.bioderma.co.kr/front/product_view.php?id=028067B" target="_blank">
                               <img src="./images/PT/button_cream.png">
                             </a>
-							<a class="button02" href="http://www.bioderma.co.kr/front/product_view.php?id=028106">
+							<a class="button02" href="http://www.bioderma.co.kr/front/product_view.php?id=028106" target="_blank">
                               <img src="./images/PT/button_pp.png">
                             </a>
-							<a class="button03" href="http://www.bioderma.co.kr/front/product_view.php?id=028104S">
+							<a class="button03" href="http://www.bioderma.co.kr/front/product_view.php?id=028104S" target="_blank">
                               <img src="./images/PT/button_balm.png">
                             </a>
                         </div>

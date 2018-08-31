@@ -49,15 +49,21 @@
 						</div>
 					</div>
 					<div class="checklist">
-						<button type="button" class="season" onclick="location.href='http://www.bioderma.co.kr/front/product_view.php?id=028067B'">
-							<img src="./images/find_btn_season.png" alt="">
-						</button>
-						<button type="button" class="chronic" onclick="location.href='http://www.bioderma.co.kr/front/product_view.php?id=028106'">
-							<img src="./images/find_btn_chronic.png" alt="">
-						</button>
-						<button type="button" class="problem" onclick="location.href='http://www.bioderma.co.kr/front/product_view.php?id=028104S'">
-							<img src="./images/find_btn_problem.png" alt="">
-						</button>
+					<a href="http://www.bioderma.co.kr/front/product_view.php?id=028067B" target="_blank">
+							<button type="button" class="season">
+								<img src="./images/find_btn_season.png" alt="">
+							</button>
+						</a>
+						<a href="http://www.bioderma.co.kr/front/product_view.php?id=028106" target="_blank">
+							<button type="button" class="chronic">
+								<img src="./images/find_btn_chronic.png" alt="">
+							</button>
+						</a>
+						<a href="http://www.bioderma.co.kr/front/product_view.php?id=028104S" target="_blank">
+							<button type="button" class="problem">
+								<img src="./images/find_btn_problem.png" alt="">
+							</button>
+						</a>
 					</div>
 				</div>
 <?
