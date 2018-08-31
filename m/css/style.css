@@ -352,7 +352,7 @@ input[type="checkbox"]:focus {
 	top: 12.4%;
 	margin-left: 7.4%;
 	z-index: 2;
-	width: 83.7%;
+	width: 84.7%;
 }
 .content.main .visual-wrap .front {
 /*	top: 40%;*/
@@ -380,13 +380,12 @@ input[type="checkbox"]:focus {
 .content.main #title-c-tail {
 	width: 11.4%;
 /*	height: 36px;*/
-	top: 50.2%;
-	left: 52.4%;
-/*	width: 11.6%;*/
-/*	left: 52.7%;	*/
+/*	top: 50.2%;*/
+	top: 50.3%;
+	left: 52.6%;
 /*
-	-webkit-transform: rotate(-0.7deg);	
-	transform: rotate(-0.7deg);
+	-webkit-transform: rotate(3deg);	
+	transform: rotate(3deg);
 */
 	z-index: 1;
 }
