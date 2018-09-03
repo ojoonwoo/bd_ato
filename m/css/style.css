@@ -382,7 +382,8 @@ input[type="checkbox"]:focus {
 /*	height: 36px;*/
 /*	top: 50.2%;*/
 	top: 50.3%;
-	left: 52.6%;
+	left: 52.5%;
+	transform: rotate(1deg);
 /*
 	-webkit-transform: rotate(3deg);	
 	transform: rotate(3deg);
