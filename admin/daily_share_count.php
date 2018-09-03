@@ -35,6 +35,11 @@
                 </thead>
                 <tbody>
 <?php
+	$pc_total_all = 0;
+	$mobile_total_all = 0;
+	$media1_total = 0;
+	$media2_total = 0;
+	$all_total = 0;
 	$daily_date_query	= "SELECT sns_regdate FROM share_info Group by substr(sns_regdate,1,10) order by sns_regdate desc";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
@@ -89,6 +94,11 @@
 			$total_pc_cnt += $pc_cnt[$i];                  
 			$i++;
 		}
+		$pc_total_all += $total_pc_cnt;
+		$mobile_total_all += $total_mobile_cnt;
+		$media1_total += $media_cnt[0];
+		$media2_total += $media_cnt[1];
+		$all_total += $total_pc_cnt+$total_mobile_cnt;
 ?>
                   <tr bgcolor="skyblue">
                     <td colspan="2">합계</td>
@@ -101,6 +111,15 @@
 	}
 ?>
                 </tbody>
+				<div class="total-wrap" style="float: right; background: lightgrey; padding: 20px; margin-bottom: 10px;">
+				  <?
+					echo "<span style='display:inline-block; margin-right:10px;'>PC: ".$pc_total_all."</span>";
+					echo "<span style='display:inline-block; margin-right:10px;'>MOBILE: ".$mobile_total_all."</span>";
+					echo "<span style='display:inline-block; margin-right:10px;'>FB: ".$media1_total."</span>";
+					echo "<span style='display:inline-block; margin-right:10px;'>KT: ".$media2_total."</span>";
+					echo "<span style='display:inline-block;'>TOTAL: ".$all_total."</span>";
+				  ?>
+				</div>
               </table>
             </div>
           </div>

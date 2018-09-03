@@ -30,12 +30,15 @@
           <div class="table-responsive">
             <!-- 필리핀 -->
             <div id="daily_applicant_count_div1" style="display:block">
-              <table class="table table-hover">
+              <table class="table table-hover" style="position:relative">
                 <thead>
                   <tr><th>날짜</th><th>유입매체</th><th>PC</th><th>Mobile</th><th>Total</th></tr>
                 </thead>
                 <tbody>
 <?php
+	$pc_total_all = 0;
+	$mobile_total_all = 0;
+	$all_total = 0;
 	$daily_date_query	= "SELECT tracking_date FROM tracking_info WHERE 1 Group by substr(tracking_date,1,10) ORDER BY tracking_date DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
@@ -123,6 +126,9 @@
 			// $total_unique_pc_cnt += $pc_unique_cnt[$i];
 			$i++;
 		}
+		$pc_total_all += $total_pc_cnt;
+		$mobile_total_all += $total_mobile_cnt;
+		$all_total += $total_pc_cnt+$total_mobile_cnt;
 ?>
                   <tr bgcolor="skyblue" class="date-end">
                     <td colspan="2">합계</td>
@@ -138,6 +144,13 @@
 	}
 ?>
                 </tbody>
+                <div class="total-wrap" style="float: right; background: lightgrey; padding: 20px; margin-bottom: 10px;">
+<?
+					echo "<span style='display:inline-block; margin-right:10px;'>PC: ".$pc_total_all."</span>";
+					echo "<span style='display:inline-block; margin-right:10px;'>MOBILE: ".$mobile_total_all."</span>";
+					echo "<span style='display:inline-block;'>TOTAL: ".$all_total."</span>";
+?>
+			  	</div>
               </table>
             </div>
           </div>

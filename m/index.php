@@ -134,35 +134,35 @@
 				}, 1600);
 			}
 
-//			(function($){
-//				var x;
-//				var y;
-//				var waves = $('.wave').each(function(){
-//					this.np = 0;
-//					this.ep = 0;
-//					this.yp = 0;
-//					this.lv = this.getAttribute('data-wave')*1;
-//				});
-//				function move(){
-//					this.ep = this.lv*x;
-//					this.yp = this.lv*y;
-//				}
-//				function loop() {
-//					this.np = this.np + (this.ep - this.np)*0.1;
-//					this.yp = this.yp + (this.yp - this.yp)*0.1;
-//					this.style.transform = "translate("+this.np+'px'+", "+this.yp+'px'+")";
-//					//			this.style.transform = "translate("+this.np+'px'+")";
-//				}
+			(function($){
+				var x;
+				var y;
+				var waves = $('.wave').each(function(){
+					this.np = 0;
+					this.ep = 0;
+					this.yp = 0;
+					this.lv = this.getAttribute('data-wave')*1;
+				});
+				function move(){
+					this.ep = this.lv*x;
+					this.yp = this.lv*y;
+				}
+				function loop() {
+					this.np = this.np + (this.ep - this.np)*0.1;
+					this.yp = this.yp + (this.yp - this.yp)*0.1;
+					this.style.transform = "translate("+this.np+'px'+", "+this.yp+'px'+")";
+					//			this.style.transform = "translate("+this.np+'px'+")";
+				}
 //				$(window).on('mousemove', function(e){
 //					x = (e.clientX - $(window).width()/2) / 50;
 //					y = (e.clientY - $(window).height()/2) / 50;
 //					waves.each(move);
 //				});
-//
-//				setInterval(function(){
-//					waves.each(loop);
-//				},33);
-//			})(jQuery);
+
+				setInterval(function(){
+					waves.each(loop);
+				},33);
+			})(jQuery);
 
 			
 			$('.burger').on('click', function() {
