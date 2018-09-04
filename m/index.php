@@ -92,6 +92,9 @@
 						
 					</div>
 					<div class="btn-group">
+						<div class="balloon">
+							<img src="./images/text_balloon.png" alt="">
+						</div>
 						<button type="button" onclick="location.href='gate.php'"><span>스킨 PT 시작</span></button>
 						<button type="button" onclick="location.href='find_pt.php'"><span>나에게 맞는 PT 찾기</span></button>
 					</div>

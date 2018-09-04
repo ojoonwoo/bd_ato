@@ -369,6 +369,11 @@ input[type="checkbox"]:focus {
 	transform: translateX(0);
 	
 }
+.content.main .visual-wrap .btn-group .balloon {
+	position: absolute;
+	top: -66px;
+	right: -63px;
+}
 .content.main .visual-wrap .btn-group button {
 	display: block;
 	width: 206px;
