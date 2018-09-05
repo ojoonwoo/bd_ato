@@ -120,6 +120,9 @@ if (isset($_SESSION['ss_mb_name']) == false)
               <li>
                 <a href="entry_list.php"><i class="fa fa-fw fa-table"></i> 이벤트 참여자 목록</a>
               </li>
+              <li>
+                <a href="winner_count.php"><i class="fa fa-fw fa-table"></i> 샘플별 소진 갯수</a>
+              </li>
               <!-- <li>
                 <a href="entry_list2.php"><i class="fa fa-fw fa-table"></i> 내 마음대로 부문 참여자 목록</a>
               </li> -->
