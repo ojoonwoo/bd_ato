@@ -4,15 +4,15 @@
 	$r 	= $_REQUEST["r"];
 	
 	$mnv_f = new mnv_function();
-	$my_db         = $mnv_f->Connect_MySQL();
+	// $my_db         = $mnv_f->Connect_MySQL();
 	$mobileYN      = $mnv_f->MobileCheck();
-	$obYN          = $mnv_f->BrowserCheck();
+	// $obYN          = $mnv_f->BrowserCheck();
 	if ($mobileYN == "PC")
 	{
 		echo "<script>location.href='../index.php?media=".$_REQUEST["media"]."&r=".$_REQUEST["r"]."';</script>";
 	}else{
-		$saveMedia     = $mnv_f->SaveMedia();
-		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
+		// $saveMedia     = $mnv_f->SaveMedia();
+		// $rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
 	}
 
 	include_once "./head2.php";
