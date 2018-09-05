@@ -1,11 +1,11 @@
 <?
-	// include_once "./include/autoload.php";
+	include_once "./include/autoload.php";
 
     $r 	= $_REQUEST["r"];
 	
-    // $mnv_f = new mnv_function();
+    $mnv_f = new mnv_function();
     // $my_db         = $mnv_f->Connect_MySQL();
-    // $mobileYN      = $mnv_f->MobileCheck();
+    $mobileYN      = $mnv_f->MobileCheck();
     // $obYN          = $mnv_f->BrowserCheck();
     if ($mobileYN == "MOBILE")
 	{
