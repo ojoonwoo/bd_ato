@@ -39,15 +39,24 @@
 	$res			= mysqli_query($my_db, $query);
 	while($data = mysqli_fetch_array($res))
 	{
+    $winner_count[$data['mb_type']] = $data['cnt'];
+    // switch($data["mb_type"])
+    // {
+    //   case "light" :
+    //   break;
+    //   case "medium" :
+    //     $winner_count['mediu'] = $data['cnt'];
+    //   break;
+    //   case "heavy" :
+    //   break;
+    // }
+  }
 ?>
                   <tr>
-                    <td><?=number_format($data["cnt"])?></td>
-                    <td><?=number_format($data["cnt"])?></td>
-                    <td><?=number_format($data["cnt"])?></td>
+                    <td><?=number_format($winner_count['light'])?></td>
+                    <td><?=number_format($winner_count['medium'])?></td>
+                    <td><?=number_format($winner_count['heavy'])?></td>
                   </tr>
-<?
-	}
-?>
                 </tbody>
               </table>
             </div>
