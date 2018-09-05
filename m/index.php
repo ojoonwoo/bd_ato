@@ -1,19 +1,19 @@
 <?
-    // include_once "../include/autoload.php";
+    include_once "../include/autoload.php";
 
-    // $mnv_f 			= new mnv_function();
-   	// $my_db         = $mnv_f->Connect_MySQL();
-    // $mobileYN      = $mnv_f->MobileCheck();
-    // // $obYN          = $mnv_f->BrowserCheck();
-    // $IEYN          = $mnv_f->IECheck();
-    // $SafariYN          = $mnv_f->SafariCheck();
+    $mnv_f 			= new mnv_function();
+   	$my_db         = $mnv_f->Connect_MySQL();
+    $mobileYN      = $mnv_f->MobileCheck();
+    // $obYN          = $mnv_f->BrowserCheck();
+    $IEYN          = $mnv_f->IECheck();
+    $SafariYN          = $mnv_f->SafariCheck();
     // print_r($_SERVER["HTTP_USER_AGENT"]);
     if ($mobileYN == "PC")
     {
         echo "<script>location.href='../index.php?media=".$_REQUEST["media"]."';</script>";
     }else{
-        // $saveMedia     = $mnv_f->SaveMedia();
-        // $rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
+        $saveMedia     = $mnv_f->SaveMedia();
+        $rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
     }
 
     // include_once "./head.php";
