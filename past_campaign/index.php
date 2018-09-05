@@ -1,5 +1,5 @@
 <?
-	include_once "./include/autoload.php";
+	// include_once "./include/autoload.php";
 
     $r 	= $_REQUEST["r"];
 	
