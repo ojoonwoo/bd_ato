@@ -267,7 +267,7 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 						$('.frame .bg img').attr('src', './images/game_body_frame_19.jpg');
 						//						alert("게임 클리어")
 						setTimeout(function(){
-							bato.popup.show($("#pt-pass"));
+							bato.popup.show($("#pt-success"));
 						},1000);
 						gameController.clearFlag = true;
 						return false;

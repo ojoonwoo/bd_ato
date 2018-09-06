@@ -138,7 +138,7 @@
 <?
 	include_once "./popup.php";
 ?>		
-<!--		<input type="button" id="sample-btn" data-popup="#pt-result">-->
+		<!-- <input type="button" id="sample-btn" data-popup="#pt-retry"> -->
 		<script type="text/javascript">
 			var imageArray = [];
 			for(var i = 2; i <= 19; i++) {
@@ -178,9 +178,9 @@
 				});
 
 			});
-			$(window).on('load', function() {
-//				$('#sample-btn').trigger('click');
-			});
+			// $(window).on('load', function() {
+			// 	$('#sample-btn').trigger('click');
+			// });
 			
 			$('#pt-pass .check-block .check').on('click', function() {
 				var $parent = $(this).parent();
@@ -269,7 +269,7 @@
 						$('.frame .bg img').attr('src', './images/game_skin_frame_19.jpg');
 //						alert("게임 클리어")
 						setTimeout(function(){
-							bato.popup.show($("#pt-pass"));
+							bato.popup.show($("#pt-success"));
 						},1000);
 						gameController.clearFlag = true;
 						return false;

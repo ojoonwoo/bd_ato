@@ -232,7 +232,8 @@
 					} else {
 						//						alert("게임 클리어")
 						setTimeout(function(){
-							bato.popup.show($("#pt-pass"));
+							// bato.popup.show($("#pt-pass"));
+							bato.popup.show($("#pt-success"));
 						},1000);
 						gameController.clearFlag = true;
 						$('.frame .bg img').attr('src', './images/game_body_frame_19.jpg');

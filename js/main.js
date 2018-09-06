@@ -471,6 +471,27 @@ function confirm_close()
 		location.href = "index.php";
 }
 
+function pt_draw()
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "draw_winner"
+		},
+		url: "./main_exec.php",
+		success: function(response){
+			console.log(response);
+			bato.popup.close($("#pt-success"));
+
+			if (response == "Y")
+				bato.popup.show($("#pt-pass"));
+			else
+				bato.popup.show($("#pt-retry"));
+
+		}
+	});
+}
+
 function sns_share(media, flag)
 {
 	if (media == "fb")

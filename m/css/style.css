@@ -1433,6 +1433,76 @@ html.popup-opened {
 	font-size: 12px;
 	font-weight: 700;
 }
+
+.popup.pt-success {
+	width: 226px;
+}
+.popup.pt-success .inner {
+	padding: 25px 0;
+	background: url(../images/popup_pt_inner_bg.png) center 93px / cover no-repeat #ffffff;
+}
+.popup.pt-success .title-block {
+	margin-bottom: 15px;
+}
+.popup.pt-success .title-block img {
+	width: 24px;
+}
+.popup.pt-success .title-block h5 {
+	margin: 8px 0 6px;	
+	font-size: 15px;
+	font-weight: 800;
+	color: #333333;
+}
+.popup.pt-success .title-block p {
+	font-size: 12px;
+	font-weight: 500;
+}
+.popup.pt-success .btn-retry {
+	display: block;
+	width: 105px;
+	height: 29px;
+	margin: 0 auto;
+	background: #e63e8c;
+	border-radius: 23px;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.popup.pt-retry {
+	width: 226px;
+}
+.popup.pt-retry .inner {
+	padding: 25px 0;
+	background: url(../images/popup_pt_inner_bg.png) center 93px / cover no-repeat #ffffff;
+}
+.popup.pt-retry .title-block {
+	margin-bottom: 15px;
+}
+.popup.pt-retry .title-block img {
+	width: 24px;
+}
+.popup.pt-retry .title-block h5 {
+	margin: 8px 0 6px;	
+	font-size: 15px;
+	font-weight: 800;
+	color: #333333;
+}
+.popup.pt-retry .title-block p {
+	font-size: 12px;
+	font-weight: 500;
+}
+.popup.pt-retry .btn-retry {
+	display: block;
+	width: 105px;
+	height: 29px;
+	margin: 0 auto;
+	background: #e63e8c;
+	border-radius: 23px;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+}
 /*popup*/
 @media all and (max-width: 340px) {
 	.content.main .btn-group button {
