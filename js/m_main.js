@@ -94,6 +94,11 @@ $(function(){
 	
 	$('#rs1').on('click', function() {
 		// console.log("1111");
+		if ($(".check-wrapper .check").hasClass("is-checked") === false) {
+			alert("나에게 맞는 PT크림을 선택해주세요");
+			return false;
+		}
+
 		bato.popup.close($("#pt-pass"));
 		bato.popup.show($("#pt-pass2"));
 	});

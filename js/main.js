@@ -211,6 +211,10 @@ $(function(){
 		var mb_addr2 	= $("#mb_addr2").val();
 		var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
 
+		if ($(".check-wrapper .check").hasClass("is-checked") === false) {
+			alert("나에게 맞는 PT크림을 선택해주세요");
+			return false;
+		}
 		// console.log($('.mb_type').val());
 		if (mb_name == "") {
 			alert("이름을 입력해 주세요.");

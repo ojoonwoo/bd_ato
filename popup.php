@@ -11,7 +11,8 @@
 				</div>
 				<div class="check-block">
 					<div class="check-wrapper">
-						<div class="check is-checked" data-value="light">
+						<!-- <div class="check is-checked" data-value="light"> -->
+						<div class="check" data-value="light">
 							<div class="checkbox"></div>
 						</div>
 						<div class="check" data-value="medium">
