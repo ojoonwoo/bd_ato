@@ -42,7 +42,7 @@
 							</div>
 							<div class="text">
 								당신에게 <b>필요한 PT</b>를 선택하세요
-								<span>PT에 성공하면 당신에게 맞는 PT크림을 드립니다</span>
+								<span>PT에 성공하면 추첨을 통해 당신에게 맞는 PT크림을 드립니다</span>
 							</div>
 						</div>
 						<div class="btn-group">

@@ -94,6 +94,11 @@ $(function(){
 	
 	$('#rs1').on('click', function() {
 		// console.log("1111");
+		if ($(".check-wrapper .check").hasClass("is-checked") === false) {
+			alert("나에게 맞는 PT크림을 선택해주세요");
+			return false;
+		}
+
 		bato.popup.close($("#pt-pass"));
 		bato.popup.show($("#pt-pass2"));
 	});
@@ -291,6 +296,27 @@ function confirm_close()
 {
 	if (confirm("창을 닫으시면 이벤트 참여가 취소됩니다. 닫으시겠습니까?"))
 		location.href = "index.php";
+}
+
+function pt_draw()
+{
+	$.ajax({
+		type:"POST",
+		data:{
+			"exec"				: "draw_winner"
+		},
+		url: "../main_exec.php",
+		success: function(response){
+			console.log(response);
+			bato.popup.close($("#pt-success"));
+
+			if (response == "Y")
+				bato.popup.show($("#pt-pass"));
+			else
+				bato.popup.show($("#pt-retry"));
+
+		}
+	});
 }
 
 function sns_share(media, flag)

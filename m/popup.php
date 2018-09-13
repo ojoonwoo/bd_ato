@@ -11,7 +11,8 @@
 				</div>
 				<div class="check-block">
 					<div class="check-wrapper">
-						<div class="check is-checked" data-value="light">
+						<!-- <div class="check is-checked" data-value="light"> -->
+						<div class="check" data-value="light">
 							<div class="checkbox"></div>
 						</div>
 						<div class="check" data-value="medium">
@@ -257,6 +258,36 @@
 				</div>
 				<button class="btn-retry" onclick="location.reload();">
 					재도전
+				</button>
+			</div>
+		</div>
+		<div class="popup pt-success" id="pt-success">
+			<button type="button" class="popup-close" onclick="pt_draw();"></button>
+			<div class="inner">
+				<div class="title-block">
+					<img src="./images/popup_title_img_health.png" alt="">
+					<h5>피부 체력 강화 성공<i>!</i></h5>
+					<p>
+						PT크림 당첨을 확인해보세요!
+					</p>
+				</div>
+				<button class="btn-retry" onclick="pt_draw();">
+					확인하기
+				</button>
+			</div>
+		</div>
+		<div class="popup pt-retry" id="pt-retry">
+			<button type="button" class="popup-close" onclick="location.reload();"></button>
+			<div class="inner">
+				<div class="title-block">
+					<img src="./images/popup_title_img_health.png" alt="">
+					<h5>아쉬워요<i>!</i></h5>
+					<p>
+						한 번 더 PT에 도전해보세요!
+					</p>
+				</div>
+				<button class="btn-retry" onclick="location.reload();">
+					확인하기
 				</button>
 			</div>
 		</div>

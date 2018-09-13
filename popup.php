@@ -11,7 +11,8 @@
 				</div>
 				<div class="check-block">
 					<div class="check-wrapper">
-						<div class="check is-checked" data-value="light">
+						<!-- <div class="check is-checked" data-value="light"> -->
+						<div class="check" data-value="light">
 							<div class="checkbox"></div>
 						</div>
 						<div class="check" data-value="medium">
@@ -256,6 +257,36 @@
 						아쉽게 PT 도전에 실패하셨습니다<br>
 						다시 한 번 더 빠르게 아토덤을 발라<br>
 						PT에 통과하세요!
+					</p>
+				</div>
+				<button class="btn-retry" onclick="location.reload();">
+					재도전
+				</button>
+			</div>
+		</div>
+		<div class="popup pt-success" id="pt-success">
+			<button type="button" class="popup-close" onclick="pt_draw();"></button>
+			<div class="inner">
+				<div class="title-block">
+					<img src="./images/popup_title_img_health.png" alt="">
+					<h5>피부 체력 강화 성공<i>!</i></h5>
+					<p>
+						PT크림 당첨을 확인해보세요!
+					</p>
+				</div>
+				<button class="btn-retry" onclick="pt_draw();">
+					확인하기
+				</button>
+			</div>
+		</div>
+		<div class="popup pt-retry" id="pt-retry">
+			<button type="button" class="popup-close" onclick="location.reload();"></button>
+			<div class="inner">
+				<div class="title-block">
+					<img src="./images/popup_title_img_health.png" alt="">
+					<h5>아쉬워요<i>!</i></h5>
+					<p>
+						한 번 더 PT에 도전해보세요!
 					</p>
 				</div>
 				<button class="btn-retry" onclick="location.reload();">

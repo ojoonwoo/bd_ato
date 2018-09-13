@@ -57,4 +57,15 @@ switch ($_REQUEST['exec'])
         $result 	= mysqli_query($my_db, $query);
 
     break;
+
+    case "draw_winner" :
+        $mnv_f          = new mnv_function();
+        $my_db          = $mnv_f->Connect_MySQL();
+        // $gubun          = $mnv_f->MobileCheck();
+
+        $draw_array      = array("Y","Y","Y","N","N","N","N","N","N","N");
+		shuffle($draw_array);
+
+        echo $draw_array[0];
+    break;
 }
