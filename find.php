@@ -54,7 +54,8 @@
 						</div>
 					</div>
 					<div class="checklist">
-					<a href="http://www.bioderma.co.kr/front/product_view.php?id=028067B" target="_blank">
+					<!-- <a href="http://www.bioderma.co.kr/front/product_view.php?id=028067B" target="_blank"> -->
+					<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000077" target="_blank">
 							<button type="button" class="season">
 								<img src="./images/find_btn_season.png" alt="">
 							</button>

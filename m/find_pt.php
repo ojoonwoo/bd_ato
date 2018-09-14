@@ -47,7 +47,8 @@
                             <img src="./images/PT/contents.png">
                         </div>
                         <div class="button">
-							<a class="button01" href="http://www.bioderma.co.kr/front/product_view.php?id=028067B" target="_blank">
+							<!-- <a class="button01" href="http://www.bioderma.co.kr/front/product_view.php?id=028067B" target="_blank"> -->
+							<a class="button01" href="http://www.bioderma.co.kr/front/product_view.php?id=7000077" target="_blank">
                               <img src="./images/PT/button_cream.png">
                             </a>
 							<a class="button02" href="http://www.bioderma.co.kr/front/product_view.php?id=028106" target="_blank">
