@@ -222,7 +222,7 @@
 							<div class="col"><span id="rs_goods">아토덤 PP밤</span></div>
 						</div>
 					</div>
-					<div class="guide-msg">(선택하신 PT에 맞는 샘플 키트는 10월 1일 이후 일괄 배송됩니다)</div>
+					<div class="guide-msg">(선택하신 PT에 맞는 샘플 키트는 10월 1일 이후 순차적으로 배송됩니다)</div>
 				</div>
 				<div class="caution-block">
 					<p>- 부정한 방법으로 이벤트 참여시 당첨 선발에서 제외됩니다.</p>
