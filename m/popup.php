@@ -137,6 +137,16 @@
 							<input type="tel" id="mb_phone3" onkeyup="lengthCheck(this, 4)">
 						</div>
 					</div>
+					<div class="input-group mail">
+						<div class="guide">
+							<span>이메일</span>
+						</div>
+						<div class="input">
+							<input type="text" id="mb_mail1">
+							<span>@</span>
+							<input type="text" id="mb_mail2">
+						</div>
+					</div>
 					<div class="input-group">
 						<div class="guide">
 							<span>주소</span>

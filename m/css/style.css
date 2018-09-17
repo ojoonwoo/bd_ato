@@ -1147,6 +1147,21 @@ html.popup-opened {
 	vertical-align: middle;
 	padding-left: 10px;
 }
+.popup.pt-pass .input-block .input-group.mail .input input[type="text"]:first-child {
+	width: 50%;
+}
+.popup.pt-pass .input-block .input-group.mail .input input[type="text"],
+.popup.pt-pass .input-block .input-group.mail .input input[type="tel"] {
+	width: 40%;
+}
+.popup.pt-pass .input-block .input-group.mail .input span {
+	display: inline-block;
+	width: 10%;
+	font-size: 11px;
+	font-weight: 300;
+	vertical-align: middle;
+	text-align: center;
+}
 .popup.pt-pass .input-block .input-group.n3 .input input[type="text"],
 .popup.pt-pass .input-block .input-group.n3 .input input[type="tel"] {
 	width: 30%;
