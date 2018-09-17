@@ -1044,11 +1044,11 @@ html.popup-opened {
 	padding-left: 10px;
 }
 .popup.pt-pass .input-block .input-group.mail .input input[type="text"]:first-child {
-	width: 130px;
+/*	width: 130px;*/
 }
 .popup.pt-pass .input-block .input-group.mail .input input[type="text"],
 .popup.pt-pass .input-block .input-group.mail .input input[type="tel"] {
-	width: 88px;
+	width: 109px;
 }
 .popup.pt-pass .input-block .input-group.mail .input span {
 	display: inline-block;
@@ -1062,7 +1062,7 @@ html.popup-opened {
 	width: 100%;
 	height: 30px;
 	padding-left: 7px;
-	background: #f8f8f8;
+	background: url(../images/popup_arrow.png) 96% center / 12px 10px no-repeat #f8f8f8;
 	margin-top: 5px;
 }
 .popup.pt-pass .input-block .input-group .input input[type="text"],
