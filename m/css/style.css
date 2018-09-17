@@ -1147,6 +1147,10 @@ html.popup-opened {
 	vertical-align: middle;
 	padding-left: 10px;
 }
+.popup.pt-pass .input-block .input-group.mail .guide {
+	vertical-align: top;
+	padding-top: 0px;
+}
 .popup.pt-pass .input-block .input-group.mail .input input[type="text"]:first-child {
 /*	width: 50%;*/
 }
