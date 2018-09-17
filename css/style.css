@@ -1035,6 +1035,29 @@ html.popup-opened {
 	width: 243px;
 	vertical-align: middle;
 }
+.popup.pt-pass .input-block .input-group.mail .input input[type="text"],
+.popup.pt-pass .input-block .input-group.mail .input input[type="tel"] {
+	background: #f8f8f8;
+	height: 30px;
+	width: 100%;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.popup.pt-pass .input-block .input-group.mail .input input[type="text"]:first-child {
+	width: 130px;
+}
+.popup.pt-pass .input-block .input-group.mail .input input[type="text"],
+.popup.pt-pass .input-block .input-group.mail .input input[type="tel"] {
+	width: 88px;
+}
+.popup.pt-pass .input-block .input-group.mail .input span {
+	display: inline-block;
+	width: 25px;
+	font-size: 15px;
+	font-weight: 300;
+	vertical-align: middle;
+	text-align: center;
+}
 .popup.pt-pass .input-block .input-group .input input[type="text"],
 .popup.pt-pass .input-block .input-group .input input[type="tel"] {
 	background: #f8f8f8;

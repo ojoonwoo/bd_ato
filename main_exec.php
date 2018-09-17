@@ -10,7 +10,7 @@ switch ($_REQUEST['exec'])
 
         $mb_name     = trim($_REQUEST["mb_name"]);
         $mb_phone    = trim($_REQUEST["mb_phone"]);
-		$mb_mail	 = trim($_REQUSET["mb_mail"]);
+		$mb_mail	 = trim($_REQUEST["mb_mail"]);
         $mb_addr1    = $_REQUEST["mb_addr1"];
         $mb_addr2    = trim($_REQUEST["mb_addr2"]);
         // $mb_addr     = $mb_addr1 . " " . $mb_addr2;        

@@ -207,9 +207,12 @@ $(function(){
 		var mb_phone1 	= $("#mb_phone1").val();
 		var mb_phone2 	= $("#mb_phone2").val();
 		var mb_phone3 	= $("#mb_phone3").val();
+		var mb_mail1	= $("#mb_mail1").val();
+		var mb_mail2	= $("#mb_mail2").val();
 		var mb_addr1 	= $("#mb_addr1").val();
 		var mb_addr2 	= $("#mb_addr2").val();
 		var mb_phone 	= mb_phone1 + mb_phone2 + mb_phone3;
+		var mb_mail		= mb_mail1 + "@" + mb_mail2;
 
 		if ($(".check-wrapper .check").hasClass("is-checked") === false) {
 			alert("나에게 맞는 PT크림을 선택해주세요");
@@ -247,6 +250,12 @@ $(function(){
 			$("#mb_addr2").focus();
 			return false;
 		}
+		if (mb_mail1 == "") {
+			alert("메일주소를 입력해주세요");
+		}
+		if (mb_mail2 == "") {
+			alert("메일주소를 입력해주세요");
+		}
 
 		if ($("#agree1").is(":checked") === false)
 		{
@@ -266,6 +275,7 @@ $(function(){
 				"exec"				: "insert_member_info",
 				"mb_name"			: mb_name,
 				"mb_phone"			: mb_phone,
+				"mb_mail"			: mb_mail,
 				"mb_addr1"			: mb_addr1,
 				"mb_addr2"			: mb_addr2,
 				"mb_type"			: pt_type
