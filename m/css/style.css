@@ -1164,6 +1164,9 @@ html.popup-opened {
 	margin-top: 5px;
 	padding-left: 7px;
 	background: url(../images/popup_arrow.png) 95% center / 7px 6px no-repeat #f8f8f8;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 .popup.pt-pass .input-block .input-group.mail .input span {
 	display: inline-block;
