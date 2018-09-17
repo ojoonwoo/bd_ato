@@ -208,6 +208,17 @@ $(function(){
 			}
 		});
 	});
+	
+	$('#mb_mail3').on('change', function() {
+		var val = $(this).val();
+		if(val == '') {
+			$('#mb_mail2').focus();
+		} else if(val == 'input') {
+			$('#mb_mail2').val('').focus();
+		} else {
+			$('#mb_mail2').val(val);	
+		}
+	});
 
 	$(".find-addr").on("click", function(){
 		// sample2_execDaumPostcode();

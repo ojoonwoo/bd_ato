@@ -1058,6 +1058,13 @@ html.popup-opened {
 	vertical-align: middle;
 	text-align: center;
 }
+.popup.pt-pass .input-block .input-group.mail #mb_mail3 {
+	width: 100%;
+	height: 30px;
+	padding-left: 7px;
+	background: #f8f8f8;
+	margin-top: 5px;
+}
 .popup.pt-pass .input-block .input-group .input input[type="text"],
 .popup.pt-pass .input-block .input-group .input input[type="tel"] {
 	background: #f8f8f8;

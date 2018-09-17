@@ -145,6 +145,14 @@
 							<input type="text" id="mb_mail1">
 							<span>@</span>
 							<input type="text" id="mb_mail2">
+							<select name="mb_mail3" id="mb_mail3">
+								<option value="">이메일 선택</option>
+								<option value="naver.com">naver.com</option>
+								<option value="daum.net">daum.net</option>
+								<option value="nate.com">nate.com</option>
+								<option value="gmail.com">gmail.com</option>
+								<option value="input" selected>직접입력</option>
+							</select>
 						</div>
 					</div>
 					<div class="input-group">

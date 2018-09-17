@@ -201,7 +201,16 @@ $(function(){
 //	}
 //	share.bind();
 	
-
+	$('#mb_mail3').on('change', function() {
+		var val = $(this).val();
+		if(val == '') {
+			$('#mb_mail2').focus();
+		} else if(val == 'input') {
+			$('#mb_mail2').val('').focus();
+		} else {
+			$('#mb_mail2').val(val);	
+		}
+	});
 	$(".btn-result").on("click", function(){
 		var mb_name 	= $("#mb_name").val();
 		var mb_phone1 	= $("#mb_phone1").val();
