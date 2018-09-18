@@ -31,7 +31,7 @@
             <div id="daily_applicant_count_div1" style="display:block">
               <table class="table table-hover">
                 <thead>
-                  <tr><th>날짜</th><th>클릭명</th><th>PC</th><th>Mobile</th><!--<th>PC unique(IP)</th><th>MOBILE unique(IP)</th>--><th>Total</th></tr>
+                  <tr><th>날짜</th><th>클릭명</th><th>PC</th><th>Mobile</th><th>unique(IP)</th><!--<th>PC unique(IP)</th><th>MOBILE unique(IP)</th>--><th>Total</th></tr>
                 </thead>
                 <tbody>
 <?php
@@ -48,7 +48,7 @@
 		unset($click_cnt);
 		unset($pc_cnt);
 		unset($mobile_cnt);
-		// unset($pc_unique_cnt);
+		unset($unique_cnt);
 		// unset($mobile_unique_cnt);
 		// unset($click_unique_cnt);
 		// unset($daily_unique_click_count);
@@ -57,7 +57,7 @@
 		$total_mobile_cnt = 0;
 		$total_pc_cnt = 0;
 		// $total_unique_mobile_cnt = 0;
-		// $total_unique_pc_cnt = 0;
+		$total_unique_cnt = 0;
 		// $daily_unique_click_query = "SELECT * FROM ".$_gl['click_info_table']." WHERE 1 AND click_date LIKE '%".$daily_date."%' GROUP BY click_ipaddr";
 		// $daily_unique_click_res = mysqli_query($my_db, $daily_unique_click_query);
 		// $daily_unique_click_count = mysqli_num_rows($daily_unique_click_res);
@@ -69,13 +69,13 @@
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
 			$mobile_query	= "SELECT * FROM click_info WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
-			// $pc_unique_query		= "SELECT * FROM ".$_gl['click_info_table']." WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='PC' GROUP BY click_ipaddr";
-			// $pc_unique_count		= mysqli_num_rows(mysqli_query($my_db, $pc_unique_query));
+			$unique_query		= "SELECT * FROM click_info WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' GROUP BY click_ipaddr";
+			$unique_count		= mysqli_num_rows(mysqli_query($my_db, $pc_unique_query));
 			// $mobile_unique_query	= "SELECT * FROM ".$_gl['click_info_table']." WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='MOBILE' GROUP BY click_ipaddr";
 			// $mobile_unique_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_unique_query));
 			$pc_cnt[]		= $pc_count;
 			$mobile_cnt[]	= $mobile_count;
-			// $pc_unique_cnt[]		= $pc_unique_count;
+			$unique_cnt[]		= $unique_count;
 			// $mobile_unique_cnt[]	= $mobile_unique_count;
 			// $click_unique_cnt[]	= $pc_unique_count + $mobile_unique_count ;
 		}
@@ -116,8 +116,8 @@
                     <td><?=$val?></td>
                     <td><?=number_format($pc_cnt[$i])?></td>
                     <td><?=number_format($mobile_cnt[$i])?></td>
-                    <!-- <td><?=number_format($pc_unique_cnt[$i])?></td>
-                    <td><?=number_format($mobile_unique_cnt[$i])?></td> -->
+                    <td><?=number_format($unique_cnt[$i])?></td>
+                    <!-- <td><?=number_format($mobile_unique_cnt[$i])?></td> -->
                     <!-- <td><?=number_format($click_cnt[$i])?> / <?=number_format($click_unique_cnt[$i])?></td> -->
                     <td><?=number_format($click_cnt[$i])?></td>
                   </tr>
@@ -127,7 +127,7 @@
 			$total_mobile_cnt += $mobile_cnt[$i];
 			$total_pc_cnt += $pc_cnt[$i];
 			// $total_unique_mobile_cnt += $mobile_unique_cnt[$i];
-			// $total_unique_pc_cnt += $pc_unique_cnt[$i];
+			$total_unique_cnt += $unique_cnt[$i];
 			$i++;
 		}
 ?>
@@ -135,8 +135,8 @@
                     <td colspan="2">합계</td>
                     <td><?php echo number_format($total_pc_cnt)?></td>
                     <td><?php echo number_format($total_mobile_cnt)?></td>
-                    <!-- <td><?php echo number_format($total_unique_pc_cnt)?></td>
-                    <td><?php echo number_format($total_unique_mobile_cnt)?></td> -->
+                    <td><?php echo number_format($total_unique_cnt)?></td>
+                    <!-- <td><?php echo number_format($total_unique_mobile_cnt)?></td> -->
                     <!-- <td><?php echo number_format($total_click_cnt)." / IP기준 유니크 : ".$total_unique_click_cnt ?></td> -->
                     <td><?php echo number_format($total_click_cnt)?></td>
                   </tr>
