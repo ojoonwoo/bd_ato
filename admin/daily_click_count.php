@@ -1,6 +1,9 @@
 <?php
 	// 설정파일
-	include_once "../config.php";
+	include_once "../include/autoload.php";
+
+	$mnv_f = new mnv_function();
+	$my_db         = $mnv_f->Connect_MySQL();
 /*
 	if (isset($_SESSION['ss_mb_id']) == false)
 	{
@@ -18,7 +21,7 @@
     <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">캠페인 사이트 내 클릭 수 PC / Mobile</h1>
+          <h1 class="page-header">캠페인 이벤트 참여 버튼 클릭 수 PC / Mobile</h1>
         </div>
       </div>
       <!-- /.row -->
@@ -32,12 +35,12 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT click_date FROM ".$_gl['click_info_table']." Group by substr(click_date,1,10) ORDER BY click_date DESC";
+	$daily_date_query	= "SELECT click_date FROM click_info Group by substr(click_date,1,10) ORDER BY click_date DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
 		$daily_date		= substr($date_daily_data['click_date'],0,10);
-		$click_query	= "SELECT click_name, COUNT( click_name ) click_name_cnt FROM ".$_gl['click_info_table']." WHERE 1 AND click_date LIKE  '%".$daily_date."%' GROUP BY click_name";
+		$click_query	= "SELECT click_name, COUNT( click_name ) click_name_cnt FROM click_info WHERE 1 AND click_date LIKE  '%".$daily_date."%' GROUP BY click_name";
 		$click_res		= mysqli_query($my_db, $click_query);
 
 		unset($click_name);
@@ -62,9 +65,9 @@
 		{
 			$click_name[]	= $click_daily_data['click_name'];
 			$click_cnt[]	= $click_daily_data['click_name_cnt'];
-			$pc_query		= "SELECT * FROM ".$_gl['click_info_table']." WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='PC' ";
+			$pc_query		= "SELECT * FROM click_info WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='PC' ";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM ".$_gl['click_info_table']." WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM click_info WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			// $pc_unique_query		= "SELECT * FROM ".$_gl['click_info_table']." WHERE 1 AND click_date LIKE  '%".$daily_date."%' AND click_name='".$click_daily_data['click_name']."' AND click_gubun='PC' GROUP BY click_ipaddr";
 			// $pc_unique_count		= mysqli_num_rows(mysqli_query($my_db, $pc_unique_query));
