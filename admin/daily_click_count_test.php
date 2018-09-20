@@ -31,7 +31,7 @@
             <div id="daily_applicant_count_div1" style="display:block">
               <table class="table table-hover">
                 <thead>
-                  <tr><th>날짜</th><th>매체</th><th>클릭명</th><th>PC</th><th>Mobile</th><th>unique(IP)</th><!--<th>PC unique(IP)</th><th>MOBILE unique(IP)</th>--><th>Total</th></tr>
+                  <tr><th>날짜</th><th>매체</th><th>PC</th><th>Mobile</th><th>unique(IP)</th><!--<th>PC unique(IP)</th><th>MOBILE unique(IP)</th>--><th>Total</th></tr>
                 </thead>
                 <tbody>
 <?php
