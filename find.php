@@ -65,7 +65,7 @@
 								<img src="./images/find_btn_chronic.png" alt="">
 							</button>
 						</a>
-						<a href="http://www.bioderma.co.kr/front/product_view.php?id=028104S" target="_blank">
+						<a href="http://www.mdeshop.co.kr/shop/item.php?it_id=1456728614" target="_blank">
 							<button type="button" class="problem">
 								<img src="./images/find_btn_problem.png" alt="">
 							</button>
