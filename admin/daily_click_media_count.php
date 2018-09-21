@@ -43,7 +43,7 @@
 		$click_query	= "SELECT click_media, COUNT( click_media ) click_media_cnt FROM click_info WHERE 1 AND click_date LIKE  '%".$daily_date."%' GROUP BY click_media";
 		$click_res		= mysqli_query($my_db, $click_query);
 
-		unset($click_name);
+		unset($click_media);
 		unset($click_name_cnt);
 		unset($click_cnt);
 		unset($pc_cnt);
