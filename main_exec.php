@@ -65,7 +65,7 @@ switch ($_REQUEST['exec'])
         // $gubun          = $mnv_f->MobileCheck();
 
         $draw_array      = array("Y","N","N","N","N","N","N","N","N","N");
-//        $draw_array      = array("Y");
+    //    $draw_array      = array("Y");
 		shuffle($draw_array);
 
         echo $draw_array[0];

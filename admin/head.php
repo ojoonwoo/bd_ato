@@ -101,6 +101,12 @@ if (isset($_SESSION['ss_mb_name']) == false)
                   <li>
                     <a href="daily_media_count.php">캠페인 참여자 수</a>
                   </li>
+                  <li>
+                    <a href="daily_click_count.php">캠페인 이벤트 참여 버튼 클릭 수</a>
+                  </li>
+                  <li>
+                    <a href="daily_click_media_count.php">매체별 이벤트 참여 버튼 클릭 수</a>
+                  </li>
 <!--
                   <li>
                     <a href="daily_tracking_count2.php">2차 일자별 사이트 유입자 수</a>

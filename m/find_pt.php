@@ -54,7 +54,7 @@
 							<a class="button02" href="http://www.bioderma.co.kr/front/product_view.php?id=028106" target="_blank">
                               <img src="./images/PT/button_pp.png">
                             </a>
-							<a class="button03" href="http://www.bioderma.co.kr/front/product_view.php?id=028104S" target="_blank">
+							<a class="button03" href="http://www.mdeshop.co.kr/shop/item.php?it_id=1456728614" target="_blank">
                               <img src="./images/PT/button_balm.png">
                             </a>
                         </div>
