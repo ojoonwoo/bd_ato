@@ -73,4 +73,16 @@ class mnv_function extends mnv_dbi
 	}
 
 
+	public function CPCheck($IP)
+	{
+		$list = array(
+			'220.68.14.142',
+			'175.192.4.228',
+			'222.111.11.10'
+		);
+		if(in_array($IP, $list))
+			return true;
+		else
+			return false;
+	}
 }

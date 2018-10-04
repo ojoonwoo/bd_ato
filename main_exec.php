@@ -64,7 +64,11 @@ switch ($_REQUEST['exec'])
         $my_db          = $mnv_f->Connect_MySQL();
         // $gubun          = $mnv_f->MobileCheck();
 
-        $draw_array      = array("Y","N","N","N","N","N","N","N","N","N");
+		if($mnv_f->CPCheck($_SERVER['REMOTE_ADDR']))
+			$draw_array = array("N");
+		else
+        	$draw_array = array("Y","N","N","N","N","N","N","N","N","N");
+		
     //    $draw_array      = array("Y");
 		shuffle($draw_array);
 
