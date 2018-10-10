@@ -509,7 +509,6 @@ function pt_draw()
 			if (response == "Y")
 				bato.popup.show($("#pt-pass"));
 			else
-				alert(response);
 				bato.popup.show($("#pt-retry"));
 		}
 	});
