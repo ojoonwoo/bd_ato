@@ -259,11 +259,11 @@ $(function(){
 			$("#mb_addr2").focus();
 			return false;
 		}
-		if (mb_mail1 == "") {
+		if (mb_mail1.trim().length < 1) {
 			alert("메일주소를 입력해주세요");
 			return false;
 		}
-		if (mb_mail2 == "") {
+		if (mb_mail2.trim().length < 1) {
 			alert("메일주소를 입력해주세요");
 			return false;
 		}
