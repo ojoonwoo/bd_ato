@@ -261,9 +261,11 @@ $(function(){
 		}
 		if (mb_mail1 == "") {
 			alert("메일주소를 입력해주세요");
+			return false;
 		}
 		if (mb_mail2 == "") {
 			alert("메일주소를 입력해주세요");
+			return false;
 		}
 
 		if ($("#agree1").is(":checked") === false)
