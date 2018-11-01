@@ -49,7 +49,7 @@
 				<div id="header">
 					<div class="inner">
 						<div class="logo">
-							<a href="http://www.bioderma.co.kr/?utm_source=atoderm-pt&utm_medium=miniver-link&utm_campaign=by-atoderm&utm_content=btn-header-logo" target="_blank">
+							<a href="http://www.bioderma.co.kr/?utm_source=atoderm-pt&utm_medium=link&utm_campaign=by-atoderm&utm_content=btn-header-logo" target="_blank">
 								<img src="./images/header_logo.png" alt="logo">
 							</a>
 						</div>
@@ -74,12 +74,12 @@
 					</div>
 					<div class="checklist">
 					<!-- <a href="http://www.bioderma.co.kr/front/product_view.php?id=028067B" target="_blank"> -->
-						<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000077&utm_source=atoderm-pt&utm_medium=miniver-link&utm_campaign=by-atoderm&utm_content=btn-find-cream" target="_blank">
+						<a href="http://www.bioderma.co.kr/front/product_view.php?id=7000077&utm_source=atoderm-pt&utm_medium=link&utm_campaign=by-atoderm&utm_content=btn-find-cream" target="_blank">
 							<button type="button" class="season">
 								<img src="./images/find_btn_season.png" alt="">
 							</button>
 						</a>
-						<a href="http://www.bioderma.co.kr/front/product_view.php?id=028106&utm_source=atoderm-pt&utm_medium=miniver-link&utm_campaign=by-atoderm&utm_content=btn-find-cream" target="_blank">
+						<a href="http://www.bioderma.co.kr/front/product_view.php?id=028106&utm_source=atoderm-pt&utm_medium=link&utm_campaign=by-atoderm&utm_content=btn-find-cream" target="_blank">
 							<button type="button" class="chronic">
 								<img src="./images/find_btn_chronic.png" alt="">
 							</button>

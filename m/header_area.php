@@ -1,7 +1,7 @@
 				<div id="header">
 					<div class="inner">
 						<div class="logo">
-							<a href="http://www.bioderma.co.kr/?utm_source=atoderm-pt&utm_medium=miniver-link&utm_campaign=by-atoderm&utm_content=btn-header-logo" target="_blank">
+							<a href="http://www.bioderma.co.kr/?utm_source=atoderm-pt&utm_medium=link&utm_campaign=by-atoderm&utm_content=btn-header-logo" target="_blank">
                                 <img src="./images/header_logo.png" alt="logo">
                             </a>
 						</div>
