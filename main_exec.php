@@ -67,7 +67,9 @@ switch ($_REQUEST['exec'])
 		if($mnv_f->CPCheck($_SERVER['REMOTE_ADDR']))
 			$draw_array = array("N");
 		else
-        	$draw_array = array("Y","N","N","N","N","N","N","N","N","N");
+//        	$draw_array = array("Y","N","N","N","N","N","N","N","N","N");
+			// 당첨확률 변경 181105
+        	$draw_array = array("Y","Y","Y","N","N","N","N","N","N","N");
 		
     //    $draw_array      = array("Y");
 		shuffle($draw_array);
