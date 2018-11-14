@@ -69,7 +69,9 @@ switch ($_REQUEST['exec'])
 		else
 //        	$draw_array = array("Y","N","N","N","N","N","N","N","N","N");
 			// 당첨확률 변경 181105
-        	$draw_array = array("Y","Y","Y","N","N","N","N","N","N","N");
+//        	$draw_array = array("Y","Y","Y","N","N","N","N","N","N","N");
+			// 당첨확률 변경 181114
+        	$draw_array = array("Y","Y","Y","Y","Y","N","N","N","N","N");
 		
     //    $draw_array      = array("Y");
 		shuffle($draw_array);
