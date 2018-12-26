@@ -15,7 +15,7 @@
 						<div class="check" data-value="light">
 							<div class="checkbox"></div>
 						</div>
-						<div class="check" data-value="medium">
+						<div class="check is-checked" data-value="medium">
 							<div class="checkbox"></div>
 						</div>
 						<div class="check" data-value="heavy">
@@ -77,7 +77,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="content-opened">
+					<div class="content-opened" style="display:block;">
 						<div class="tab-wrapper">
 							<div class="tab" data-tab-target="light">
 								<span>라이트 PT</span>
@@ -93,7 +93,7 @@
 							<div class="content light">
 								<img src="./images/tab_content_light.png" alt="">
 							</div>
-							<div class="content medium">
+							<div class="content medium" style="display:block;">
 								<img src="./images/tab_content_medium.png" alt="">
 							</div>
 							<div class="content heavy">

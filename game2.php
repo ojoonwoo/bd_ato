@@ -174,7 +174,7 @@ d="M0.600,750.600 C0.600,750.600 66.530,800.747 149.600,616.600 C232.670,432.452
 				}
 			}
 			preloading(imageArray);
-			var pt_type		= "light";
+			var pt_type		= "medium";
 
 			$('#game-start').on('click', function() {
 				$('#hand').draggable("enable");
