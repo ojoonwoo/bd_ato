@@ -6,7 +6,8 @@
 					<img src="./images/popup_title_img_cup.png" alt="">
 					<h5>PT에 통과하셨습니다<i>!</i></h5>
 					<p class="check-guide-msg">
-						체크리스트를 확인하고 나에게 맞는 PT 크림을 선택해주세요
+<!--						체크리스트를 확인하고 나에게 맞는 PT 크림을 선택해주세요-->
+						라이트 PT, 미디움 PT, 헤비 PT 중에서 선택해주세요.
 					</p>
 				</div>
 				<div class="check-block">

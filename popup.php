@@ -102,7 +102,7 @@
 						</div>
 					</div>
 				</div>
-				<p class="msg">당신에게 맞는 PT크림을 보내드릴게요</p>
+				<p class="msg">라이트 PT, 미디움 PT, 헤비 PT 중에서 선택해주세요.</p>
 				<div class="input-block">
 					<div class="input-group">
 						<div class="guide">
