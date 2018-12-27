@@ -6,7 +6,8 @@
 					<img src="./images/popup_title_img_cup.png" alt="">
 					<h5>PT에 통과하셨습니다<i>!</i></h5>
 					<p class="check-guide-msg">
-						체크리스트를 확인하고 나에게 맞는 PT 크림을 선택해주세요
+<!--						체크리스트를 확인하고 나에게 맞는 PT 크림을 선택해주세요-->
+						라이트 PT, 미디움 PT, 헤비 PT 중에서 선택해주세요.
 					</p>
 				</div>
 				<div class="check-block">
@@ -15,7 +16,7 @@
 						<div class="check" data-value="light">
 							<div class="checkbox"></div>
 						</div>
-						<div class="check" data-value="medium">
+						<div class="check is-checked" data-value="medium">
 							<div class="checkbox"></div>
 						</div>
 						<div class="check" data-value="heavy">
@@ -77,7 +78,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="content-opened">
+					<div class="content-opened" style="display:block;">
 						<div class="tab-wrapper">
 							<div class="tab" data-tab-target="light">
 								<span>라이트 PT</span>
@@ -93,7 +94,7 @@
 							<div class="content light">
 								<img src="./images/tab_content_light.jpg" alt="">
 							</div>
-							<div class="content medium">
+							<div class="content medium" style="display:block;">
 								<img src="./images/tab_content_medium.jpg" alt="">
 							</div>
 							<div class="content heavy">
@@ -237,7 +238,11 @@
 					<p class="need">
 						아토덤 PP밤으로 피부 PT가 필요합니다
 					</p>
+<<<<<<< HEAD
 					<div class="msg">(선택하신 PT에 맞는 샘플 키트는 1월 9일 이후 순차적으로 배송됩니다)</div>
+=======
+					<div class="msg">(선택하신 PT에 맞는 샘플 키트는 12월 26일 이후 순차적으로 배송됩니다)</div>
+>>>>>>> b06ff90226d97bc92a56212d6c5ee360078edc3f
 				</div>
 				<div class="caution-block">
 					<p>- 부정한 방법으로 이벤트 참여시 당첨 선발에서 제외됩니다.</p>

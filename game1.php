@@ -175,7 +175,7 @@
 			}
 			preloading(imageArray);
 
-			var pt_type		= "light";
+			var pt_type		= "medium";
 
 			$('#game-start').on('click', function() {
 				$('#hand').draggable("enable");
